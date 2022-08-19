@@ -1,0 +1,29 @@
+if (event.getWorld() == Bukkit.getWorld("world") && random.nextDouble() < 0.5)
+		{
+			
+			for (String spell : ChestGenSpellRegistry.chestgen_registry.keySet()) 
+			{
+				if(random.nextDouble() < 0.5)
+				{
+					
+					ItemStack s = ChestGenSpellRegistry.chestgen_registry.get(spell).generate();
+					
+					event.getLoot().add(random.nextInt(), s);
+					
+					if (event.getLoot().size() == 28) 
+					{
+						event.getLoot().add(27,s);
+					}
+					else
+					{
+						event.getLoot().add(s);
+					}
+					
+					break;
+				}
+			}
+		}
+
+
+Git Access Token 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
+
