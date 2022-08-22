@@ -23,7 +23,7 @@ public class SpellAetherealOverridePlus extends BaseSpellCapsule
 
 	public SpellAetherealOverridePlus()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§bAethereal Tome§f: Override§r§e+§r§f§ko§r", "SpellAetherealOverridePlus", 500, false, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fA spelltome containing highly unstable §r§b§l§oAethereal§r§f energy.","§r§fAn incantation is written within that allows","§r§fthe caster to randomly enchant normal books.","§r§fEnchantment level reflects the maximum value possible.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§bAethereal Tome§f: Override§r§e+§r§f§ko§r", "SpellAetherealOverridePlus", 500, false, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome containing highly unstable §r§b§l§oAethereal§r§f energy.","§r§fAn incantation is written within that allows","§r§fthe caster to randomly enchant normal books.","§r§fEnchantment level reflects the maximum value possible.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class SpellTerraform extends BaseSpellCapsule
 
 	public SpellTerraform()
 	{
-		super(Material.BROWN_DYE, "§r§7§ko§r§7§lSpell: §r§fTerraform§r§7§ko§r", "SpellTerraform", 25, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fThe caster summons a block of dirt from","§r§fconcentrated §r§6Geo§r§f essence.","§r§fRange: 5 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.BROWN_DYE, "§r§7§ko§r§7§lSpell: §r§fTerraform§r§7§ko§r", "SpellTerraform", 25, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §bUtility§f.","§r§fThe caster summons a block of dirt from","§r§fconcentrated §r§6Geo§r§f essence.","§r§fRange: 5 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override

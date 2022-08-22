@@ -27,7 +27,7 @@ public class SpellBanishGreaterEvil extends BaseSpellCapsule
 
 	public SpellBanishGreaterEvil()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fBanish§r§7§ko§r", "SpellBanishGreaterEvil", 1000, true, true,"§r§fElement: §r§3§lVOID§r§f.","§r§fTarget world-level entity is banished into the void.","§r§fValid targets: Ender Dragon, The Warden, The Wither.","§r§fRange: 15 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fBanish§r§7§ko§r", "SpellBanishGreaterEvil", 1000, true, true,"§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fTarget world-level entity is banished into the void.","§r§fValid targets: Ender Dragon, The Warden, The Wither.","§r§fRange: 15 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -49,6 +49,7 @@ public class SpellBanishGreaterEvil extends BaseSpellCapsule
 		}
 		if (target.getType().equals(EntityType.ENDER_DRAGON)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BELL_USE, SoundCategory.MASTER, 1, 1);
 			((Damageable) target).damage(2000);
@@ -56,6 +57,7 @@ public class SpellBanishGreaterEvil extends BaseSpellCapsule
 		}
 		if (target.getType().equals(EntityType.WARDEN)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BELL_USE, SoundCategory.MASTER, 1, 1);
 			((Damageable) target).damage(2000);
@@ -63,6 +65,7 @@ public class SpellBanishGreaterEvil extends BaseSpellCapsule
 		}
 		if (target.getType().equals(EntityType.WITHER)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BELL_USE, SoundCategory.MASTER, 1, 1);
 			((Damageable) target).damage(2000);

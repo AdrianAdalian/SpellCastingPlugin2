@@ -22,7 +22,7 @@ public class SpellVoidShift extends BaseSpellCapsule
 
 	public SpellVoidShift()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Void Shift§r§f§ko§r", "SpellVoidShift", 350, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fA forbidden tome that allows the caster to temporarily","§r§fshift into the void, free of physical restraints.","§r§fDuration: 15 seconds.","§r§fMana cost: 350 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Void Shift§r§f§ko§r", "SpellVoidShift", 350, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA forbidden tome that allows the caster to temporarily","§r§fshift into the void, free of physical restraints.","§r§fDuration: 15 seconds.","§r§fMana cost: 350 §r§9mana§r§f.");
 	}
 
 	@Override

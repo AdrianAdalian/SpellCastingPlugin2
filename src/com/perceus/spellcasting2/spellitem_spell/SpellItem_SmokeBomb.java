@@ -19,7 +19,7 @@ public class SpellItem_SmokeBomb extends BaseSpellCapsule
 
 	public SpellItem_SmokeBomb()
 	{
-		super(Material.FIREWORK_STAR, "§r§7§ko§r§7§lCrafted Spell: §r§fSmoke Bomb§r§7§ko§r", "SpellItem_SmokeBomb", 0, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fA smoke bomb that cloaks the caster briefly.","§r§fDuration: 10 seconds.");
+		super(Material.FIREWORK_STAR, "§r§7§ko§r§7§lCrafted Spell: §r§fSmoke Bomb§r§7§ko§r", "SpellItem_SmokeBomb", 0, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §6Buff§f.","§r§fA smoke bomb that cloaks the caster briefly.","§r§fDuration: 10 seconds.");
 	}
 
 	@Override

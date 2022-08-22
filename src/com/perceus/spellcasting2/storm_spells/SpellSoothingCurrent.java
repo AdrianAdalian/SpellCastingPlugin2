@@ -29,7 +29,7 @@ public class SpellSoothingCurrent extends BaseSpellCapsule
 
 	public SpellSoothingCurrent()
 	{
-		super(Material.PURPLE_DYE, "§r§7§ko§r§7§lSpell: §r§fSoothing Current§r§7§ko§r", "SpellSoothingCurrent", 100, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fThe caster concentrates §r§dStorm§r§f energy,","§r§fallowing them to direct a soothing current","§r§fthroughout their or a target's body.","§r§aHeal §r§f10 hearts over 25 seconds.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.PURPLE_DYE, "§r§7§ko§r§7§lSpell: §r§fSoothing Current§r§7§ko§r", "SpellSoothingCurrent", 100, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §aSupport§f.","§r§fThe caster concentrates §r§dStorm§r§f energy,","§r§fallowing them to direct a soothing current","§r§fthroughout their or a target's body.","§r§aHeal §r§f10 hearts over 25 seconds.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -63,6 +63,8 @@ public class SpellSoothingCurrent extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);

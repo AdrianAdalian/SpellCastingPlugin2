@@ -23,7 +23,7 @@ public class SpellWildBolt extends BaseSpellCapsule
 
 	public SpellWildBolt()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fWildBolt§r§f§ko§r", "SpellWildBolt", 350, true, "§r§fElement: §r§dStorm§r§f.","§r§fThis unstable spell randomly summons five","§r§fbolts of lightning to a target block.","§r§fRange to cast: 50 meters.","§r§fRange of lightning: 7 meters.","§r§fMana cost: 350 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fWildBolt§r§f§ko§r", "SpellWildBolt", 350, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThis unstable spell randomly summons five","§r§fbolts of lightning to a target block.","§r§fRange to cast: 50 meters.","§r§fRange of lightning: 7 meters.","§r§fMana cost: 350 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class SpellWildBolt extends BaseSpellCapsule
 		int TARGETBLOCKRADIUS = 50; //the radius in which the spell can be casted on.
 		
 		Block target = event.getPlayer().getTargetBlock(null, TARGETBLOCKRADIUS) ;
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
 		event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;
@@ -53,7 +53,7 @@ public class SpellWildBolt extends BaseSpellCapsule
 				target = event.getPlayer().getWorld().getBlockAt(target.getLocation().subtract(new Location(event.getPlayer().getWorld(), 0, 1, 0))) ;
 			}	
 		}
-		final Block Actualtarget = target ;
+		final Block Actualtarget = target;
 		for (int i = 1; i < 5; i++)
 		{
 			 new BukkitRunnable()
@@ -61,7 +61,7 @@ public class SpellWildBolt extends BaseSpellCapsule
 			    @Override
 			    public void run()
 			    {
-			    	int offsetX = radiusOfLightningStrike * -1 + rand.nextInt(radiusOfLightningStrike * 2); // Container values for X and Z offsets
+			    	  int offsetX = radiusOfLightningStrike * -1 + rand.nextInt(radiusOfLightningStrike * 2);
 					  int offsetZ = radiusOfLightningStrike * -1 + rand.nextInt(radiusOfLightningStrike * 2);
 
 					  // Assume we have some kind of object, like an entity or a block, that has a .getLocation() method

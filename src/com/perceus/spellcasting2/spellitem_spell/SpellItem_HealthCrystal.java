@@ -18,7 +18,7 @@ public class SpellItem_HealthCrystal extends BaseSpellCapsule
 
 	public SpellItem_HealthCrystal()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fHealth Crystal§r§7§ko§r", "SpellItem_HealthCrystal", 0, true, "§r§fElement: §r§f§o§lHoly§r§f.", "§r§fA conglomerate of crystalized ether.","§r§fThis crystal, when broken,","§r§aheals §r§f5 hearts of health.");
+		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fHealth Crystal§r§7§ko§r", "SpellItem_HealthCrystal", 0, true, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fA conglomerate of crystalized ether.","§r§fThis crystal, when broken,","§r§aheals §r§f5 hearts of health.");
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class SpellDracoMorph extends BaseSpellCapsule
 
 	public SpellDracoMorph()
 	{
-		super(Material.NETHERITE_INGOT, "§r§7§ko§r§7§lSpell: §r§fDracoMorph§r§7§ko§r", "SpellDracoMorph", 250, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fDrastically hardens the caster's skin","§r§fwhile drastically lowering movement speed.","§r§fAlso soothes the caster from high temperatures.","§r§fGrant 60% damage reduction and fire protection.","§r§fDuration:  1 minute.","§r§fMana cost: 250 §r§9mana§r§f.");
+		super(Material.NETHERITE_INGOT, "§r§7§ko§r§7§lSpell: §r§fDracoMorph§r§7§ko§r", "SpellDracoMorph", 250, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fDrastically hardens the caster's skin","§r§fwhile drastically lowering movement speed.","§r§fAlso soothes the caster from high temperatures.","§r§fGrant 60% damage reduction and fire protection.","§r§fDuration:  1 minute.","§r§fMana cost: 250 §r§9mana§r§f.");
 	}
 
 	@Override

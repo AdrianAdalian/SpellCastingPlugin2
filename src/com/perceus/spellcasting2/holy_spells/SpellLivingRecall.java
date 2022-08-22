@@ -20,7 +20,7 @@ public class SpellLivingRecall extends BaseSpellCapsule
 
 	public SpellLivingRecall()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Recall§r§f§ko§r", "SpellLivingRecall", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fA spelltome with an incantation within that allows","§r§fthe caster to recall to their spawnpoint.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Recall§r§f§ko§r", "SpellLivingRecall", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome with an incantation within that allows","§r§fthe caster to recall to their spawnpoint.","§r§fMana cost: 100 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 

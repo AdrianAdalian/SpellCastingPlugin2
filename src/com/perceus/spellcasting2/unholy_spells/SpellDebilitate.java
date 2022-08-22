@@ -21,7 +21,7 @@ public class SpellDebilitate extends BaseSpellCapsule
 
 	public SpellDebilitate()
 	{
-		super(Material.GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fDebilitate§r§7§ko§r", "SpellDebilitate", 300, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fThe caster emits a force of §r§4§o§lUnholy§r§f","§r§fenergy that utterly debilitates any target around them.","§r§fEffects: Slowness, Fatigue, Weakness, Nausea and Starvation.","§r§fRange: 20 meters.","§r§fDuration: 25 seconds.","§r§fMana cost: 300 §r§9mana§r§f.");
+		super(Material.GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fDebilitate§r§7§ko§r", "SpellDebilitate", 300, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fThe caster emits a force of §r§4§o§lUnholy§r§f","§r§fenergy that utterly debilitates any target around them.","§r§fEffects: Slowness, Fatigue, Weakness, Nausea and Starvation.","§r§fRange: 10 meters.","§r§fDuration: 25 seconds.","§r§fMana cost: 300 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class SpellDebilitate extends BaseSpellCapsule
 		return false;
 		}
 	
-		if (event.getPlayer().getNearbyEntities(30, 30, 30).size() == 0)
+		if (event.getPlayer().getNearbyEntities(10, 10, 10).size() == 0)
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
@@ -43,11 +43,11 @@ public class SpellDebilitate extends BaseSpellCapsule
 		
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 		
-		for (Entity target : event.getPlayer().getNearbyEntities(30, 30, 30)) 
+		for (Entity target : event.getPlayer().getNearbyEntities(10, 10, 10)) 
 		{
 			if (target instanceof LivingEntity)
 			{	
-				
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 200, 2));
 				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.CONFUSION, 200, 0));
 				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));

@@ -21,7 +21,7 @@ public class SpellItem_ProtectivePaste extends BaseSpellCapsule
 
 	public SpellItem_ProtectivePaste()
 	{
-		super(Material.CLAY_BALL, "§r§7§ko§r§7§lCrafted Spell: §r§fProtective Paste§r§7§ko§r", "SpellItem_ProtectivePaste", 0, true, "§r§fElement: §r§6Geo§r§f.", "§r§fClay paste infused with §r§6Geo§r§f energy.", "§r§fWhen spread on the caster,", "§r§fgrant minor physical resistance.","§r§fDuration: 1 minute.");
+		super(Material.CLAY_BALL, "§r§7§ko§r§7§lCrafted Spell: §r§fProtective Paste§r§7§ko§r", "SpellItem_ProtectivePaste", 0, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.", "§r§fClay paste infused with §r§6Geo§r§f energy.", "§r§fWhen spread on the caster,", "§r§fgrant minor physical resistance.","§r§fDuration: 1 minute.");
 	}
 
 	@Override

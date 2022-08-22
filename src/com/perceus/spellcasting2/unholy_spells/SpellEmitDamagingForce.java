@@ -9,6 +9,7 @@ import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -25,7 +26,7 @@ public class SpellEmitDamagingForce extends BaseSpellCapsule
 
 	public SpellEmitDamagingForce()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fEmit Damaging Force§r§7§ko§r", "SpellEmitDamagingForce", 50, true, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fOn Right-Click:","§r§fEmits a radial damaging force, subjugating targets.","§r§fRange: 10 meters.","§r§fOn Left-Click:", "§r§fEmit a concentrated dark force, subjugating the target.", "§r§fDeals 4 hearts of §r§cdamage§r§f","§r§fRange: 15 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fEmit Damaging Force§r§7§ko§r", "SpellEmitDamagingForce", 50, true, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fOn Right-Click:","§r§fEmits a radial damaging force, subjugating targets.","§r§fRange: 10 meters.","§r§fOn Left-Click:", "§r§fEmit a concentrated dark force, subjugating the target.", "§r§fDeals 4 hearts of §r§cdamage§r§f","§r§fRange: 15 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -68,7 +69,12 @@ public class SpellEmitDamagingForce extends BaseSpellCapsule
 			
 			for (Entity target2 : event.getPlayer().getNearbyEntities(10, 10, 10))
 			{
-				((LivingEntity) target2).damage(4);
+				if (!(target instanceof Damageable)) 
+				{
+					continue;
+				}
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
+				((Damageable) target2).damage(4);
 				target2.setVelocity(target2.getLocation().toVector().subtract(event.getPlayer().getLocation().toVector()));
 				
 			}

@@ -20,7 +20,7 @@ public class SpellCombustion extends BaseSpellCapsule
 
 	public SpellCombustion()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fCombustion§r§7§ko§r", "SpellCombustion", 400, true,true, "§r§fElement: §r§cFire§r§f.", "§r§fBy concentrating a small flame in the caster's hand,","§r§fthe caster is able to smelt any ore.","§r§fCobbled stones are smeltable.","§r§fMana cost: 400 §r§9mana§r§f.");
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fCombustion§r§7§ko§r", "SpellCombustion", 400, true,true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fBy concentrating a small flame in the caster's hand,","§r§fthe caster is able to smelt any ore.","§r§fCobbled stones are smeltable.","§r§fMana cost: 400 §r§9mana§r§f.");
 	}
 
 	@Override

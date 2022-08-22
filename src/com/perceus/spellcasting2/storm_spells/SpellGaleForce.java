@@ -24,7 +24,7 @@ public class SpellGaleForce extends BaseSpellCapsule
 
 	public SpellGaleForce()
 	{
-		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fGaleForce§r§7§ko§r", "SpellGaleForce", 30, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fEmit a damaging galeforce that pushes any ","§r§ftarget a small distance away.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fRange: 7 meters.","§r§fMana cost: 30 §r§9mana§r§f.");
+		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fGaleForce§r§7§ko§r", "SpellGaleForce", 30, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fEmit a damaging galeforce that pushes any ","§r§ftarget a small distance away.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fRange: 7 meters.","§r§fMana cost: 30 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -46,6 +46,7 @@ public class SpellGaleForce extends BaseSpellCapsule
 		
 		target.setVelocity(target.getLocation().toVector().subtract(event.getPlayer().getLocation().toVector()));
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		if (target instanceof Damageable)
 		{
 			((Damageable) target).damage(4, event.getPlayer());

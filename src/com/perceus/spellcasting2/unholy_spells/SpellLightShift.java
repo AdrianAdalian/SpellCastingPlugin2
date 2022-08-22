@@ -21,7 +21,7 @@ public class SpellLightShift extends BaseSpellCapsule
 
 	public SpellLightShift()
 	{
-		super(Material.LIGHT_GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fLight Shift§r§7§ko§r", "SpellLightShift", 75, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fCloaks the caster in §r§4§o§lUnholy§r§f energy,","§r§fshifting light around them making them less easily seen.","§r§fDuration: 30 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.LIGHT_GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fLight Shift§r§7§ko§r", "SpellLightShift", 75, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §6Buff§f.","§r§fCloaks the caster in §r§4§o§lUnholy§r§f energy,","§r§fshifting light around them making them less easily seen.","§r§fDuration: 30 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

@@ -20,7 +20,7 @@ public class SpellCreateAllay extends BaseSpellCapsule
 
 	public SpellCreateAllay()
 	{
-		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lAncient Rune§f: Materialize Allay§r§f§ko§r", "SpellCreateAllay", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fAn stable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon world level entities.","§r§fThis rune will summon an Allay on target block.","§r§fThe rune will be consumed upon use.");
+		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lAncient Rune§f: Materialize Allay§r§f§ko§r", "SpellCreateAllay", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn stable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon world level entities.","§r§fThis rune will summon an Allay on target block.","§r§fThe rune will be consumed upon use.");
 	}
 
 	@Override

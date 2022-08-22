@@ -21,7 +21,7 @@ public class SpellTailWind extends BaseSpellCapsule
 
 	public SpellTailWind()
 	{
-		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fTailwind§r§7§ko§r", "SpellTailWind", 25, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fThe caster creates a current of wind behind them","§r§fwhich slightly increases their movement speed.","§r§fDuration: 15 seconds.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fTailwind§r§7§ko§r", "SpellTailWind", 25, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §6Buff§f.","§r§fThe caster creates a current of wind behind them","§r§fwhich slightly increases their movement speed.","§r§fDuration: 15 seconds.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override

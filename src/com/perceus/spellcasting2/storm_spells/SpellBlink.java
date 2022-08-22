@@ -19,7 +19,7 @@ public class SpellBlink extends BaseSpellCapsule
 
 	public SpellBlink()
 	{
-		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fBlink§r§7§ko§r", "SpellBlink", 25, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fThe caster accelerates their body's capability","§r§fto move causing them to violently shift forward.","§r§fTeleport a short distance away.","§r§fRange: 10 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fBlink§r§7§ko§r", "SpellBlink", 25, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §bUtility§f.","§r§fThe caster accelerates their body's capability","§r§fto move causing them to violently shift forward.","§r§fTeleport a short distance away.","§r§fRange: 10 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override

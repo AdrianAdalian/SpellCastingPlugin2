@@ -29,7 +29,7 @@ public class SpellLifeSteal extends BaseSpellCapsule
 
 	public SpellLifeSteal()
 	{
-		super(Material.BLACK_DYE, "§r§7§ko§r§7§lSpell: §r§fLife Steal§r§7§ko§r", "SpellLifeSteal", 25, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSteal the lifeforce of any target,","§r§fhowever undead targets are immune.","§r§fThe Warden and Wither are also immune.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§4Drain§r§f 1 heart.","§r§fRange: 10 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.BLACK_DYE, "§r§7§ko§r§7§lSpell: §r§fLife Steal§r§7§ko§r", "SpellLifeSteal", 25, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSteal the lifeforce of any target,","§r§fhowever undead targets are immune.","§r§fThe Warden and Wither are also immune.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§4Drain§r§f 1 heart.","§r§fRange: 10 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -74,7 +74,7 @@ public class SpellLifeSteal extends BaseSpellCapsule
 		{
 			
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
-			
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
 			
 			((Damageable) target).damage(4, event.getPlayer());

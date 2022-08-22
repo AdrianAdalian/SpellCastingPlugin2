@@ -222,13 +222,18 @@ import com.perceus.spellcasting2.geo_spells.SpellTransmute;
 import com.perceus.spellcasting2.holy_spells.SpellAmeliorate;
 import com.perceus.spellcasting2.holy_spells.SpellDisarm;
 import com.perceus.spellcasting2.holy_spells.SpellEtherTransference;
+import com.perceus.spellcasting2.holy_spells.SpellFertility;
 import com.perceus.spellcasting2.holy_spells.SpellGuardianAngel;
 import com.perceus.spellcasting2.holy_spells.SpellHeal;
+import com.perceus.spellcasting2.holy_spells.SpellHealingAura;
 import com.perceus.spellcasting2.holy_spells.SpellLivingRecall;
 import com.perceus.spellcasting2.holy_spells.SpellPacify;
 import com.perceus.spellcasting2.holy_spells.SpellProlongedFlight;
+import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
+import com.perceus.spellcasting2.holy_spells.SpellUndyingSoul;
+import com.perceus.spellcasting2.spellitem_spell.SpellItem_EtherCrystal;
 import com.perceus.spellcasting2.storm_spells.SpellElectrocute;
 import com.perceus.spellcasting2.storm_spells.SpellStormSurge;
 import com.perceus.spellcasting2.storm_spells.SpellWildBolt;
@@ -302,13 +307,13 @@ public class SpellItemDropListener implements Listener
 		put(EntityType.PIG, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellHealingHands(), new KBSpellSatiate()});
 		put(EntityType.CHICKEN, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellHealingHands(), new KBSpellAccolades()});
 		put(EntityType.SHEEP, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellHealingHands()});
-		put(EntityType.PARROT, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellAccolades()});
-		put(EntityType.PANDA, new BaseSpellCapsule[]{new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure(), new KBSpellSatiate()});
-		put(EntityType.GOAT, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure()});
+		put(EntityType.PARROT, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellAccolades(), new SpellHealingAura()});
+		put(EntityType.PANDA, new BaseSpellCapsule[]{new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure(), new KBSpellSatiate(), new SpellHealingAura()});
+		put(EntityType.GOAT, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure(), new SpellHealingAura(), new SpellProtectOther()});
 		put(EntityType.FOX, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellAccolades()});
-		put(EntityType.MULE, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce()});
-		put(EntityType.LLAMA, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new KBSpellAccolades()});
-		put(EntityType.HORSE, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce()});
+		put(EntityType.MULE, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new SpellHealingAura(), new SpellProtectOther()});
+		put(EntityType.LLAMA, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new KBSpellAccolades(), new SpellHealingAura(), new SpellProtectOther()});
+		put(EntityType.HORSE, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new SpellHealingAura(), new SpellProtectOther()});
 		//void spell drops
 		put(EntityType.ENDERMAN, new BaseSpellCapsule[] {new KBSpellVoidBurst(), new KBSpellPull(), new KBSpellVectorPlate(), new KBSpellTeleport(), new KBSpellRift(), new KBSpellAntimatter(),
 				new KBSpellCrush(), new KBSpellPolarize(), new KBSpellAccelerateLife(), new KBSpellCataclysm(), 
@@ -340,7 +345,7 @@ public class SpellItemDropListener implements Listener
 		put(EntityType.HOGLIN, new BaseSpellCapsule[] {new KBSpellKindleFlame(), new KBSpellIgnite(), new KBSpellInsulate()});
 		
 		//geo spell drops
-		put(EntityType.HUSK, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellSandBlast(), new SpellSandstorm(), new KBSpellBoulder()});
+		put(EntityType.HUSK, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellSandBlast(), new SpellSandstorm(), new KBSpellBoulder(), new SpellProtectOther()});
 		put(EntityType.SPIDER, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellPoisonGas(), new KBSpellPoisonCloud()});
 		put(EntityType.CAVE_SPIDER, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellPoisonCloud(), new KBSpellToxicGas()});
 		
@@ -349,7 +354,7 @@ public class SpellItemDropListener implements Listener
 		put(EntityType.VINDICATOR, new BaseSpellCapsule[] {new KBSpellThunderStorm(), new KBSpellUberCharge(), new KBSpellThunderStrike()});
 		
 		//unholy spell drops
-		put(EntityType.BAT, new BaseSpellCapsule[] {new KBSpellLifeSteal()});
+		put(EntityType.BAT, new BaseSpellCapsule[] {new KBSpellLifeSteal(), new SpellFertility(), new SpellProtectOther()});
 		//Magic Bolt (internal name) aka magic missile, is a spell that can only be dropped by the skeleton regardless of it being undead and the spell element being Holy.
 		put(EntityType.SKELETON, new BaseSpellCapsule[] {new KBSpellReapSouls(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), new KBSpellLightShift(), new KBSpellMagicBolt()});
 		put(EntityType.ZOMBIE, new BaseSpellCapsule[] {new KBSpellLifeSteal(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), new KBSpellEmitDamagingForce()});
@@ -367,20 +372,20 @@ public class SpellItemDropListener implements Listener
 				new KBSpellHellFire(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellDemonicReflexes(), new KBSpellDoom(), new KBSpellRot()});
 		put(EntityType.WITCH, new BaseSpellCapsule[] {new KBSpellKindleFlame(),
 				new KBSpellIgnite(), new KBSpellSoak(), new SpellPacify(), new KBSpellPoisonGas(), new KBSpellArcaneBolt(), new KBSpellDebilitate(), new KBSpellRaiseDead(), new KBSpellCure(),
-				new SpellDisarm(), new KBSpellMageMorph(), new KBSpellBarrier()});
+				new SpellDisarm(), new KBSpellMageMorph(), new KBSpellBarrier(), new SpellProtectOther()});
 		put(EntityType.PHANTOM, new BaseSpellCapsule[] {new KBSpellAngelicFlight(), new KBSpellSmite(), new KBSpellGust(), new KBSpellGaleForce(), new KBSpellTailWind()});
 		put(EntityType.VEX, new BaseSpellCapsule[] {new KBSpellAngelicFlight(),
 				new KBSpellSmite(), new KBSpellGust(), new KBSpellLifeSteal(), new KBSpellReapSouls(), new KBSpellEmitForce(), new KBSpellEmitDamagingForce(), new KBSpellTailWind(), new KBSpellBlink()});
 		put(EntityType.EVOKER, new BaseSpellCapsule[] {new KBSpellBlink(), new SpellWildBolt(),
 				new SpellStormSurge(), new KBSpellMageMorph(), new KBSpellArcaneBolt(),
 				new KBSpellVoidBurst(), new KBSpellUndeadEffigy(), new KBSpellAccelerateLife(),
-				new KBSpellPolarize(), new KBSpellRaiseDead(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellPull(), new SpellEtherTransference()});
+				new KBSpellPolarize(), new KBSpellRaiseDead(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellPull(), new SpellEtherTransference(), new SpellFertility(), new SpellProtectOther()});
 		put(EntityType.RAVAGER, new BaseSpellCapsule[] {new KBSpellGeoMorph(), new KBSpellEmitDamagingForce(), new KBSpellCrush(), new KBSpellVectorPlate(), new KBSpellUndeadEffigy()});
 		put(EntityType.AXOLOTL, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellReconstitute(), new KBSpellRegenerate(), new KBSpellSplash(), new KBSpellMendingWater(), new KBSpellPenance()});
 		put(EntityType.BEE, new BaseSpellCapsule[] {new KBSpellTailWind(), new KBSpellGust(), new KBSpellCure(), new KBSpellHealingHands(), new KBSpellPoisonGas(), new KBSpellBarrier()});
 		put(EntityType.TURTLE, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellBoulder(), new KBSpellGills(), new KBSpellSoak(), new KBSpellRipTide(), new SpellTillEarth(), new KBSpellBarrier()});
-		put(EntityType.GHAST, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellFireball(), new KBSpellIgnite(), new KBSpellRegenerate(), new KBSpellAngelicFlight(), new KBSpellPenance(), new KBSpellExtricate()});
-		put(EntityType.WOLF, new BaseSpellCapsule[] {new KBSpellCure(), new KBSpellSatiate(), new KBSpellAccolades(), new KBSpellEmitForce()});
+		put(EntityType.GHAST, new BaseSpellCapsule[]{new SpellFertility(), new SpellPacify(), new KBSpellFireball(), new KBSpellIgnite(), new KBSpellRegenerate(), new KBSpellAngelicFlight(), new KBSpellPenance(), new KBSpellExtricate(), new SpellProtectOther()});
+		put(EntityType.WOLF, new BaseSpellCapsule[] {new KBSpellCure(), new KBSpellSatiate(), new KBSpellAccolades(), new KBSpellEmitForce(), new SpellFertility(), new SpellProtectOther()});
 	}};
 	
 	@SuppressWarnings("serial")
@@ -389,16 +394,21 @@ public class SpellItemDropListener implements Listener
 		//bosses' drops 
 		put(EntityType.ELDER_GUARDIAN, new BaseSpellCapsule[] {new SpellIceAge(), new KBSpellConduitEther(), 
 				new KBSpellWaveWake(), new KBSpellCrystalize(), new KBSpellMendingWater(), new KBSpellFishScales(), new KBSpellGills(), new SpellPoseidonsGift(), 
-				new KBSpellSoothingCurrent(), new SpellLivingRecall(), new KBSpellPenance(), new SpellEtherTransference()});
-		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), 
-				new KBSpellDracoMorph(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellVoidGate(), new KBSpellGate()});
+				new KBSpellSoothingCurrent(), new SpellLivingRecall(), new KBSpellPenance(), new SpellEtherTransference(), new KBSpellBarrier(), new SpellItem_EtherCrystal()});
+		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), new KBSpellBarrier(), 
+				new KBSpellDracoMorph(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellVoidGate(), new KBSpellGate(), new SpellItem_EtherCrystal()});
 		put(EntityType.WITHER, new BaseSpellCapsule[] {new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), 
-				new SpellLawOfProgression(), new SpellEtherBreak(), new KBSpellArcaneBolt(), new SpellNullify(), new SpellDrainingAura(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellReapSouls(),
+				new SpellLawOfProgression(), new SpellEtherBreak(), new KBSpellArcaneBolt(), new SpellNullify(), 
+				new SpellDrainingAura(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellReapSouls(),
 				new KBSpellDemonSight(), new KBSpellSapEther(), new KBSpellRaiseDead(), new KBSpellUndeadEffigy(), 
-				new KBSpellDemonicReflexes(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellDoom(), new KBSpellRot(), new KBSpellBarrier(), new SpellReapAndSew()});
+				new KBSpellDemonicReflexes(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellDoom(), 
+				new KBSpellRot(), new KBSpellBarrier(), new SpellReapAndSew(), new SpellItem_EtherCrystal(),new SpellUndyingSoul()});
 		put(EntityType.ALLAY, new BaseSpellCapsule[] {new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellJudgement(), new SpellAmeliorate(), 
-				new KBSpellVaporize(), new KBSpellArcaneBolt(), new SpellProlongedFlight(), new SpellGuardianAngel(), new KBSpellLawOfRegression(), new KBSpellPenance(), new SpellRestoration(), new SpellEtherTransference()});
-		put(EntityType.WARDEN, new BaseSpellCapsule[] {new KBSpellBanishGreaterEvil(), new SpellPrimordialShift(), new SpellVoidShift(), new SpellEtherContinuity(), new SpellOverrideClimate(), new SpellSingularity()});
+				new KBSpellVaporize(), new KBSpellArcaneBolt(), new SpellProlongedFlight(), new SpellGuardianAngel(), new KBSpellLawOfRegression(), 
+				new KBSpellPenance(), new SpellRestoration(), new SpellEtherTransference(), 
+				new SpellHealingAura(), new SpellProtectOther(), new SpellFertility(), new KBSpellBarrier(), new SpellItem_EtherCrystal(),new SpellUndyingSoul()});
+		put(EntityType.WARDEN, new BaseSpellCapsule[] {new KBSpellBanishGreaterEvil(), new SpellPrimordialShift(), new SpellVoidShift(), 
+				new SpellEtherContinuity(), new SpellOverrideClimate(), new SpellSingularity(), new KBSpellBarrier(), new SpellItem_EtherCrystal()});
 	}};
 	
 	@SuppressWarnings("serial")

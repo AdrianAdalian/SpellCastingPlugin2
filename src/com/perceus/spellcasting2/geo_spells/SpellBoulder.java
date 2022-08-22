@@ -21,7 +21,7 @@ public class SpellBoulder extends BaseSpellCapsule
 
 	public SpellBoulder()
 	{
-		super(Material.BROWN_DYE, "§r§7§ko§r§7§lSpell: §r§fBoulder§r§7§ko§r", "SpellBoulder", 50, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fHurl a large boulder that stuns any target upon impact.","§r§fStun for 5 seconds.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.BROWN_DYE, "§r§7§ko§r§7§lSpell: §r§fBoulder§r§7§ko§r", "SpellBoulder", 50, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §7Debuff§f.","§r§fHurl a large boulder that stuns any target upon impact.","§r§fStun for 5 seconds.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

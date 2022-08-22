@@ -23,7 +23,7 @@ public class MagicWeapon_WandOfFire extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfFire()
 	{
-		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Fire", "FFE748","FF1919","§l§o"), "MagicWeaponWandOfFire", 0, true, "§r§fElement: §r§cFire§r§f.",
+		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Fire", "FFE748","FF1919","§l§o"), "MagicWeaponWandOfFire", 0, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f and §6Buff§f.",
 				"§r§fA simple stick infused with the element of §r§cFire§r§f.",
 				"§r§7§lSpell: §r§fHot Coals",
 				"§r§fLeft-Click: Cast a tiny burst of flame towards a target.",

@@ -18,7 +18,7 @@ public class SpellHeal extends BaseSpellCapsule
 
 	public SpellHeal()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Heal§r§f§ko§r", "SpellHeal", 50, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fA tome with an incantation that heals the caster.","§r§aHeals §r§f5 hearts to self.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Heal§r§f§ko§r", "SpellHeal", 50, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.","§r§fA tome with an incantation that heals the caster.","§r§aHeals §r§f5 hearts to self.","§r§fMana cost: 50 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 

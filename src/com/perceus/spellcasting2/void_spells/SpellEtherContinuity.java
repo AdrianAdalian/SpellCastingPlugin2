@@ -21,7 +21,7 @@ public class SpellEtherContinuity extends BaseSpellCapsule
 
 	public SpellEtherContinuity()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fEther Continuity§r§f§ko§r", "SpellEtherContinuity", 0, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fA spelltome with an incantation that", "§r§fmanipulates the caster's mana and health.","§r§fThis spell's effect differ from time of day.","§r§fDuring the §r§6Day§r§f, channel mana into health.","§r§fDuring the §r§7Night§r§f, channel health into mana.","§r§fIf §r§7Night§r§f:","§r§fTake 5 hearts of §r§cdamage§r§f.","§r§fRestore 750 §r§9mana§r§f.","§r§fIf §r§6Day§r§f:","§r§aHeal§r§f 10 hearts.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fEther Continuity§r§f§ko§r", "SpellEtherContinuity", 0, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome with an incantation that", "§r§fmanipulates the caster's mana and health.","§r§fThis spell's effect differ from time of day.","§r§fDuring the §r§6Day§r§f, channel mana into health.","§r§fDuring the §r§7Night§r§f, channel health into mana.","§r§fIf §r§7Night§r§f:","§r§fTake 5 hearts of §r§cdamage§r§f.","§r§fRestore 750 §r§9mana§r§f.","§r§fIf §r§6Day§r§f:","§r§aHeal§r§f 10 hearts.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override

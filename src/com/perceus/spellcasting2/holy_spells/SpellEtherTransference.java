@@ -27,7 +27,7 @@ public class SpellEtherTransference extends BaseSpellCapsule
 
 	public SpellEtherTransference()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Ether Transference§r§f§ko§r", "SpellEtherTransference", 0, true, true, "§r§fElement: §r§f§o§lHoly§r§f.",
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Ether Transference§r§f§ko§r", "SpellEtherTransference", 0, true, true, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.",
 				"§r§fRadiate a player target with §r§f§o§lHoly§r§f energy,",
 				"§r§fConcentrating on their Aethereal wavelength,",
 				"§r§ftransfer the caster's mana reserves to target player.",
@@ -70,7 +70,7 @@ public class SpellEtherTransference extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"You don't have any more mana left to give.");
 			return false;
 		}
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);

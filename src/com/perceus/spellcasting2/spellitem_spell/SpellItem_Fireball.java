@@ -18,7 +18,7 @@ public class SpellItem_Fireball extends BaseSpellCapsule
 
 	public SpellItem_Fireball()
 	{
-		super(Material.FIRE_CHARGE, "§r§7§ko§r§7§lCrafted Spell: §r§fHot Coals§r§7§ko§r", "SpellItem_Fireball", 0, true, "§r§fElement: §r§cFire§r§f.","§r§fLaunch hot coals that set whatever's hit ablaze.");
+		super(Material.FIRE_CHARGE, "§r§7§ko§r§7§lCrafted Spell: §r§fHot Coals§r§7§ko§r", "SpellItem_Fireball", 0, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fLaunch hot coals that set whatever's hit ablaze.");
 	}
 
 	@Override

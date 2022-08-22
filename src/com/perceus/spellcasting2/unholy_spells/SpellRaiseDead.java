@@ -27,7 +27,7 @@ public class SpellRaiseDead extends BaseSpellCapsule
 
 	public SpellRaiseDead()
 	{
-		super(Material.BONE, "§r§7§ko§r§7§lSpell: §r§fRaise Dead§r§7§ko§r", "SpellRaiseDead", 500, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fThe caster harnesses enough,", "§r§4§o§lUnholy§r§f energy to revive the undead.", "§r§fSacrifice half of the caster's", "§r§fcurrent life force.","§r§fReanimates any zombie villager", "§r§fto their living counter part.","§r§fRange: 5 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.BONE, "§r§7§ko§r§7§lSpell: §r§fRaise Dead§r§7§ko§r", "SpellRaiseDead", 500, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §bUtility§f.","§r§fThe caster harnesses enough,", "§r§4§o§lUnholy§r§f energy to revive the undead.", "§r§fSacrifice half of the caster's", "§r§fcurrent life force.","§r§fReanimates any zombie villager", "§r§fto their living counter part.","§r§fRange: 5 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class SpellRaiseDead extends BaseSpellCapsule
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
 		
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 		event.getPlayer().setHealth(event.getPlayer().getHealth() / 2.0);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
 		((ZombieVillager) target).setConversionTime(0);

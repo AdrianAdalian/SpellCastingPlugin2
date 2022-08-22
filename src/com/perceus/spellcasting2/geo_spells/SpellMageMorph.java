@@ -21,7 +21,7 @@ public class SpellMageMorph extends BaseSpellCapsule
 
 	public SpellMageMorph()
 	{
-		super(Material.GOLD_INGOT, "§r§7§ko§r§7§lSpell: §r§fMageMorph§r§7§ko§r", "SpellMageMorph", 75, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fA lightweight incantation that","§r§fprotects the caster from damage.","§r§fCoats the body in a protective coat of mage's armor.","§r§fGrant 20% damage reduction and fire protection.","§r§fAlso slightly boots movement speed.","§r§fDuration: 1 minute.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.GOLD_INGOT, "§r§7§ko§r§7§lSpell: §r§fMageMorph§r§7§ko§r", "SpellMageMorph", 75, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fA lightweight incantation that","§r§fprotects the caster from damage.","§r§fCoats the body in a protective coat of mage's armor.","§r§fGrant 20% damage reduction and fire protection.","§r§fAlso slightly boots movement speed.","§r§fDuration: 1 minute.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

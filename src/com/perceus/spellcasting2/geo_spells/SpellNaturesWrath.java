@@ -20,7 +20,7 @@ public class SpellNaturesWrath extends BaseSpellCapsule
 
 	public SpellNaturesWrath()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fNature's Wrath§r§7§ko§r", "SpellNaturesWrath", 750, true, true, "§r§fElement: §r§6Geo§r§f.",
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fNature's Wrath§r§7§ko§r", "SpellNaturesWrath", 750, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §bUtility§f §dAOE§f.",
 				"§r§fThe caster concentrates pure §r§6Geo§r§f energy,",
 				"§r§fCausing all wildlife to rapidly decay around the caster.",
 				"§r§fRange: 50 square meters.",

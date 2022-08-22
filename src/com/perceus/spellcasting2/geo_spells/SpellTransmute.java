@@ -21,7 +21,7 @@ public class SpellTransmute extends BaseSpellCapsule
 
 	public SpellTransmute()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fTransmute§r§f§ko§r", "SpellTransmute", 150, false, "§r§fElement: §r§6Geo§r§f.","§r§fInfuse any ore with the forces of §r§6Geo§r§f.","§r§fTransmute that ore into its next level of rarity.","§r§fDoes the same thing in off-hand.","§r§fRange: 10 meters.","§r§fMana cost: 150 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fTransmute§r§f§ko§r", "SpellTransmute", 150, false, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §bUtility§f.","§r§fInfuse any ore with the forces of §r§6Geo§r§f.","§r§fTransmute that ore into its next level of rarity.","§r§fDoes the same thing in off-hand.","§r§fRange: 10 meters.","§r§fMana cost: 150 §r§9mana§r§f.");
 	}
 
 	@Override

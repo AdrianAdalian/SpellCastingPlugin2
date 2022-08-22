@@ -25,7 +25,7 @@ public class SpellRestoration extends BaseSpellCapsule
 
 	public SpellRestoration()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fAura of Restoration§r§f§ko§r", "SpellRestoration", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fAn incation written by Archangels", "§r§fcalls home to the pages of this tome.","§r§fThe caster is able to fully restore health and mana,","§r§fand cure diseases and dispell debuffs","§r§fof all those within range.", "§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fAura of Restoration§r§f§ko§r", "SpellRestoration", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §dAOE§f.","§r§fAn incation written by Archangels", "§r§fcalls home to the pages of this tome.","§r§fThe caster is able to fully restore health and mana,","§r§fand cure diseases and dispell debuffs","§r§fof all those within range.", "§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -42,9 +42,6 @@ public class SpellRestoration extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
-		
-		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.CLOUD, null);
-		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 		
 		for (Entity target : event.getPlayer().getNearbyEntities(15, 15, 15))
 		{
@@ -82,15 +79,17 @@ public class SpellRestoration extends BaseSpellCapsule
 				}
 			}		
 			
+			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.CLOUD, null);
+			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			if (target instanceof Player) 
 			{
 				((Player) target).setHealth(((Player) target).getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 			}
-			
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getMaxMana());
 			ManaInterface.updateScoreBoard((Player) target);
 			
-			PrintUtils.sendMessage((Player)target.getLocation(), event.getPlayer().getDisplayName() + " has restored your Mana, Health and routed all ailments.");
+			PrintUtils.sendMessage((Player)target, event.getPlayer().getDisplayName() + " has restored your Mana, Health and routed all ailments.");
 			
 		}
 		

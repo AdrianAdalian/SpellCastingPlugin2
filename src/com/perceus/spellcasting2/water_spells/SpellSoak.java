@@ -27,7 +27,7 @@ public class SpellSoak extends BaseSpellCapsule
 
 	public SpellSoak()
 	{
-		super(Material.BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fSoak§r§7§ko§r", "SpellSoak", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fConduct and expell a current of §r§9Water§r§f,","§r§ffatiguing, slowing, and weakens the target.","§r§fDuration: 20 seconds.","§r§fRange: 20 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fSoak§r§7§ko§r", "SpellSoak", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §7Debuff§f.","§r§fConduct and expell a current of §r§9Water§r§f,","§r§ffatiguing, slowing, and weakens the target.","§r§fDuration: 20 seconds.","§r§fRange: 20 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -51,7 +51,7 @@ public class SpellSoak extends BaseSpellCapsule
 		{
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.AMBIENT_UNDERWATER_EXIT, SoundCategory.MASTER, 1, 1);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.WATER_DROP, null);
-			
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 400, 0));
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 400, 0));
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 400, 0));

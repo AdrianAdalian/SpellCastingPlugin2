@@ -23,7 +23,7 @@ public class SpellSmite extends BaseSpellCapsule
 
 	public SpellSmite()
 	{
-		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fSmite§r§7§ko§r", "SpellSmite", 50, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSummon a small bolt of lightning on any target.","§r§fRange: 50 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fSmite§r§7§ko§r", "SpellSmite", 50, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a small bolt of lightning on any target.","§r§fRange: 50 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -42,6 +42,7 @@ public class SpellSmite extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target");
 			return false;
 		}
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
 		target.getWorld().strikeLightning(target.getLocation());
 		

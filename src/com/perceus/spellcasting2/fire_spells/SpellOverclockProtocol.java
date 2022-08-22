@@ -21,7 +21,7 @@ public class SpellOverclockProtocol extends BaseSpellCapsule
 
 	public SpellOverclockProtocol()
 	{
-		super(Material.RED_DYE, "§r§7§ko§r§7§lSpell: §r§fOverclock Protocol§r§7§ko§r", "SpellOverclockProtocol", 250, true, true, "§r§fElement: §r§cFire§r§f.","§r§fDrastically overclocks caster's offensive","§r§fperformance granting a 200% §r§cdamage§r§f increase.","§r§fAlso slightly boosts interact speed.", "§r§fWhen the overclock has subsided,", "§r§fa brief period of shock will overcome the caster.","§r§fEffect duration: 30 seconds.", "§r§fShock duration: 15 seconds.","§r§fMana cost: 250 §r§9mana§r§f.");
+		super(Material.RED_DYE, "§r§7§ko§r§7§lSpell: §r§fOverclock Protocol§r§7§ko§r", "SpellOverclockProtocol", 250, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §6Buff§f.","§r§fDrastically overclocks caster's offensive","§r§fperformance granting a 200% §r§cdamage§r§f increase.","§r§fAlso slightly boosts interact speed.", "§r§fWhen the overclock has subsided,", "§r§fa brief period of shock will overcome the caster.","§r§fEffect duration: 30 seconds.", "§r§fShock duration: 15 seconds.","§r§fMana cost: 250 §r§9mana§r§f.");
 	}
 
 	@Override

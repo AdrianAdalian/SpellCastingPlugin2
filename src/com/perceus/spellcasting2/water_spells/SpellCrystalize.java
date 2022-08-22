@@ -24,7 +24,7 @@ public class SpellCrystalize extends BaseSpellCapsule
 
 	public SpellCrystalize()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§7§lSpell: §r§fCrystallize§r§7§ko§r", "SpellCrystalize", 1000, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpikes burst from the casters body crystallizing them","§r§fwhile briefly rendering them immobilized and impervious.","§r§fAny within close proximity are immobilized, weakened and damaged.","§r§fThe effects of the blast also cause targets to glow.","§r§fAfter the caster thaws,","§r§fgrant increased movement speed for 5 seconds.","§r§fDeals 7 hearts of §r§cdamage§r§f.","§r§fDuration for caster: 10 seconds.","§r§fDuration for targets: 20 seconds.","§r§fRange: 5 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.QUARTZ, "§r§7§ko§r§7§lSpell: §r§fCrystallize§r§7§ko§r", "SpellCrystalize", 1000, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fSpikes burst from the casters body crystallizing them","§r§fwhile briefly rendering them immobilized and impervious.","§r§fAny within close proximity are immobilized, weakened and damaged.","§r§fThe effects of the blast also cause targets to glow.","§r§fAfter the caster thaws,","§r§fgrant increased movement speed for 5 seconds.","§r§fDeals 7 hearts of §r§cdamage§r§f.","§r§fDuration for caster: 10 seconds.","§r§fDuration for targets: 20 seconds.","§r§fRange: 5 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -46,6 +46,7 @@ public class SpellCrystalize extends BaseSpellCapsule
 		{
 			if (target instanceof LivingEntity)
 	    	{
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
 				((Damageable) target).damage(14, event.getPlayer());
 	    		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 400, 99));
 	    		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 400, 99));

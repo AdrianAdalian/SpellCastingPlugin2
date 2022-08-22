@@ -21,7 +21,7 @@ public class SpellGills extends BaseSpellCapsule
 
 	public SpellGills()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fGills§r§7§ko§r", "SpellGills", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fPolymorph fish-like gills at the caster's neck","§r§fgranting temporary water breathing.","§r§fDuration: 60 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fGills§r§7§ko§r", "SpellGills", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §6Buff§f.","§r§fPolymorph fish-like gills at the caster's neck","§r§fgranting temporary water breathing.","§r§fDuration: 60 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

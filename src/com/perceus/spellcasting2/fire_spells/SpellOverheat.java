@@ -18,7 +18,7 @@ public class SpellOverheat extends BaseSpellCapsule
 
 	public SpellOverheat()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Overheat§r§f§ko§r", "SpellOverheat", 200, true, "§r§fElement: §r§cFire§r§f.","§r§fSet all targets within a small radius ablaze.","§r§fDeals 10 hearts of §r§cdamage§r§f over 16 seconds to each target.","§r§fRange: 15 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Overheat§r§f§ko§r", "SpellOverheat", 200, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fSet all targets within a small radius ablaze.","§r§fDeals 10 hearts of §r§cdamage§r§f over 16 seconds to each target.","§r§fRange: 15 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -42,9 +42,11 @@ public class SpellOverheat extends BaseSpellCapsule
 		
 		for (Entity target : event.getPlayer().getNearbyEntities(15, 15, 15)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FLAME, null);
 			target.setFireTicks(400);
 		}
 		return true; 
 	}
 
 }
+//,"§r§fSpell Type: §7Debuff§f §dAOE§f."

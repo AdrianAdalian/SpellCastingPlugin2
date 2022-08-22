@@ -18,7 +18,7 @@ public class SpellAntimatter extends BaseSpellCapsule
 
 	public SpellAntimatter()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fAntimatter§r§7§ko§r", "SpellAntimatter", 150, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSummon a small concentration of antimatter","§r§fthat causes an explosion at any target block.","§r§fRange: 30 meters.","§r§fMana cost: 150 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fAntimatter§r§7§ko§r", "SpellAntimatter", 150, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a small concentration of antimatter","§r§fthat causes an explosion at any target block.","§r§fRange: 30 meters.","§r§fMana cost: 150 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -40,9 +40,9 @@ public class SpellAntimatter extends BaseSpellCapsule
 			return false;
 		}
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SHULKER_SHOOT, SoundCategory.MASTER, 1, 1);
 		target.getWorld().createExplosion(target.getLocation(), 5);
-		
 		return true;
 	}
 

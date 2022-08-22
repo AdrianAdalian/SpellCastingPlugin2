@@ -25,7 +25,7 @@ public class SpellThunderStrike extends BaseSpellCapsule
 
 	public SpellThunderStrike()
 	{
-		super(Material.LARGE_AMETHYST_BUD, "§r§7§ko§r§7§lSpell: §r§fThunderStrike§r§7§ko§r", "SpellThunderStrike", 200, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSummon two consecutive lightning bolts on any target.","§r§fRange: 55 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.LARGE_AMETHYST_BUD, "§r§7§ko§r§7§lSpell: §r§fThunderStrike§r§7§ko§r", "SpellThunderStrike", 200, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon two consecutive lightning bolts on any target.","§r§fRange: 55 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -45,6 +45,7 @@ public class SpellThunderStrike extends BaseSpellCapsule
 			return false;
 		}
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		target.getWorld().strikeLightning(target.getLocation());
 		new BukkitRunnable()
 		{

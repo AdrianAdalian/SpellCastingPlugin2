@@ -20,7 +20,7 @@ public class SpellVoidBurst extends BaseSpellCapsule
 
 	public SpellVoidBurst()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fVoid Burst§r§7§ko§r", "SpellVoidBurst", 10, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fEmit a burst of concentrated §r§3§lVOID§r§f energy","§r§fstrong enough to distort matter.","§r§fCause any target block to acutely decompose.","§r§fRange: 6 meter.","§r§fMana cost: 10 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fVoid Burst§r§7§ko§r", "SpellVoidBurst", 10, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fEmit a burst of concentrated §r§3§lVOID§r§f energy","§r§fstrong enough to distort matter.","§r§fCause any target block to acutely decompose.","§r§fRange: 6 meter.","§r§fMana cost: 10 §r§9mana§r§f.");
 	}
 
 	@Override

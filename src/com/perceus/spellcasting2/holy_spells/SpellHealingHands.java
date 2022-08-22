@@ -28,7 +28,7 @@ public class SpellHealingHands extends BaseSpellCapsule
 
 	public SpellHealingHands()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fHealing Hands§r§7§ko§r", "SpellHealingHands", 60, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fBathe the target in healing light.","§r§aHeals §r§f5 hearts to target.", "§r§fRange: 5 meters.","§r§fMana cost: 60 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fHealing Hands§r§7§ko§r", "SpellHealingHands", 100, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.","§r§fBathe the target in healing light.","§r§aHeals §r§f5 hearts to target.", "§r§fRange: 7 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -40,7 +40,7 @@ public class SpellHealingHands extends BaseSpellCapsule
 			return false; 
 		}
 		
-		Entity target = getNearestPlayerInSight(event.getPlayer(), 5);
+		Entity target = getNearestPlayerInSight(event.getPlayer(), 7);
 		if (target == null) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
@@ -61,16 +61,20 @@ public class SpellHealingHands extends BaseSpellCapsule
 		
 		try
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
+			SpellParticles.drawDisc(target.getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			((Damageable) target).setHealth(event.getPlayer().getHealth()+10);		
 		}
 		catch(IllegalArgumentException e)
 		{		
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
+			SpellParticles.drawDisc(target.getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			((Damageable) target).setHealth(event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 		}
 		return true;

@@ -27,8 +27,7 @@ public class SpellDisarm extends BaseSpellCapsule
 
 	public SpellDisarm()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Disarm§r§f§ko§r", "SpellDisarm", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.", "§r§fAn incantation capable of disarming target player.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
-		// TODO Auto-generated constructor stub
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Disarm§r§f§ko§r", "SpellDisarm", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.", "§r§fAn incantation capable of disarming target player.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -78,6 +77,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		
 		if (stack.getType().equals(Material.DIAMOND_SWORD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -88,6 +88,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.GOLDEN_SWORD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -97,6 +98,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.IRON_SWORD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -106,6 +108,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.NETHERITE_SWORD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -115,6 +118,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.STONE_SWORD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -124,6 +128,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.WOODEN_SWORD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -133,6 +138,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.WOODEN_AXE)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -142,6 +148,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.STONE_AXE)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -151,6 +158,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.IRON_AXE)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -160,6 +168,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.GOLDEN_AXE)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -169,6 +178,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.DIAMOND_AXE)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -178,6 +188,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.NETHERITE_AXE)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);
@@ -187,6 +198,7 @@ public class SpellDisarm extends BaseSpellCapsule
 		}
 		if (stack.getType().equals(Material.SHIELD)) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getLocation().getWorld().dropItem(target.getLocation(), stack);

@@ -21,7 +21,7 @@ public class SpellConduitEther extends BaseSpellCapsule
 
 	public SpellConduitEther()
 	{
-		super(Material.BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fConduit Ether§r§7§ko§r", "SpellConduitEther", 125, true, true, "§r§fElement: §r§9Water§r§f.", "§r§fThe caster concentrates pure §r§9Water§r§f energy,","§r§fgranting heightened senses underwater.","§r§fDuration: 1 minute.","§r§fMana cost: 125 §r§9mana§r§f.");
+		super(Material.BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fConduit Ether§r§7§ko§r", "SpellConduitEther", 125, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §6Buff§f.", "§r§fThe caster concentrates pure §r§9Water§r§f energy,","§r§fgranting heightened senses underwater.","§r§fDuration: 1 minute.","§r§fMana cost: 125 §r§9mana§r§f.");
 	}
 
 	@Override

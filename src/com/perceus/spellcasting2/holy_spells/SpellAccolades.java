@@ -27,7 +27,7 @@ public class SpellAccolades extends BaseSpellCapsule
 
 	public SpellAccolades()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fAccolades§r§7§ko§r", "SpellAccolades", 200, true, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fBlesses the target, granting various positive buffs.", "§r§fRange: 15 meters.","§r§fDuration: 1 minute.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fAccolades§r§7§ko§r", "SpellAccolades", 350, true, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §6Buff§f.","§r§fBlesses the target, granting various positive buffs.", "§r§fRange: 15 meters.","§r§fDuration: 1 minute.","§r§fMana cost: 350 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -46,6 +46,7 @@ public class SpellAccolades extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 		    SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
 			((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);

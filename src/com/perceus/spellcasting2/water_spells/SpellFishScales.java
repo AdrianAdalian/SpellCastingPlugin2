@@ -23,7 +23,7 @@ public class SpellFishScales extends BaseSpellCapsule
 
 	public SpellFishScales()
 	{
-		super(Material.PRISMARINE_CRYSTALS, "§r§7§ko§r§7§lSpell: §r§fFish Scales§r§7§ko§r", "SpellFishScales", 50, true, true, "§r§fElement: §r§9Water§r§f.","§r§fHardens the caster's flesh into fish scales.","§r§fOn Right-Click:","§r§fApply 20% damage reduction for 20 seconds.","§r§fOn Left-Click:","§r§fExpell a fish scale that slows, weakens and fatigues","§r§fthose hit. Also deal minor damage.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fDuration of effects: 20 seconds.","§r§f","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.PRISMARINE_CRYSTALS, "§r§7§ko§r§7§lSpell: §r§fFish Scales§r§7§ko§r", "SpellFishScales", 50, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fHardens the caster's flesh into fish scales.","§r§fOn Right-Click:","§r§fApply 20% damage reduction for 20 seconds.","§r§fOn Left-Click:","§r§fExpell a fish scale that slows, weakens and fatigues","§r§fthose hit. Also deal minor damage.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fDuration of effects: 20 seconds.","§r§f","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

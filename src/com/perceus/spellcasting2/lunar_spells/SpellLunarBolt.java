@@ -31,7 +31,7 @@ public class SpellLunarBolt extends BaseSpellCapsule
 	public SpellLunarBolt()
 	{
 		super(Material.ENCHANTED_BOOK, ChatUtils.of("☽ Lunar Tome: Lunar Bolt ☽", "30D5C8","FFFFFF",""), "SpellLunarBolt", 150, false, "§r§fElement: §r§f§o§l§bL§3u§bn§3α§br§r§f.",
-				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.",
+				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fThe spell within grows stronger during §7Nightfall§f.",
 				"§r§fDuring the §r§6Day§r§f:",
 				"§r§fCast a weak bolt of §r§f§o§l§bL§3u§bn§3a§br§r§f energy.",

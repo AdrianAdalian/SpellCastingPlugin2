@@ -21,7 +21,7 @@ public class SpellGalvanicNeedle extends BaseSpellCapsule
 
 	public SpellGalvanicNeedle()
 	{
-		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fGalvanic Needle§r§7§ko§r", "SpellGalvanicNeedle", 60, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fFire an electrified crystal shard","§r§fthat acts like a lightning rod.","§r§fDeals 1 heart of §r§cdamage §r§ffrom crystal strike,","§r§fthen summons a bolt of lightning.","§r§fMana cost: 60 §r§9mana§r§f.");
+		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fGalvanic Needle§r§7§ko§r", "SpellGalvanicNeedle", 60, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fFire an electrified crystal shard","§r§fthat acts like a lightning rod.","§r§fDeals 1 heart of §r§cdamage §r§ffrom crystal strike,","§r§fthen summons a bolt of lightning.","§r§fMana cost: 60 §r§9mana§r§f.");
 	}
 
 	@Override

@@ -21,7 +21,7 @@ public class SpellInsulate extends BaseSpellCapsule
 
 	public SpellInsulate()
 	{
-		super(Material.PAPER, "§r§7§ko§r§7§lSpell: §r§fInsulate§r§7§ko§r", "SpellInsulate", 75, true, true, "§r§fElement: §r§cFire§r§f.","§r§fAn incantation that grants the caster temporary fire immunity.","§r§fDuration: 1 minute.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.PAPER, "§r§7§ko§r§7§lSpell: §r§fInsulate§r§7§ko§r", "SpellInsulate", 75, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §6Buff§f.","§r§fAn incantation that grants the caster temporary fire immunity.","§r§fDuration: 1 minute.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

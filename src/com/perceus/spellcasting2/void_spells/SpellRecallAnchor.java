@@ -25,7 +25,7 @@ public class SpellRecallAnchor extends BaseSpellCapsule
 
 	public SpellRecallAnchor()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Recall Anchor§r§f§ko§r", "SpellRecallAnchor", 0, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fA tome with an incantation that allows the caster","§r§fto set a teleport anchor.","§r§fThis anchor can only be accessed with this tome.","§r§fLeft-Click to set the anchor's location.","§r§fMana cost: 350 §r§9mana§r§f.","§r§fRight-Click to recall to that anchor.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Recall Anchor§r§f§ko§r", "SpellRecallAnchor", 0, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA tome with an incantation that allows the caster","§r§fto set a teleport anchor.","§r§fThis anchor can only be accessed with this tome.","§r§fLeft-Click to set the anchor's location.","§r§fMana cost: 350 §r§9mana§r§f.","§r§fRight-Click to recall to that anchor.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 	
 	private static Map<Player, Location> playerStoredLocations = new HashMap<>();

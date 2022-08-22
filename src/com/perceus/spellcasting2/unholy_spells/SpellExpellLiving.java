@@ -31,7 +31,7 @@ public class SpellExpellLiving extends BaseSpellCapsule
 
 	public SpellExpellLiving()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fExpell Living§r§7§ko§r", "SpellExpellLiving", 200, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fObliterate non-undead target.","§r§fPlayer targets receive wither for 20 seconds.","§r§fUndead targets are immune.","§r§fThe Wither and The Warden are also immune.","§r§fRange: 15 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fExpell Living§r§7§ko§r", "SpellExpellLiving", 200, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fObliterate non-undead target.","§r§fPlayer targets receive wither for 20 seconds.","§r§fUndead targets are immune.","§r§fThe Wither and The Warden are also immune.","§r§fRange: 15 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -75,12 +75,13 @@ public class SpellExpellLiving extends BaseSpellCapsule
 		
 		if(target instanceof Player) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
 			((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 400, 0));
 			return true;
 		}
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
 		((Damageable) target).damage(84);

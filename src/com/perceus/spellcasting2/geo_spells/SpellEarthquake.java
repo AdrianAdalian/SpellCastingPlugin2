@@ -22,7 +22,7 @@ public class SpellEarthquake extends BaseSpellCapsule
 
 	public SpellEarthquake()
 	{
-		super(Material.BROWN_DYE, "§r§7§ko§r§7§lSpell: §r§fEarthquake§r§7§ko§r", "SpellEarthquake", 500, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fCause an earthquake that damages","§r§fand stuns all within the radius.","§r§fDeals 5 hearts of §r§cdamage§r§f to all affected.","§r§fStun for 5 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.BROWN_DYE, "§r§7§ko§r§7§lSpell: §r§fEarthquake§r§7§ko§r", "SpellEarthquake", 500, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §dAOE§f.","§r§fCause an earthquake that damages","§r§fand stuns all within the radius.","§r§fDeals 5 hearts of §r§cdamage§r§f to all affected.","§r§fStun for 5 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -44,6 +44,7 @@ public class SpellEarthquake extends BaseSpellCapsule
 		{
 			if (target instanceof Damageable)
 			{
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CAMPFIRE_COSY_SMOKE, null);
 				((Damageable) target).damage(10, event.getPlayer());
 				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 100, 99));
 			}

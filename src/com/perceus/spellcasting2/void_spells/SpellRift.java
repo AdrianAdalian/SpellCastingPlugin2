@@ -27,7 +27,7 @@ public class SpellRift extends BaseSpellCapsule
 
 	public SpellRift()
 	{
-		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fRift§r§7§ko§r", "SpellRift", 100, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fThe caster summons a rift between space and time.","§r§fUsing §r§3§lVOID§r§f energy,","§r§fthe caster has two usage cases for this spell.","§r§fTeleports caster between targets within a 100 block radius.","§r§fTeleports caster within a 50 block radius.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fRift§r§7§ko§r", "SpellRift", 100, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fThe caster summons a rift between space and time.","§r§fUsing §r§3§lVOID§r§f energy,","§r§fthe caster has two usage cases for this spell.","§r§fTeleports caster between targets within a 100 block radius.","§r§fTeleports caster within a 50 block radius.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

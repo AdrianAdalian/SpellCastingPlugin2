@@ -19,7 +19,7 @@ public class SpellTidalForce extends BaseSpellCapsule
 
 	public SpellTidalForce()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fTidal Force§r§7§ko§r", "SpellTidalForce", 45, true, true, "§r§fElement: §r§9Water§r§f.","§r§fModerately boosts the caster through water.","§r§fMana cost: 45 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fTidal Force§r§7§ko§r", "SpellTidalForce", 45, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f.","§r§fModerately boosts the caster through water.","§r§fMana cost: 45 §r§9mana§r§f.");
 	}
 
 	@Override

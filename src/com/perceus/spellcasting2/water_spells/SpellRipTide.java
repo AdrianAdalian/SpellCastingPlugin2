@@ -19,7 +19,7 @@ public class SpellRipTide extends BaseSpellCapsule
 
 	public SpellRipTide()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fRiptide§r§7§ko§r", "SpellRipTide", 20, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSlightly boosts the caster through water.","§r§fMana cost: 20 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fRiptide§r§7§ko§r", "SpellRipTide", 20, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f.","§r§fSlightly boosts the caster through water.","§r§fMana cost: 20 §r§9mana§r§f.");
 	}
 
 	@Override

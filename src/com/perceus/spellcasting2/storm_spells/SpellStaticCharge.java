@@ -21,7 +21,7 @@ public class SpellStaticCharge extends BaseSpellCapsule
 
 	public SpellStaticCharge()
 	{
-		super(Material.PURPLE_DYE, "§r§7§ko§r§7§lSpell: §r§fStatic Charge§r§7§ko§r", "SpellStaticCharge", 50, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fUsing §r§dStorm§r§f energy, the caster","§r§fundergoes a static charge which","§r§fmoderately increases movement and interact speed.","§r§fDuration: 30 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.PURPLE_DYE, "§r§7§ko§r§7§lSpell: §r§fStatic Charge§r§7§ko§r", "SpellStaticCharge", 50, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §6Buff§f.","§r§fUsing §r§dStorm§r§f energy, the caster","§r§fundergoes a static charge which","§r§fmoderately increases movement and interact speed.","§r§fDuration: 30 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

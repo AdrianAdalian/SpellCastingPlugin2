@@ -27,7 +27,7 @@ public class SpellExpellUndead extends BaseSpellCapsule
 
 	public SpellExpellUndead()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fExpell Undead§r§7§ko§r", "SpellExpellUndead", 50, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fObliterate undead target.","§r§fNon-undead targets are immune.","§r§fThe Wither and The Warden are also immune.","§r§fRange: 15 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fExpell Undead§r§7§ko§r", "SpellExpellUndead", 50, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fObliterate undead target.","§r§fNon-undead targets are immune.","§r§fThe Wither and The Warden are also immune.","§r§fRange: 15 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -59,6 +59,7 @@ public class SpellExpellUndead extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BELL_USE, SoundCategory.MASTER, 1, 1);
 		((Damageable) target).damage(84);

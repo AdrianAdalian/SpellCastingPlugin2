@@ -20,7 +20,7 @@ public class SpellCreateSheep extends BaseSpellCapsule
 
 	public SpellCreateSheep()
 	{
-		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lRune§f: Materialize Sheep§r§f§ko§r", "SpellCreateSheep", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fAn unstable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon living organisms.","§r§fThis rune will summon a sheep on target block.","§r§fThe rune will be consumed upon use.");
+		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lRune§f: Materialize Sheep§r§f§ko§r", "SpellCreateSheep", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn unstable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon living organisms.","§r§fThis rune will summon a sheep on target block.","§r§fThe rune will be consumed upon use.");
 		// TODO Auto-generated constructor stub
 	}
 

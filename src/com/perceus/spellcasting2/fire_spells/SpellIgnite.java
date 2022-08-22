@@ -25,7 +25,7 @@ public class SpellIgnite extends BaseSpellCapsule
 
 	public SpellIgnite()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fIgnite§r§7§ko§r", "SpellIgnite", 30, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSet any target ablaze.","§r§fDeals 5 hearts of §r§cdamage§r§f over 8 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 30 §r§9mana§r§f.");
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fIgnite§r§7§ko§r", "SpellIgnite", 30, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSet any target ablaze.","§r§fDeals 5 hearts of §r§cdamage§r§f over 8 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 30 §r§9mana§r§f.");
 	}
 
 	@Override

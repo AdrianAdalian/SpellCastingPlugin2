@@ -19,7 +19,7 @@ public class SpellItem_Updraft extends BaseSpellCapsule
 
 	public SpellItem_Updraft()
 	{
-		super(Material.STRING, "§r§7§ko§r§7§lCrafted Spell: §r§fUpdraft§r§7§ko§r", "SpellItem_Updraft", 0, true, "§r§fElement: §r§dStorm§r§f.","§r§fCreate a rising galeforce of wind allowing","§r§fthe caster to jump to insane heights.","§r§fDuration: 2 seconds.","§r§fJump range: 0-11 meters.");
+		super(Material.STRING, "§r§7§ko§r§7§lCrafted Spell: §r§fUpdraft§r§7§ko§r", "SpellItem_Updraft", 0, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §6Buff§f.","§r§fCreate a rising galeforce of wind allowing","§r§fthe caster to jump to insane heights.","§r§fDuration: 2 seconds.","§r§fJump range: 0-11 meters.");
 	}
 
 	@Override

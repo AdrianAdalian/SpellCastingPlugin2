@@ -29,7 +29,7 @@ public class SpellGuardianAngel extends BaseSpellCapsule
 
 	public SpellGuardianAngel()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Guardian Angel§r§f§ko§r", "SpellGuardianAngel", 200, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fGrant full regenerative §r§ahealing §r§fto either target or self.","§r§fThen, apply absorption and 20% damage reduction.","§r§aHeal §r§fto full over 3 seconds.","§r§fDuration: 15 seconds.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Guardian Angel§r§f§ko§r", "SpellGuardianAngel", 200, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f and §6Buff§f.","§r§fGrant full regenerative §r§ahealing §r§fto either target or self.","§r§fThen, apply absorption and 20% damage reduction.","§r§aHeal §r§fto full over 3 seconds.","§r§fDuration: 15 seconds.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -68,6 +68,7 @@ public class SpellGuardianAngel extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 		    SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);

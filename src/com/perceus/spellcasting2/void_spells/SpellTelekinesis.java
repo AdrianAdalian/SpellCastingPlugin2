@@ -27,7 +27,7 @@ public class SpellTelekinesis extends BaseSpellCapsule
 
 	public SpellTelekinesis()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fTelekinesis§r§f§ko§r", "SpellTelekinesis", 150, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fAn incantation is written within that allows","§r§fthe caster to teleport any target 15 meters in the air.","§r§fDeals 0-5 hearts of §r§cdamage§r§f.","§r§fRange: 20 meters.","§r§fMana cost: 150 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fTelekinesis§r§f§ko§r", "SpellTelekinesis", 150, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fAn incantation is written within that allows","§r§fthe caster to teleport any target 15 meters in the air.","§r§fDeals 0-5 hearts of §r§cdamage§r§f.","§r§fRange: 20 meters.","§r§fMana cost: 150 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -55,6 +55,7 @@ public class SpellTelekinesis extends BaseSpellCapsule
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SHULKER_SHOOT, SoundCategory.MASTER, 1, 1);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 			SpellParticles.drawDisc(target.getLocation(), 2, 2, 60, Particle.PORTAL, null);
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 			target.getWorld().spawnParticle(Particle.EXPLOSION_LARGE, target.getLocation(), 1);
 			target.teleport(newLoc);
 			new BukkitRunnable()

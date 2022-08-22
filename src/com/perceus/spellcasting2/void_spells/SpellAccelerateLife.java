@@ -29,7 +29,7 @@ public class SpellAccelerateLife extends BaseSpellCapsule
 
 	public SpellAccelerateLife()
 	{
-		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fAccelerate Life§r§7§ko§r", "SpellAccelerateLife", 0, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fA spell radiating unstable §r§3§lVOID§r§f energy.","§r§fAccelerates all life at the target's source.","§r§fRange for vegitative acceleration: 5 meters.", "§r§fMana cost: 25 §r§9mana§r§f.","§r§fRange for living creature acceleration: 15 meters.","§r§fMana cost: 750 §r§9mana§r§f.");
+		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fAccelerate Life§r§7§ko§r", "SpellAccelerateLife", 0, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §7Debuff§f and §bUtility§f.","§r§fA spell radiating unstable §r§3§lVOID§r§f energy.","§r§fAccelerates all life at the target's source.","§r§fRange for vegitative acceleration: 5 meters.", "§r§fMana cost: 25 §r§9mana§r§f.","§r§fRange for living creature acceleration: 15 meters.","§r§fMana cost: 750 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -101,7 +101,7 @@ public class SpellAccelerateLife extends BaseSpellCapsule
 					PrintUtils.sendMessage(event.getPlayer(), "Mana Insufficient.");
 					return false;
 				}
-				
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target2.getLocation(), 1, Particle.PORTAL, null);
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SHULKER_SHOOT, SoundCategory.MASTER, 1, 1);
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 				((LivingEntity) target2).addPotionEffect(new PotionEffect(PotionEffectType.WITHER, 12000, 2));

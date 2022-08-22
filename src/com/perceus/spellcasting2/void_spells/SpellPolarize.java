@@ -25,7 +25,7 @@ public class SpellPolarize extends BaseSpellCapsule
 
 	public SpellPolarize()
 	{
-		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fPolarize§r§7§ko§r", "SpellPolarize", 200, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSummon an expanding gravitational force upon any target","§r§fthat pushes away other entities around it.","§r§fThe gravitational field causes those affected to be damaged.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fCasting Range: 40 meters.","§r§fField Range: 7 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fPolarize§r§7§ko§r", "SpellPolarize", 200, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon an expanding gravitational force upon any target","§r§fthat pushes away other entities around it.","§r§fThe gravitational field causes those affected to be damaged.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fCasting Range: 40 meters.","§r§fField Range: 7 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -49,6 +49,7 @@ public class SpellPolarize extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"No Surrounding Targets Detected.");
 			return false;
 		}
+		SpellParticles.drawLine(event.getPlayer().getLocation(), InitialTarget.getLocation(), 1, Particle.PORTAL, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SHULKER_SHOOT, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 		for (Entity TargetsOfTarget : InitialTarget.getNearbyEntities(7, 7, 7)) 

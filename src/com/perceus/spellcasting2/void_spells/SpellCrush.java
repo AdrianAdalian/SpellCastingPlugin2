@@ -25,7 +25,7 @@ public class SpellCrush extends BaseSpellCapsule
 
 	public SpellCrush()
 	{
-		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fCrush§r§7§ko§r", "SpellCrush", 200, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSummon a collapsing singularity upon any target,","§r§fwhich in turn creates a gravitational field","§r§fthat sucks in any surrounding entities.","§r§fThe gravitational field causes those affected to be damaged.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fCasting Range: 40 meters.","§r§fField Range: 7 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fCrush§r§7§ko§r", "SpellCrush", 200, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a collapsing singularity upon any target,","§r§fwhich in turn creates a gravitational field","§r§fthat sucks in any surrounding entities.","§r§fThe gravitational field causes those affected to be damaged.","§r§fDeals 2 hearts of §r§cdamage§r§f.","§r§fCasting Range: 40 meters.","§r§fField Range: 7 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -51,6 +51,7 @@ public class SpellCrush extends BaseSpellCapsule
 			return false;
 		}
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SHULKER_SHOOT, SoundCategory.MASTER, 1, 1);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), InitialTarget.getLocation(), 1, Particle.PORTAL, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 		for (Entity TargetsOfTarget : InitialTarget.getNearbyEntities(7, 7, 7)) 
 		{

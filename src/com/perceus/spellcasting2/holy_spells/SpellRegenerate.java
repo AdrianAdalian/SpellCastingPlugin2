@@ -27,7 +27,7 @@ public class SpellRegenerate extends BaseSpellCapsule
 
 	public SpellRegenerate()
 	{
-		super(Material.EMERALD, "§r§7§ko§r§7§lSpell: §r§fRegenerate§r§7§ko§r", "SpellRegenerate", 100,true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fBathe the target in healing light.","§r§aHeals §r§f5 hearts to target over time while granting resistances.", "§r§fRange: 10 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.EMERALD, "§r§7§ko§r§7§lSpell: §r§fRegenerate§r§7§ko§r", "SpellRegenerate", 100,true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.","§r§fBathe the target in healing light.","§r§aHeals §r§f5 hearts to target over time while granting resistances.", "§r§fRange: 10 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -52,6 +52,7 @@ public class SpellRegenerate extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
 		((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 200, 2));

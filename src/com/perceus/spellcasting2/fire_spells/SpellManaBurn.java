@@ -28,7 +28,7 @@ public class SpellManaBurn extends BaseSpellCapsule
 
 	public SpellManaBurn()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fMana Burn§r§7§ko§r", "SpellManaBurn", 0, true, true, "§r§fElement: §r§cFire§r§f.",
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fMana Burn§r§7§ko§r", "SpellManaBurn", 0, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fThe caster concentrates all of their remaining","§r§9mana§r§f into a fiery explosion at target.",
 				"§r§fDeals 15 hearts of §r§cdamage§r§f to target.",
 				"§r§fRange: 20 meters.",
@@ -63,6 +63,7 @@ public class SpellManaBurn extends BaseSpellCapsule
 		ManaInterface.updateScoreBoard(event.getPlayer());
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_BLAZE_SHOOT, SoundCategory.MASTER, 1, 1);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FLAME, null);
 		SpellParticles.drawSphere(target.getLocation(), 1, 1, 1, Particle.EXPLOSION_NORMAL, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.FLAME, null);
 		((Damageable) target).damage(30);

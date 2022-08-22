@@ -17,7 +17,7 @@ public class SpellItem_XpCrystal extends BaseSpellCapsule
 
 	public SpellItem_XpCrystal()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fXp Crystal§r§7§ko§r", "SpellItem_XpCrystal", 0, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fA conglomerate of crystalized §r§3§lVOID§r§f.","§r§fThis crystal, when broken,","§r§fwill add a level to caster.");
+		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fXp Crystal§r§7§ko§r", "SpellItem_XpCrystal", 0, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA conglomerate of crystalized §r§3§lVOID§r§f.","§r§fThis crystal, when broken,","§r§fwill add a level to caster.");
 	}
 
 	@Override

@@ -19,7 +19,7 @@ public class SpellSaturate extends BaseSpellCapsule
 
 	public SpellSaturate()
 	{
-		super(Material.LAPIS_LAZULI, "§r§7§ko§r§7§lSpell: §r§fSaturate§r§7§ko§r", "SpellSaturate", 50, true, true, "§r§fElement: §r§9Water§r§f.","§r§fThe caster concentrates a large pool of","§r§9Water§r§f on whatever block they're looking at.","§r§fRange: 5 meters.",
+		super(Material.LAPIS_LAZULI, "§r§7§ko§r§7§lSpell: §r§fSaturate§r§7§ko§r", "SpellSaturate", 50, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f.","§r§fThe caster concentrates a large pool of","§r§9Water§r§f on whatever block they're looking at.","§r§fRange: 5 meters.",
 				"§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 

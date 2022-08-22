@@ -18,7 +18,7 @@ public class SpellFireball extends BaseSpellCapsule
 
 	public SpellFireball()
 	{
-		super(Material.FIRE_CHARGE, "§r§7§ko§r§7§lSpell: §r§fFireBall§r§7§ko§r", "SpellFireBall", 35, true, true,"§r§fElement: §r§cFire§r§f.",
+		super(Material.FIRE_CHARGE, "§r§7§ko§r§7§lSpell: §r§fFireBall§r§7§ko§r", "SpellFireBall", 35, true, true,"§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fSummons a small ball of fire that explodes on impact.","§r§fMana cost: 35 §r§9mana§r§f.");
 	}
 

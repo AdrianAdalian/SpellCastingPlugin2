@@ -18,7 +18,7 @@ public class SpellReconstitute extends BaseSpellCapsule
 
 	public SpellReconstitute()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fReconstitute§r§7§ko§r", "SpellReconstitute", 25, true, true, "§r§fElement: §r§9Water§r§f.","§r§fA spell that allows the caster to","§r§fregenerate health while surrounded by water.","§r§aHeals §r§f3 hearts to self.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fReconstitute§r§7§ko§r", "SpellReconstitute", 25, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §aSupport§f.","§r§fA spell that allows the caster to","§r§fregenerate health while surrounded by water.","§r§aHeals §r§f3 hearts to self.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override

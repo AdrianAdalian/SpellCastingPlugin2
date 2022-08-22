@@ -19,7 +19,7 @@ public class SpellVoidGate extends BaseSpellCapsule
 
 	public SpellVoidGate()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fVoid Gate§r§7§ko§r", "SpellVoidGate", 500, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fA highly unstable spell containing enough energy","§r§fto grant the caster safe travel between dimensions.","§r§fGate between the End and the Overworld.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fVoid Gate§r§7§ko§r", "SpellVoidGate", 500, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §6Utility§f.","§r§fA highly unstable spell containing enough energy","§r§fto grant the caster safe travel between dimensions.","§r§fGate between the End and the Overworld.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override

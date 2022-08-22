@@ -27,7 +27,7 @@ public class SpellSolarEclipse extends BaseSpellCapsule
 	public SpellSolarEclipse()
 	{
 		super(Material.ENCHANTED_BOOK, ChatUtils.of("☀ Solar Tome: Solar Eclipse ☀", "F9812B","FFFFFF",""), "SpellSolarEclipse", 0, false, "§r§fElement: §r§6S§eo§6l§eα§6r§r§f.",
-				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.",
+				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.","§r§fSpell Type: §bUtility§f and §7Debuff §dAOE§f.",				
 				"§r§fDuring the §r§7Night§r§f:",
 				"§r§fChange the current trajectory of the sun,", 
 				"§r§fcausing a solar eclipse.",

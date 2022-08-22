@@ -21,7 +21,7 @@ public class SpellFlamethrower extends BaseSpellCapsule
 
 	public SpellFlamethrower()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fFlamethrower§r§7§ko§r", "SpellFlamethrower", 75, true, true, "§r§fElement: §r§cFire§r§f.", "§r§fSummons three consective balls of flame.","§r§fThird ball deals 5 hearts of §r§cdamage§r§f.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fFlamethrower§r§7§ko§r", "SpellFlamethrower", 75, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.", "§r§fSummons three consective balls of flame.","§r§fThird ball deals 5 hearts of §r§cdamage§r§f.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

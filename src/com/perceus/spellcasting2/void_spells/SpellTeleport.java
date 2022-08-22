@@ -21,7 +21,7 @@ public class SpellTeleport extends BaseSpellCapsule
 
 	public SpellTeleport()
 	{
-		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fTeleport§r§7§ko§r", "SpellTeleport", 50, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fTeleport a far distance away.","§r§fRange: 25 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fTeleport§r§7§ko§r", "SpellTeleport", 50, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fTeleport a far distance away.","§r§fRange: 25 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -33,19 +33,19 @@ public class SpellTeleport extends BaseSpellCapsule
 			return false;
 		}
 		
-		int TARGETRANGE = 25 ;
+		int TARGETRANGE = 25;
 		
-		float YAW = event.getPlayer().getLocation().getYaw() ;
-		float PITCH = event.getPlayer().getLocation().getPitch() ;
+		float YAW = event.getPlayer().getLocation().getYaw();
+		float PITCH = event.getPlayer().getLocation().getPitch();
 		
-		Block target = event.getPlayer().getTargetBlock(null, TARGETRANGE) ;
+		Block target = event.getPlayer().getTargetBlock(null, TARGETRANGE);
 		
 		while (target.getType().equals(Material.AIR)) 
 		{
 			target = event.getPlayer().getWorld().getBlockAt(target.getLocation().subtract(new Location(event.getPlayer().getWorld(), 0.5, 1, 0.5))) ;
 		}
 		
-		Location newlocation = target.getLocation().add(new Location(event.getPlayer().getWorld(), 0.5, 1, 0.5)) ;
+		Location newlocation = target.getLocation().add(new Location(event.getPlayer().getWorld(), 0.5, 1, 0.5));
 		newlocation.setYaw(YAW);
 		newlocation.setPitch(PITCH);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);

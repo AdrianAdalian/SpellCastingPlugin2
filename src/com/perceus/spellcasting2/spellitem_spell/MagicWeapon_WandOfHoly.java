@@ -24,7 +24,7 @@ public class MagicWeapon_WandOfHoly extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfHoly()
 	{
-		super(Material.STICK,  ChatUtils.of("Magic Weapon: Wand of Holy", "FFE748","FFFFFF","§l§o"), "MagicWeaponWandOfHoly", 0, true, "§r§fElement: §r§f§o§lHoly§r§f.",
+		super(Material.STICK,  ChatUtils.of("Magic Weapon: Wand of Holy", "FFE748","FFFFFF","§l§o"), "MagicWeaponWandOfHoly", 0, true, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §cOffensive§f and §6Buff§f.",
 				"§r§fA simple stick infused with the element of §r§f§o§lHoly§r§f.",
 				"§r§7§lSpell: §r§fMagic Missile+",
 				"§r§fLeft-Click: Summon a large missile of light.",

@@ -21,7 +21,7 @@ public class SpellFortifyRipTide extends BaseSpellCapsule
 
 	public SpellFortifyRipTide()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§bAethereal Tome§f: Fortify Riptide§r§f§ko§r", "SpellFortifyRipTide", 1000, false, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fA spelltome containing §r§b§l§oAethereal§r§f energy.","§r§fAn incantation is written within that allows","§r§fthe caster to enchant items.","§r§fEnchant offhand applicable item with tier one riptide.","§r§fIf the current item is already enchanted, 'level it up'.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§bAethereal Tome§f: Fortify Riptide§r§f§ko§r", "SpellFortifyRipTide", 1000, false, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome containing §r§b§l§oAethereal§r§f energy.","§r§fAn incantation is written within that allows","§r§fthe caster to enchant items.","§r§fEnchant offhand applicable item with tier one riptide.","§r§fIf the current item is already enchanted, 'level it up'.","§r§fMana cost: 1000 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 

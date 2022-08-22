@@ -18,7 +18,7 @@ public class SpellPrimordialShift extends BaseSpellCapsule
 
 	public SpellPrimordialShift()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Primordial Shift§r§f§ko§r", "SpellPrimordialShift", 1000, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fA tome with an incantation thought to be lost","§r§fin time has the power to swap","§r§6Day §r§fwith §r§7Night §r§fand vice versa.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Primordial Shift§r§f§ko§r", "SpellPrimordialShift", 1000, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA tome with an incantation thought to be lost","§r§fin time has the power to swap","§r§6Day §r§fwith §r§7Night §r§fand vice versa.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override

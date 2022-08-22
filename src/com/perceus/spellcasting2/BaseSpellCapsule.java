@@ -67,8 +67,9 @@ public abstract class BaseSpellCapsule implements GuiComponent
 		ItemUtils.saveToNamespacedKey(spellitem, "spellname", internalName);
 		if (glow == true)
 		{
+			ItemUtils.saveToNamespacedKey(spellitem, "itemglowflag", "true");
 			ItemMeta meta = spellitem.getItemMeta();
-			meta.addEnchant(Enchantment.DURABILITY, 0, glow);
+			meta.addEnchant(Enchantment.DURABILITY, 1, glow);
 			meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
 			spellitem.setItemMeta(meta);
 		}

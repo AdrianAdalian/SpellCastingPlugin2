@@ -27,7 +27,7 @@ public class SpellPoisonGas extends BaseSpellCapsule
 
 	public SpellPoisonGas()
 	{
-		super(Material.SLIME_BALL, "§r§7§ko§r§7§lSpell: §r§fPoison Gas§r§7§ko§r", "SpellPoisonGas", 75, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fCaster emits a burst of","§r§fpoisonous fumes directed at a target.","§r§fDeals 4 hearts of §r§cdamage§r§f over 5 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.SLIME_BALL, "§r§7§ko§r§7§lSpell: §r§fPoison Gas§r§7§ko§r", "SpellPoisonGas", 75, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fCaster emits a burst of","§r§fpoisonous fumes directed at a target.","§r§fDeals 4 hearts of §r§cdamage§r§f over 5 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -49,8 +49,8 @@ public class SpellPoisonGas extends BaseSpellCapsule
 		if (target instanceof LivingEntity)
 		{
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CAMPFIRE_COSY_SMOKE, null);
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FALLING_SPORE_BLOSSOM, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.AMBIENT_UNDERWATER_EXIT, SoundCategory.MASTER, 1, 1);
-			
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.POISON, 100, 1));
 			return true;
 		}

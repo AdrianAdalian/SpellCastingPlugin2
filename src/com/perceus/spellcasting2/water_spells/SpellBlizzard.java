@@ -25,7 +25,7 @@ public class SpellBlizzard extends BaseSpellCapsule
 
 	public SpellBlizzard()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fBlizzard§r§f§ko§r", "SpellBlizzard", 250, false, "§r§fElement: §r§9Water§r§f.","§r§fAn incantation is written within this tome","§r§fthat allows the caster to summon a blizzard.", "§r§fOn Right-Click: Temporarily freezing nearby water.","§r§fOn Left-Click: Targets caught in the blizzard", "§r§ftake 1/2 heart of §r§cdamage§r§f/s for 10 seconds.","§r§fFrozen duration: 10 seconds.","§r§fRange to freeze water: 50 meters.","§r§fRange to freeze targets: 25 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fBlizzard§r§f§ko§r", "SpellBlizzard", 250, false, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f and §cOffensive§f §dAOE§f.","§r§fAn incantation is written within this tome","§r§fthat allows the caster to summon a blizzard.", "§r§fOn Right-Click: Temporarily freezing nearby water.","§r§fOn Left-Click: Targets caught in the blizzard", "§r§ftake 1/2 heart of §r§cdamage§r§f/s for 10 seconds.","§r§fFrozen duration: 10 seconds.","§r§fRange to freeze water: 50 meters.","§r§fRange to freeze targets: 25 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -85,10 +85,11 @@ public class SpellBlizzard extends BaseSpellCapsule
 				
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.AMBIENT_UNDERWATER_EXIT, SoundCategory.MASTER, 1, 1);
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.WATER_DROP, null);
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
 				if (target instanceof LivingEntity) 
 				{
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 99));
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 99));
+					((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 99));
+					((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 99));
 				}
 				long time = System.currentTimeMillis();
 				

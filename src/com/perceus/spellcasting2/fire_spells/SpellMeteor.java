@@ -27,7 +27,7 @@ public class SpellMeteor extends BaseSpellCapsule
 
 	public SpellMeteor()
 	{
-		super(Material.FIRE_CHARGE, "§r§7§ko§r§7§lSpell: §r§fMeteor§r§7§ko§r", "SpellMeteor", 100, true, true, "§r§fElement: §r§cFire§r§f.", 
+		super(Material.FIRE_CHARGE, "§r§7§ko§r§7§lSpell: §r§fMeteor§r§7§ko§r", "SpellMeteor", 100, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.", 
 				"§r§fSummon a small ball of fire in the air.",
 				"§r§fThe fireball will then plummit downwards upon the target.",
 				"§r§fDeals minor §r§cdamage§r§f and explodes on impact.",
@@ -56,7 +56,7 @@ public class SpellMeteor extends BaseSpellCapsule
 		}
 		
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.FLAME, null);
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FLAME, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ITEM_FIRECHARGE_USE, SoundCategory.MASTER, 1, 1);
 		
 		Location newlocation = target.getLocation().add(new Location(event.getPlayer().getWorld(), 0, 20, 0)) ;

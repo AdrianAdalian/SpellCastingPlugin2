@@ -26,7 +26,7 @@ public class SpellArcaneBolt extends BaseSpellCapsule
 
 	public SpellArcaneBolt()
 	{
-		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fArcane Bolt§r§7§ko§r", "SpellArcaneBolt", 1000, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fHarness the true power of storm.","§r§fOverload any target with the","§r§felemental power of the non-spiritual elements.","§r§fSummon a small bolt of lightning at the target.","§r§fPoisons, burns, and slows thenafter.","§r§fDuration: 10 seconds.","§r§fRange: 100 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fArcane Bolt§r§7§ko§r", "SpellArcaneBolt", 1000, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fHarness the true power of storm.","§r§fOverload any target with the","§r§felemental power of the non-spiritual elements.","§r§fSummon a small bolt of lightning at the target.","§r§fPoisons, burns, and slows thenafter.","§r§fDuration: 10 seconds.","§r§fRange: 100 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -47,6 +47,7 @@ public class SpellArcaneBolt extends BaseSpellCapsule
 		}
 		
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;		
 		
 		new BukkitRunnable()

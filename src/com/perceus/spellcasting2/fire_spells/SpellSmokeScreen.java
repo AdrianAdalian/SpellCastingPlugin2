@@ -21,7 +21,7 @@ public class SpellSmokeScreen extends BaseSpellCapsule
 
 	public SpellSmokeScreen()
 	{
-		super(Material.GUNPOWDER, "§r§7§ko§r§7§lSpell: §r§fSmokeScreen§r§7§ko§r", "SpellSmokescreen", 50, true, true, "§r§fElement: §r§cFire§r§f.","§r§fEmit a burst of ash that blinds","§r§f all within radius.","§r§fDuration: 20 seconds.","§r§fRange: 7 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.GUNPOWDER, "§r§7§ko§r§7§lSpell: §r§fSmokeScreen§r§7§ko§r", "SpellSmokescreen", 50, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fEmit a burst of ash that blinds all within range.","§r§fDuration: 20 seconds.","§r§fRange: 7 meters.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -47,6 +47,8 @@ public class SpellSmokeScreen extends BaseSpellCapsule
 		{
 			if (target instanceof LivingEntity)
 	    	{	
+				SpellParticles.drawDisc(target.getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FLAME, null);
 	    		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 400, 0, true));		
 	    	}  
 		}	

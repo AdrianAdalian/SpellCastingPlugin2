@@ -30,7 +30,7 @@ public class SpellAmeliorate extends BaseSpellCapsule
 
 	public SpellAmeliorate()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Ameliorate§r§f§ko§r", "SpellAmeliorate", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.", "§r§fRoute all illness and", "§r§fnegative stat changes of target player.","§r§fSubsequently §r§aHeal §r§fthem to full.","§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Ameliorate§r§f§ko§r", "SpellAmeliorate", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.", "§r§fRoute all illness and", "§r§fnegative stat changes of target player.","§r§fSubsequently §r§aHeal §r§fthem to full.","§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -88,6 +88,7 @@ public class SpellAmeliorate extends BaseSpellCapsule
 		}
 		if(hasPotionEffect == true || (!(((Player) target).getHealth() == ((Attributable) target).getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue()))) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			((Player) target).playSound(((Player)target).getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);

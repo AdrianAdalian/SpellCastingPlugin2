@@ -21,7 +21,7 @@ public class SpellUberCharge extends BaseSpellCapsule
 
 	public SpellUberCharge()
 	{
-		super(Material.PURPLE_DYE, "§r§7§ko§r§7§lSpell: §r§fUber Charge§r§7§ko§r", "SpellUberCharge", 100, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fUsing §r§dStorm§r§f energy, the caster","§r§fundergoes a static charge which","§r§fvastly increases movement and interact speed.","§r§fDuration: 1 minute.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.PURPLE_DYE, "§r§7§ko§r§7§lSpell: §r§fUber Charge§r§7§ko§r", "SpellUberCharge", 100, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §6Buff§f.","§r§fUsing §r§dStorm§r§f energy, the caster","§r§fundergoes a static charge which","§r§fvastly increases movement and interact speed.","§r§fDuration: 1 minute.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

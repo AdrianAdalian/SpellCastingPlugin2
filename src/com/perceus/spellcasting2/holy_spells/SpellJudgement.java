@@ -27,7 +27,7 @@ public class SpellJudgement extends BaseSpellCapsule
 
 	public SpellJudgement()
 	{
-		super(Material.END_CRYSTAL, "§r§7§ko§r§7§lSpell: §r§fJudgement§r§7§ko§r", "SpellJudgement", 1000, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fEnact divine judgement upon any target.","§r§fIf target max health is <= 75%, kill that target.","§r§fIf target max health is > 75%, heal that target to full.", "§r§fRange: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.END_CRYSTAL, "§r§7§ko§r§7§lSpell: §r§fJudgement§r§7§ko§r", "SpellJudgement", 1000, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fEnact divine judgement upon any target.","§r§fIf target max health is <= 75%, kill that target.","§r§fIf target max health is > 75%, heal that target to full.", "§r§fRange: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -54,17 +54,17 @@ public class SpellJudgement extends BaseSpellCapsule
 			
 			if (healthPercent <= 0.75)
 			{
+			  SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 		      SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			  event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BELL_USE, SoundCategory.MASTER, 1, 1);
 			  target.getWorld().playSound(target.getLocation(), Sound.BLOCK_BELL_USE, SoundCategory.MASTER, 1, 1);
 			  ((Damageable) target).damage(84);
-			  target.sendMessage("You have been judged.");
-			  PrintUtils.sendMessage(event.getPlayer().getDisplayName() + "has been judged.");
 			  return true;
 			}
 			
 			if (healthPercent > 0.75)
 			{
+			  SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			  SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			  event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
 			  target.getWorld().playSound(target.getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);

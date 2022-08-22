@@ -22,7 +22,7 @@ public class SpellHellFire extends BaseSpellCapsule
 
 	public SpellHellFire()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fHell Fire§r§7§ko§r", "SpellHellFire", 0, true, true, "§r§fElement: §r§cFire§r§f.", "§r§fThe caster wields intense hellfire capable of many usages.","§r§fOn Left-Click:","§r§fSummon a huge ball of fire.","§r§fMana cost: 35 §r§9mana§r§f.","§r§fOn Right-Click:","§r§fThe caster is able to smelt any Nether Ore.","§r§fTo smelt Ancient Debris: 500 §r§9mana§r§f.","§r§fQuartz and Gold Ore: 250 §r§9mana§r§f.","§r§fGilded Blackstone is smeltable.");
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fHell Fire§r§7§ko§r", "SpellHellFire", 0, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fThe caster wields intense hellfire capable of many usages.","§r§fOn Left-Click:","§r§fSummon a huge ball of fire.","§r§fMana cost: 35 §r§9mana§r§f.","§r§fOn Right-Click:","§r§fThe caster is able to smelt any Nether Ore.","§r§fTo smelt Ancient Debris: 500 §r§9mana§r§f.","§r§fQuartz and Gold Ore: 250 §r§9mana§r§f.","§r§fGilded Blackstone is smeltable.");
 	}
 
 	@Override

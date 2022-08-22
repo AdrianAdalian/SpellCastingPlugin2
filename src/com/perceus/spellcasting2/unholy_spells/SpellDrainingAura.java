@@ -26,7 +26,7 @@ public class SpellDrainingAura extends BaseSpellCapsule
 
 	public SpellDrainingAura()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Draining Aura§r§f§ko§r", "SpellDrainingAura", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.",
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Draining Aura§r§f§ko§r", "SpellDrainingAura", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.",
 				"§r§fA spelltome radiating §r§4§o§lUnholy§r§f energy.",
 				"§r§fThis spelltome has two incantations each with",
 				"§r§ftheir own varying effects.",
@@ -87,18 +87,19 @@ public class SpellDrainingAura extends BaseSpellCapsule
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 			
-			for (Entity near : event.getPlayer().getNearbyEntities(15, 15, 15))
+			for (Entity target : event.getPlayer().getNearbyEntities(15, 15, 15))
 			{
-			  if (entity.contains(near.getType()))
+			  if (entity.contains(target.getType()))
 			  {
 			    continue;
 			  }
-			  if (!(near instanceof Damageable))
+			  if (!(target instanceof Damageable))
 			  {
 			    continue;
 			  }
 
-			  ((Damageable) near).damage(8, event.getPlayer());
+			  ((Damageable) target).damage(8, event.getPlayer());
+			  SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 
 			  try 
 			  {
@@ -133,7 +134,7 @@ public class SpellDrainingAura extends BaseSpellCapsule
 					PrintUtils.sendMessage(event.getPlayer(),"You don't have enough health to cast this spell.");
 					return false;
 				}
-				
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 				event.getPlayer().setHealth(event.getPlayer().getHealth() / 2.0);
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);

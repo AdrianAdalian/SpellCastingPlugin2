@@ -25,7 +25,7 @@ public class SpellIceAge extends BaseSpellCapsule
 
 	public SpellIceAge()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fIce Age§r§f§ko§r", "SpellIceAge", 1000, false, "§r§fElement: §r§9Water§r§f.","§r§fAn unstable incantation is written within this tome","§r§fthat allows the caster to summon an intense ice storm.", "§r§fOn Right-Click: Temporarily freeze nearby water.", "§r§fOn Left-Click: The storm wreaks havoc on all within range.", "§r§fTargets take 1/2 heart of §r§cdamage§r§f/s for 20 seconds.","§r§fFrozen duration: 20 seconds.","§r§fRange to freeze water: 100 meters.","§r§fRange to freeze targets: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fIce Age§r§f§ko§r", "SpellIceAge", 1000, false, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f and §cOffensive§f §dAOE§f.","§r§fAn unstable incantation is written within this tome","§r§fthat allows the caster to summon an intense ice storm.", "§r§fOn Right-Click: Temporarily freeze nearby water.", "§r§fOn Left-Click: The storm wreaks havoc on all within range.", "§r§fTargets take 1/2 heart of §r§cdamage§r§f/s for 20 seconds.","§r§fFrozen duration: 20 seconds.","§r§fRange to freeze water: 100 meters.","§r§fRange to freeze targets: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -88,8 +88,9 @@ public class SpellIceAge extends BaseSpellCapsule
 				
 				if (target instanceof LivingEntity) 
 				{
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 99));
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 99));
+					SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
+					((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 99));
+					((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 99));
 				}
 				
 				long time = System.currentTimeMillis();

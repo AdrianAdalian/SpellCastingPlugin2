@@ -21,7 +21,7 @@ public class SpellMetalMorph extends BaseSpellCapsule
 
 	public SpellMetalMorph()
 	{
-		super(Material.IRON_INGOT, "§r§7§ko§r§7§lSpell: §r§fMetalMorph§r§7§ko§r", "SpellMetalMorph", 100, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fModerately hardens the caster's skin.","§r§fGrant 40% damage reduction.","§r§fModerately decreases caster movment speed.","§r§fDuration: 1 minute.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.IRON_INGOT, "§r§7§ko§r§7§lSpell: §r§fMetalMorph§r§7§ko§r", "SpellMetalMorph", 100, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fModerately hardens the caster's skin.","§r§fGrant 40% damage reduction.","§r§fModerately decreases caster movment speed.","§r§fDuration: 1 minute.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

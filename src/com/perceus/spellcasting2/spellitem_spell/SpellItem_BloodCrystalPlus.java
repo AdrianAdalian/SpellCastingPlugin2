@@ -25,7 +25,7 @@ public class SpellItem_BloodCrystalPlus extends BaseSpellCapsule
 
 	public SpellItem_BloodCrystalPlus()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fBlood Crystal§r§e+§r§7§ko§r", "SpellItem_BloodCrystalPlus", 0, true, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fA conglomerate of crystalized §r§4Dark Magic§r§f.","§r§fThis crystal is impossible to break,","§r§fas the amount of pure dark magic radiating","§r§ffrom the crystal allows the wielder to","§r§ffully recover §r§aHealth§r§f and §r§9Mana§r§f at will.","§r§fAs a result of using this cursed object,", "§r§fthe wielder will suffer random negative effects.");
+		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fBlood Crystal§r§e+§r§7§ko§r", "SpellItem_BloodCrystalPlus", 0, true, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fA conglomerate of crystalized §r§4Dark Magic§r§f.","§r§fThis crystal is impossible to break,","§r§fas the amount of pure dark magic radiating","§r§ffrom the crystal allows the wielder to","§r§ffully recover §r§aHealth§r§f and §r§9Mana§r§f at will.","§r§fAs a result of using this cursed object,", "§r§fthe wielder will suffer random negative effects.");
 	}
 
 	@Override
@@ -45,22 +45,9 @@ public class SpellItem_BloodCrystalPlus extends BaseSpellCapsule
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_STEM_BREAK, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
-		
-		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 1000);
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
-		{
-			PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
-		}
-		ManaInterface.updateScoreBoard(event.getPlayer());
-		
-		try
-		{
-			event.getPlayer().setHealth(event.getPlayer().getHealth()+20);		
-		}
-		catch(IllegalArgumentException e)
-		{			
-			event.getPlayer().setHealth(event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
-		}
+		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+		ManaInterface.updateScoreBoard(event.getPlayer());		
+		event.getPlayer().setHealth(event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 		
 		List<PotionEffectType> negEffects = List.of(PotionEffectType.WEAKNESS,
 				PotionEffectType.BAD_OMEN,
@@ -80,6 +67,7 @@ public class SpellItem_BloodCrystalPlus extends BaseSpellCapsule
 		while (!(negEffects.contains((PotionEffectType)randomPotionEffect))) 
 		{
 			randomPotionEffect = PotionEffectType.values()[random.nextInt(PotionEffectType.values().length)];
+			break;
 		}
 
 		event.getPlayer().addPotionEffect(new PotionEffect(randomPotionEffect, 600, 0, true));

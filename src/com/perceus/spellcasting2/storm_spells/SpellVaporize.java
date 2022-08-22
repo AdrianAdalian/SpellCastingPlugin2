@@ -25,7 +25,7 @@ public class SpellVaporize extends BaseSpellCapsule
 
 	public SpellVaporize()
 	{
-		super(Material.AMETHYST_CLUSTER, "§r§7§ko§7§lSpell: §r§fVaporize§r§7§ko§r", "SpellVaporize", 300, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSummon three consecutive lightning bolts on any target.","§r§fRange: 100 meters.","§r§fMana cost: 300 §r§9mana§r§f.");
+		super(Material.AMETHYST_CLUSTER, "§r§7§ko§7§lSpell: §r§fVaporize§r§7§ko§r", "SpellVaporize", 300, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon three consecutive lightning bolts on any target.","§r§fRange: 100 meters.","§r§fMana cost: 300 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -37,22 +37,23 @@ public class SpellVaporize extends BaseSpellCapsule
 			return false;
 		}
 		
-		Entity target1 = getNearestEntityInSight(event.getPlayer(), 100);
+		Entity target = getNearestEntityInSight(event.getPlayer(), 100);
 		
-		if (target1==null) 
+		if (target==null) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target");
 			return false;
 		}
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
-		event.getPlayer().getWorld().strikeLightning(target1.getLocation()) ;		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
+		event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;		
 		
 		new BukkitRunnable()
 		{
 		  @Override
 		  public void run()
 		  {
-			  event.getPlayer().getWorld().strikeLightning(target1.getLocation()) ;
+			  event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;
 		  }
 		}.runTaskLater(Eden.getInstance(), 20);
 		new BukkitRunnable()
@@ -60,7 +61,7 @@ public class SpellVaporize extends BaseSpellCapsule
 		  @Override
 		  public void run()
 		  {
-			  event.getPlayer().getWorld().strikeLightning(target1.getLocation()) ;
+			  event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;
 		  }
 		}.runTaskLater(Eden.getInstance(), 40);	
 		return true;

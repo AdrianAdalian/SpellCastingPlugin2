@@ -18,7 +18,7 @@ public class SpellExplosiveBolt extends BaseSpellCapsule
 
 	public SpellExplosiveBolt()
 	{
-		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fExplosive Bolt§r§7§ko§r", "SpellExplosiveBolt", 250, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSummon a bolt of lightning that is charged for explosion.","§r§fRange: 25 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
+		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fExplosive Bolt§r§7§ko§r", "SpellExplosiveBolt", 250, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a bolt of lightning that is charged for explosion.","§r§fRange: 25 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -40,9 +40,9 @@ public class SpellExplosiveBolt extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;			
 		}
-		
-		event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
+		event.getPlayer().getWorld().strikeLightning(target.getLocation()) ;		
 
 		new BukkitRunnable()
 		{

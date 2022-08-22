@@ -19,7 +19,7 @@ public class SpellInscribeLuck extends BaseSpellCapsule
 
 	public SpellInscribeLuck()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fInscribe Luck§r§f§ko§r", "SpellInscribeLuck", 50, false, "§r§fElement: §r§6Geo§r§f.","§r§fUsing the forces of §r§6Geo§r§f,","§r§ftemporarily boost caster's luck stat.","§r§fDuration: 30 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fInscribe Luck§r§f§ko§r", "SpellInscribeLuck", 50, false, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fUsing the forces of §r§6Geo§r§f,","§r§ftemporarily boost caster's luck stat.","§r§fDuration: 30 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

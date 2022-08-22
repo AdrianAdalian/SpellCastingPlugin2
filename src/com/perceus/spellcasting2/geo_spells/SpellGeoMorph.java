@@ -21,7 +21,7 @@ public class SpellGeoMorph extends BaseSpellCapsule
 
 	public SpellGeoMorph()
 	{
-		super(Material.BRICK, "§r§7§ko§r§7§lSpell: §r§fGeomorph§r§7§ko§r", "SpellGeoMorph", 35, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fAn incantation that slightly hardens the caster's skin.", "§r§fGrant 20% damage reduction.","§r§fSlightly decreases caster movement speed.","§r§fDuration: 1 minute.","§r§fMana cost: 35 §r§9mana§r§f.");
+		super(Material.BRICK, "§r§7§ko§r§7§lSpell: §r§fGeomorph§r§7§ko§r", "SpellGeoMorph", 35, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fAn incantation that slightly hardens the caster's skin.", "§r§fGrant 20% damage reduction.","§r§fSlightly decreases caster movement speed.","§r§fDuration: 1 minute.","§r§fMana cost: 35 §r§9mana§r§f.");
 	}
 
 	@Override

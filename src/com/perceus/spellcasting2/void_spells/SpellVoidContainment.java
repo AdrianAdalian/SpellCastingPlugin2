@@ -18,7 +18,7 @@ public class SpellVoidContainment extends BaseSpellCapsule
 
 	public SpellVoidContainment()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Void Containment§r§f§ko§r", "SpellVoidContainment", 35, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fA spelltome containing an incantation to","§r§fsummon the caster's Ender Chest at will.","§r§fMana cost: 35 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Void Containment§r§f§ko§r", "SpellVoidContainment", 35, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome containing an incantation to","§r§fsummon the caster's Ender Chest at will.","§r§fMana cost: 35 §r§9mana§r§f.");
 	}
 
 	@Override

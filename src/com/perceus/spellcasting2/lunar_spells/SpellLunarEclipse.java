@@ -26,8 +26,8 @@ public class SpellLunarEclipse extends BaseSpellCapsule
 
 	public SpellLunarEclipse()
 	{
-		super(Material.ENCHANTED_BOOK, ChatUtils.of("☽ Lunar Tome: Eclipse ☽", "30D5C8","FFFFFF",""), "SpellLunarEclipse", 0, false, "§r§fElement: §r§bL§3u§bn§3α§br§r§f.",
-				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.",
+		super(Material.ENCHANTED_BOOK, ChatUtils.of("☽ Lunar Tome: Lunar Eclipse ☽", "30D5C8","FFFFFF",""), "SpellLunarEclipse", 0, false, "§r§fElement: §r§bL§3u§bn§3α§br§r§f.",
+				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.","§r§fSpell Type: §bUtility§f and §7Debuff §dAOE§f.",
 				"§r§fDuring the §r§6Day§r§f:",
 				"§r§fChange the current trajectory of the moon,", 
 				"§r§fcausing an eclipse to bathe the world in darkness.",

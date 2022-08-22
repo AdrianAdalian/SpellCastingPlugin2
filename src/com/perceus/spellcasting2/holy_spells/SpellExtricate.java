@@ -29,7 +29,7 @@ public class SpellExtricate extends BaseSpellCapsule
 
 	public SpellExtricate()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fExtricate§r§7§ko§r", "SpellExtricate", 300, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fAmplify the caster or target's normal health pool.","§r§fAdd a second full health bar for 1 minute.","§r§fAlso restores saturation over 5 seconds.", "§r§fRange: 10 meters.","§r§fMana cost: 300 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fExtricate§r§7§ko§r", "SpellExtricate", 300, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f and §6Buff§f.","§r§fAmplify the caster or target's normal health pool.","§r§fAdd a second full health bar for 1 minute.","§r§fAlso restores saturation over 5 seconds.", "§r§fRange: 10 meters.","§r§fMana cost: 300 §r§9mana§r§f.");
 	}
 
 	@Override

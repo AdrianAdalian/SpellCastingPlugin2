@@ -27,7 +27,7 @@ public class SpellFrostBite extends BaseSpellCapsule
 
 	public SpellFrostBite()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fFrostbite§r§f§ko§r", "SpellFrostBite", 50, false, "§r§fElement: §r§9Water§r§f.","§r§fAn incantation is written within this tome","§r§fthat allows the caster to", "§r§ftemporarily freeze nearby water or any target.","§r§fRange to freeze water: 25 meters.","§r§fRange to freeze target: 20 meters.","§r§fDuration: 7 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fFrostbite§r§f§ko§r", "SpellFrostBite", 50, false, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f and §cOffensive§f.","§r§fAn incantation is written within this tome","§r§fthat allows the caster to", "§r§ftemporarily freeze nearby water or any target.","§r§fRange to freeze water: 25 meters.","§r§fRange to freeze target: 20 meters.","§r§fDuration: 7 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -71,6 +71,7 @@ public class SpellFrostBite extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.AMBIENT_UNDERWATER_EXIT, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.WATER_DROP, null);
 		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 140, 99));

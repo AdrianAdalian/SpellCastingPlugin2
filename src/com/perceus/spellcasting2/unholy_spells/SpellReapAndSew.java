@@ -35,7 +35,7 @@ public class SpellReapAndSew extends BaseSpellCapsule
 
 	public SpellReapAndSew()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Reap & Sew§r§f§ko§r", "SpellReapAndSew", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fAn §r§4§o§lUnholy§r§f text that contains two spells.","§r§fSpell Sew: curse the target with the Bad Omen debuff.","§r§fDuration: 30 seconds.","§r§fRange: 20 meters.","§r§fMana cost: 10 §r§9mana§r§f.","§r§fSpell Reap: while the target is cursed,","§r§fdeal §r§cdamage§r§f equal to target's maximum health.","§r§4Drain§r§f half of damage dealt.","§r§fRange: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.","§r§fUndead targets and The Ender Dragon are immune.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Reap & Sew§r§f§ko§r", "SpellReapAndSew", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fAn §r§4§o§lUnholy§r§f text that contains two spells.","§r§fSpell Sew: curse the target with the Bad Omen debuff.","§r§fDuration: 30 seconds.","§r§fRange: 20 meters.","§r§fMana cost: 10 §r§9mana§r§f.","§r§fSpell Reap: while the target is cursed,","§r§fdeal §r§cdamage§r§f equal to target's maximum health.","§r§4Drain§r§f half of damage dealt.","§r§fRange: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.","§r§fUndead targets and The Ender Dragon are immune.");
 	}
 
 	@Override
@@ -90,6 +90,7 @@ public class SpellReapAndSew extends BaseSpellCapsule
 					return false;
 				}
 				ManaInterface.updateScoreBoard(event.getPlayer());
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 50, Particle.SMOKE_LARGE, null);
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
 				
@@ -106,10 +107,10 @@ public class SpellReapAndSew extends BaseSpellCapsule
 			return false;
 		}
 		ManaInterface.updateScoreBoard(event.getPlayer());	
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 50, Particle.SMOKE_LARGE, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 		AttributeInstance health = ((Attributable) target).getAttribute(Attribute.GENERIC_MAX_HEALTH);
 		((Damageable) target).damage(health.getValue());
 		

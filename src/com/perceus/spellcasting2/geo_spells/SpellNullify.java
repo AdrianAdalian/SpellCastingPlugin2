@@ -21,7 +21,7 @@ public class SpellNullify extends BaseSpellCapsule
 
 	public SpellNullify()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fNullify§r§f§ko§r", "SpellNullify", 1000, true, "§r§fElement: §r§6Geo§r§f.","§r§fUsing the forces of §r§6Geo§r§f,","§r§ftemporarily nullify all physical damage.","§r§fAs a result of the power needed to cast this spell,","§r§fthe caster's movement speed is greatly reduced.","§r§fDuration: 1 minute.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fNullify§r§f§ko§r", "SpellNullify", 1000, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fUsing the forces of §r§6Geo§r§f,","§r§ftemporarily nullify all physical damage.","§r§fAs a result of the power needed to cast this spell,","§r§fthe caster's movement speed is greatly reduced.","§r§fDuration: 1 minute.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override

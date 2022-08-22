@@ -21,7 +21,7 @@ public class SpellCleanse extends BaseSpellCapsule
 
 	public SpellCleanse()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§bAethereal Tome§f: Cleanse§r§f§ko§r", "SpellCleanse", 1000, false, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fA spelltome containing §r§b§l§oAethereal§r§f energy.","§r§fAn incantation is written within that allows","§r§fthe caster to remove curses from items.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§bAethereal Tome§f: Cleanse§r§f§ko§r", "SpellCleanse", 1000, false, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome containing §r§b§l§oAethereal§r§f energy.","§r§fAn incantation is written within that allows","§r§fthe caster to remove curses from items.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override

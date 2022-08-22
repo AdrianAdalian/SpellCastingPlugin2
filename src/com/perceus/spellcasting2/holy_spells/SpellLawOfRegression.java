@@ -27,7 +27,7 @@ public class SpellLawOfRegression extends BaseSpellCapsule
 
 	public SpellLawOfRegression()
 	{
-		super(Material.PAPER, "§r§7§ko§r§7§lSpell: §r§fLaw of Regression§r§7§ko§r", "SpellLawOfRegression", 100, true, true,"§r§fElement: §r§f§o§lHoly§r§f.", "§r§fRoutes all illness and", "§r§fnegative stat changes to self or target player.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.PAPER, "§r§7§ko§r§7§lSpell: §r§fLaw of Regression§r§7§ko§r", "SpellLawOfRegression", 100, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fRoutes all illness and", "§r§fnegative stat changes to self or target player.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -121,7 +121,7 @@ public class SpellLawOfRegression extends BaseSpellCapsule
 		
 		if(hasPotionEffect == true) 
 		{
-			
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			PrintUtils.sendMessage((Player)target, event.getPlayer().getDisplayName() + " has cured you.");
 			PrintUtils.sendMessage(event.getPlayer(), ((Player)target).getDisplayName() + " has been cured.");
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);

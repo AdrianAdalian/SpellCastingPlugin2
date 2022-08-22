@@ -26,7 +26,7 @@ public class MagicWeapon_WandOfGeo extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfGeo()
 	{
-		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Geo", "FFE748","964B00","§l§o"), "MagicWeaponWandOfGeo", 0, true, "§r§fElement: §r§6Geo§r§f.",
+		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Geo", "FFE748","964B00","§l§o"), "MagicWeaponWandOfGeo", 0, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §cOffensive§f and §6Buff§f.",
 				"§r§fA simple stick infused with the element of §r§6Geo§r§f.",
 				"§r§7§lSpell: §r§fPoison Dart",
 				"§r§fLeft-Click: Summon a dart that poisons those that it hits.",

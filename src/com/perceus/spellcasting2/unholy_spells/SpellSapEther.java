@@ -27,7 +27,7 @@ public class SpellSapEther extends BaseSpellCapsule
 
 	public SpellSapEther()
 	{
-		super(Material.LIGHT_GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fSap Ether§r§7§ko§r", "SpellSapEther", 0, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.",
+		super(Material.LIGHT_GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fSap Ether§r§7§ko§r", "SpellSapEther", 0, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fRadiate a player target with §r§4§o§lUnholy§r§f energy,",
 				"§r§fSapping their ether and thus",
 				"§r§fdraining their §r§9mana§r§f in exchange",
@@ -77,7 +77,7 @@ public class SpellSapEther extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"You're already at full mana.");
 			return false;
 		}
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 		event.getPlayer().setHealth(event.getPlayer().getHealth() / 2.0);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);

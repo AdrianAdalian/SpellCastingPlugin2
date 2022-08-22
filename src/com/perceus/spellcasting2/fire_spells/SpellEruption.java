@@ -21,7 +21,7 @@ public class SpellEruption extends BaseSpellCapsule
 
 	public SpellEruption()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Eruption§r§f§ko§r", "SpellEruption", 800, true, "§r§fElement: §r§cFire§r§f.","§r§fEmit a surge of §r§cFire§r§f energy around the caster,","§r§fpriming all nearby targets within range.","§r§fThose effected will explode after a short duration.","§r§fDelay: 5 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 800 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Eruption§r§f§ko§r", "SpellEruption", 800, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fEmit a surge of §r§cFire§r§f energy around the caster,","§r§fpriming all nearby targets within range.","§r§fThose effected will explode after a short duration.","§r§fDelay: 5 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 800 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -52,6 +52,7 @@ public class SpellEruption extends BaseSpellCapsule
 			}
 			
 			SpellParticles.drawDisc(target.getLocation(), 2, 2, 20, Particle.LAVA, null);
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FLAME, null);
 			new BukkitRunnable()
 			{
 				@Override
@@ -65,3 +66,4 @@ public class SpellEruption extends BaseSpellCapsule
 	}
 
 }
+//,"§r§fSpell Type: §7Debuff§f §dAOE§f."

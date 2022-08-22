@@ -20,7 +20,7 @@ public class SpellCreateRabbit extends BaseSpellCapsule
 
 	public SpellCreateRabbit()
 	{
-		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lRune§f: Materialize Rabbit§r§f§ko§r", "SpellCreateRabbit", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fAn unstable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon living organisms.","§r§fThis rune will summon a rabbit on target block.","§r§fThe rune will be consumed upon use.");
+		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lRune§f: Materialize Rabbit§r§f§ko§r", "SpellCreateRabbit", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn unstable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon living organisms.","§r§fThis rune will summon a rabbit on target block.","§r§fThe rune will be consumed upon use.");
 	}
 
 	@Override

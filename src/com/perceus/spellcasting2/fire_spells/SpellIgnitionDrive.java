@@ -21,7 +21,7 @@ public class SpellIgnitionDrive extends BaseSpellCapsule
 
 	public SpellIgnitionDrive()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fIgnition Drive§r§7§ko§r", "SpellIgnitionDrive", 1000, true, true, "§r§fElement: §r§cFire§r§f.","§r§fVastly overclocks caster's offensive capabilities","§r§fgranting a 300% §r§cdamage§r§f increase.","§r§fDue to the effects of this spell,", "§r§fthe caster goes into temporary", "§r§fshock after effects have ended.","§r§fDuration: 20 seconds.","§r§fShock duration: 60 seconds.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fIgnition Drive§r§7§ko§r", "SpellIgnitionDrive", 1000, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §6Buff§f.","§r§fVastly overclocks caster's offensive capabilities","§r§fgranting a 300% §r§cdamage§r§f increase.","§r§fDue to the effects of this spell,", "§r§fthe caster goes into temporary", "§r§fshock after effects have ended.","§r§fDuration: 20 seconds.","§r§fShock duration: 60 seconds.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override

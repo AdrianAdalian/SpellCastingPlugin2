@@ -50,6 +50,14 @@ public class RecipeBook_MagicalItemRecipes extends SurfaceGui
 		{
 			new DisplayXpCrystal().display(event.getWhoClicked());
 		}));
+		this.updateSingleComponent(player, 42, SimpleComponentBuilder.build(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fEther Crystal§r§7§ko§r", (event) -> 
+		{
+			new DisplayEtherCrystal().display(event.getWhoClicked());
+		}));
+		this.updateSingleComponent(player, 38, SimpleComponentBuilder.build(Material.END_CRYSTAL, "§r§f§ko§r§bAethereal §r§eRune§f: Create Matter§r§f§ko§r", (event) -> 
+		{
+			new DisplayCreateItem().display(event.getWhoClicked());
+		}));
 		
 		this.updateSingleComponent(player, 37, SimpleComponentBuilder.build(Material.LIME_STAINED_GLASS_PANE, "Go Back", (event) -> 
 		{

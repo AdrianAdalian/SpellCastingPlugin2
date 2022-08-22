@@ -18,7 +18,7 @@ public class SpellUndeadEffigy extends BaseSpellCapsule
 
 	public SpellUndeadEffigy()
 	{
-		super(Material.TOTEM_OF_UNDYING, "§r§7§ko§r§7§lSpell: §r§fUndead Effigy§r§7§ko§r", "SpellUndeadEffigy", 500, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fHarness §r§4§o§lUnholy§r§f energy into an undead effigy,","§r§fmarking a specific location of rebirth upon death.","§r§fThis effigy, while in hand,","§r§fcan also act as a totem of Undying.","§r§4§lWARNING§r§f: Spellbook will be consumed.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.TOTEM_OF_UNDYING, "§r§7§ko§r§7§lSpell: §r§fUndead Effigy§r§7§ko§r", "SpellUndeadEffigy", 500, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §bUtility§f.","§r§fHarness §r§4§o§lUnholy§r§f energy into an undead effigy,","§r§fmarking a specific location of rebirth upon death.","§r§fThis effigy, while in hand,","§r§fcan also act as a totem of Undying.","§r§4§lWARNING§r§f: Spellbook will be consumed.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override

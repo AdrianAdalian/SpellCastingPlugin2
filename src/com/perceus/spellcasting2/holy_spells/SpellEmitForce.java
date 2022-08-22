@@ -25,7 +25,7 @@ public class SpellEmitForce extends BaseSpellCapsule
 
 	public SpellEmitForce()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fEmit Force§r§7§ko§r", "SpellEmitForce", 20, true, true,"§r§fElement: §r§f§o§lHoly§r§f.", "§r§fOn Right-Click:","§r§fEmits a radial force, subjugating targets.","§r§fRange: 5 meters.","§r§fOn Left-Click:", "§r§fEmit a concentrated magical force, subjugating the target.", "§r§fRange: 10 meters.","§r§fMana cost: 20 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fEmit Force§r§7§ko§r", "SpellEmitForce", 20, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §dAOE§f.", "§r§fOn Right-Click:","§r§fEmits a radial force, subjugating targets.","§r§fRange: 5 meters.","§r§fOn Left-Click:", "§r§fEmit a concentrated magical force, subjugating the target.", "§r§fRange: 10 meters.","§r§fMana cost: 20 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -52,7 +52,7 @@ public class SpellEmitForce extends BaseSpellCapsule
 				PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 				return false;
 			}
-			
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.setVelocity(target.getLocation().toVector().subtract(event.getPlayer().getLocation().toVector()));
@@ -67,7 +67,7 @@ public class SpellEmitForce extends BaseSpellCapsule
 			}
 			for (Entity target2 : event.getPlayer().getNearbyEntities(5, 5, 5))
 			{
-				
+				SpellParticles.drawLine(event.getPlayer().getLocation(), target2.getLocation(), 1, Particle.END_ROD, null);
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 				target2.setVelocity(target2.getLocation().toVector().subtract(event.getPlayer().getLocation().toVector()));

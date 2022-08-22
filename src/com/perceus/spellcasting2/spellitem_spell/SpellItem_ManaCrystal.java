@@ -19,7 +19,7 @@ public class SpellItem_ManaCrystal extends BaseSpellCapsule
 
 	public SpellItem_ManaCrystal()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fMana Crystal§r§7§ko§r", "SpellItem_ManaCrystal", 0, true, "§r§fElement: §r§9Water§r§f.", "§r§fA conglomerate of crystalized §r§9mana§r§f.","§r§fThis crystal, when broken,","§r§fwill restore 500 §r§9mana§r§f.");
+		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fMana Crystal§r§7§ko§r", "SpellItem_ManaCrystal", 0, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fA conglomerate of crystalized §r§9mana§r§f.","§r§fThis crystal, when broken,","§r§fwill restore 500 §r§9mana§r§f.");
 	}
 
 	@Override

@@ -107,8 +107,11 @@ import com.perceus.spellcasting2.accounts.KBSpellVectorPlate;
 import com.perceus.spellcasting2.accounts.KBSpellVoidBurst;
 import com.perceus.spellcasting2.accounts.KBSpellVoidGate;
 import com.perceus.spellcasting2.accounts.KBSpellWaveWake;
-import com.perceus.spellcasting2.astral_spells.SpellDesolate;
+import com.perceus.spellcasting2.astral_spells.SpellEquilibrium;
+import com.perceus.spellcasting2.astral_spells.SpellKarma;
+import com.perceus.spellcasting2.astral_spells.SpellNullifyGravity;
 import com.perceus.spellcasting2.astral_spells.SpellSuspendedMatter;
+import com.perceus.spellcasting2.astral_spells.SpellUrgentTeleport;
 import com.perceus.spellcasting2.fire_spells.SpellChaosFireball;
 import com.perceus.spellcasting2.fire_spells.SpellChaosMeteor;
 import com.perceus.spellcasting2.fire_spells.SpellEruption;
@@ -122,17 +125,25 @@ import com.perceus.spellcasting2.geo_spells.SpellTransmute;
 import com.perceus.spellcasting2.holy_spells.SpellAmeliorate;
 import com.perceus.spellcasting2.holy_spells.SpellDisarm;
 import com.perceus.spellcasting2.holy_spells.SpellEtherTransference;
+import com.perceus.spellcasting2.holy_spells.SpellFertility;
 import com.perceus.spellcasting2.holy_spells.SpellGuardianAngel;
 import com.perceus.spellcasting2.holy_spells.SpellHeal;
+import com.perceus.spellcasting2.holy_spells.SpellHealingAura;
 import com.perceus.spellcasting2.holy_spells.SpellLivingRecall;
 import com.perceus.spellcasting2.holy_spells.SpellPacify;
 import com.perceus.spellcasting2.holy_spells.SpellProlongedFlight;
+import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
+import com.perceus.spellcasting2.holy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
+import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
+import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
+import com.perceus.spellcasting2.solar_spells.SpellDesolate;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
+import com.perceus.spellcasting2.solar_spells.SpellSolarBolt;
 import com.perceus.spellcasting2.solar_spells.SpellSolarEclipse;
 import com.perceus.spellcasting2.solar_spells.SpellSolarFlare;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_WandOfVoid;
@@ -140,6 +151,7 @@ import com.perceus.spellcasting2.spellitem_spell.SpellItem_AetherealScroll;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_AetherealScrollPlus;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_BloodCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_BloodCrystalPlus;
+import com.perceus.spellcasting2.spellitem_spell.SpellItem_EtherCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_HealthCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_ManaCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_XpCrystal;
@@ -209,10 +221,11 @@ public class ChestLootTablesListener implements Listener
 				new KBSpellMagicBolt(),new KBSpellHealingHands(),new KBSpellBarrier(),new KBSpellCure(),
 				new KBSpellSatiate(),new KBSpellLawOfRegression(),new KBSpellExpellUndead(),new KBSpellAngelicFlight(),
 				new KBSpellRegenerate(),new KBSpellAccolades(),new KBSpellExtricate(),new KBSpellPenance(),
-				new KBSpellJudgement());
+				new KBSpellJudgement(), new SpellFertility(), new SpellProtectOther(), new SpellHealingAura(), new SpellItem_EtherCrystal(), new SpellUndyingSoul());
 		
 		List<BaseSpellCapsule> lootList2 = List.of(new SpellLunarBolt(), new SpellLunarEclipse(), new SpellDesolate(), new SpellItem_BloodCrystalPlus(), new MagicWeapon_WandOfVoid(),
-				new SpellSolarEclipse(), new SpellComet(), new SpellSolarFlare(), new SpellSolGate(), new SpellSuspendedMatter());
+				new SpellSolarEclipse(), new SpellComet(), new SpellSolarFlare(), new SpellSolGate(), new SpellSuspendedMatter(), new SpellSolarBolt(), new SpellItem_EtherCrystal(), new SpellUrgentTeleport(),
+				new SpellNullifyGravity(), new SpellMoonBeam(), new SpellMoonBlast(), new SpellKarma(), new SpellEquilibrium());
 		
 		if (event.getWorld() == Bukkit.getWorld("world") && random.nextDouble() < 1.0)
 		{	

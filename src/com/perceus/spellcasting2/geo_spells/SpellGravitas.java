@@ -21,7 +21,7 @@ public class SpellGravitas extends BaseSpellCapsule
 
 	public SpellGravitas()
 	{
-		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fGravitas§r§7§ko§r", "SpellGravitas", 75, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fCaster temporarily resists the forces of gravity.","§r§fDuration: 10 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fGravitas§r§7§ko§r", "SpellGravitas", 75, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §6Buff§f.","§r§fCaster temporarily resists the forces of gravity.","§r§fDuration: 10 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

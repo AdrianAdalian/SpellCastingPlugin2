@@ -71,6 +71,7 @@ import com.perceus.spellcasting2.ancient_spells.SpellCreateHoglin;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateHorse;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateHusk;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateIronGolem;
+import com.perceus.spellcasting2.ancient_spells.SpellCreateItem;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateLlama;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateMagmaCube;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateMooshroom;
@@ -106,8 +107,11 @@ import com.perceus.spellcasting2.ancient_spells.SpellCreateWolf;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZoglin;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombie;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombifiedPiglin;
-import com.perceus.spellcasting2.astral_spells.SpellDesolate;
+import com.perceus.spellcasting2.astral_spells.SpellEquilibrium;
+import com.perceus.spellcasting2.astral_spells.SpellKarma;
+import com.perceus.spellcasting2.astral_spells.SpellNullifyGravity;
 import com.perceus.spellcasting2.astral_spells.SpellSuspendedMatter;
+import com.perceus.spellcasting2.astral_spells.SpellUrgentTeleport;
 import com.perceus.spellcasting2.darkmagic_spells.SpellBloodletting;
 import com.perceus.spellcasting2.darkmagic_spells.SpellCurse;
 import com.perceus.spellcasting2.darkmagic_spells.SpellDeath;
@@ -162,8 +166,10 @@ import com.perceus.spellcasting2.holy_spells.SpellEmitForce;
 import com.perceus.spellcasting2.holy_spells.SpellEtherTransference;
 import com.perceus.spellcasting2.holy_spells.SpellExpellUndead;
 import com.perceus.spellcasting2.holy_spells.SpellExtricate;
+import com.perceus.spellcasting2.holy_spells.SpellFertility;
 import com.perceus.spellcasting2.holy_spells.SpellGuardianAngel;
 import com.perceus.spellcasting2.holy_spells.SpellHeal;
+import com.perceus.spellcasting2.holy_spells.SpellHealingAura;
 import com.perceus.spellcasting2.holy_spells.SpellHealingHands;
 import com.perceus.spellcasting2.holy_spells.SpellJudgement;
 import com.perceus.spellcasting2.holy_spells.SpellLawOfRegression;
@@ -172,14 +178,20 @@ import com.perceus.spellcasting2.holy_spells.SpellMagicBolt;
 import com.perceus.spellcasting2.holy_spells.SpellPacify;
 import com.perceus.spellcasting2.holy_spells.SpellPenance;
 import com.perceus.spellcasting2.holy_spells.SpellProlongedFlight;
+import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
 import com.perceus.spellcasting2.holy_spells.SpellRegenerate;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
 import com.perceus.spellcasting2.holy_spells.SpellSatiate;
+import com.perceus.spellcasting2.holy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
+import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
+import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
+import com.perceus.spellcasting2.solar_spells.SpellDesolate;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
+import com.perceus.spellcasting2.solar_spells.SpellSolarBolt;
 import com.perceus.spellcasting2.solar_spells.SpellSolarEclipse;
 import com.perceus.spellcasting2.solar_spells.SpellSolarFlare;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_WandOfFire;
@@ -193,6 +205,7 @@ import com.perceus.spellcasting2.spellitem_spell.SpellItem_AetherealScroll;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_AetherealScrollPlus;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_BloodCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_BloodCrystalPlus;
+import com.perceus.spellcasting2.spellitem_spell.SpellItem_EtherCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_Fireball;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_HealthCrystal;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_ManaCrystal;
@@ -291,7 +304,6 @@ public class CastListener implements Listener
 		put("SpellChaosMeteor", new SpellChaosMeteor());
 		put("SpellOverclockProtocol", new SpellOverclockProtocol());
 		put("SpellSmokescreen", new SpellSmokeScreen());
-		put("SpellSolGate", new SpellSolGate()); 
 		put("SpellFlamethrower", new SpellFlamethrower());
 		put("SpellInsulate", new SpellInsulate());
 		put("SpellIgnitionDrive", new SpellIgnitionDrive());
@@ -299,9 +311,7 @@ public class CastListener implements Listener
 		put("SpellHellFire", new SpellHellFire());
 		put("SpellCombustion", new SpellCombustion());
 		put("SpellEmbers", new SpellEmbers());
-		put("SpellSolarFlare", new SpellSolarFlare());
 		put("SpellExpulsion", new SpellExpulsion());
-		put("SpellComet", new SpellComet());
 		put("SpellLavaBomb", new SpellLavaBomb());
 		put("SpellEruption", new SpellEruption());
 		
@@ -330,6 +340,10 @@ public class CastListener implements Listener
 		put("SpellLivingRecall", new SpellLivingRecall());
 		put("SpellRestoration", new SpellRestoration());
 		put("SpellEtherTransference", new SpellEtherTransference());
+		put("SpellFertility", new SpellFertility());
+		put("SpellHealingAura", new SpellHealingAura());
+		put("SpellProtectOther", new SpellProtectOther());
+		put("SpellUndyingSoul", new SpellUndyingSoul());
 		
 		//void spells
 		put("SpellBanishGreaterEvil", new SpellBanishGreaterEvil());
@@ -464,6 +478,7 @@ public class CastListener implements Listener
 		put("SpellItem_AetherealScrollPlus", new SpellItem_AetherealScrollPlus());
 		put("SpellItem_BloodCrystal", new SpellItem_BloodCrystal());
 		put("SpellItem_BloodCrystalPlus", new SpellItem_BloodCrystalPlus());
+		put("EtherCrystal", new SpellItem_EtherCrystal());
 		
 		//aethereal spells
 		put("SpellFortifyDurability", new SpellFortifyDurability());
@@ -568,6 +583,7 @@ public class CastListener implements Listener
 		put("SpellCreateWither", new SpellCreateWither());
 		put("SpellCreateWarden", new SpellCreateWarden());
 		put("SpellCreateElderGuardian", new SpellCreateElderGuardian());
+		put("SpellCreateItem", new SpellCreateItem());
 		
 		//Knowledge Books
 		put("KBSpellKindleFlame", new KBSpellKindleFlame());
@@ -672,18 +688,28 @@ public class CastListener implements Listener
 		//dev items
 		put("SpellResetTome", new SpellResetTome());
 		put("SpellUnlockTome", new SpellUnlockTome());	
+		put("CrackedEtherCrystal", new CrackedEtherCrystal());
 		
 		//astral spells
-		put("SpellDesolate", new SpellDesolate());
 		put("SpellSuspendedMatter", new SpellSuspendedMatter());
+		put("SpellUrgentTeleport", new SpellUrgentTeleport());
+		put("SpellSuspendGravity", new SpellNullifyGravity());
+		put("SpellKarma", new SpellKarma());
+		put("SpellEquilibrium", new SpellEquilibrium());
 		
 		//lunar spells
 		put("SpellLunarBolt", new SpellLunarBolt());
 		put("SpellLunarEclipse", new SpellLunarEclipse());
+		put("SpellMoonBeam", new SpellMoonBeam());
+		put("SpellMoonBlast", new SpellMoonBlast());
 		
 		//solar spell
 		put("SpellSolarEclipse", new SpellSolarEclipse());
-		
+		put("SpellSolarBolt", new SpellSolarBolt());
+		put("SpellDesolate", new SpellDesolate());
+		put("SpellSolGate", new SpellSolGate()); 
+		put("SpellSolarFlare", new SpellSolarFlare());
+		put("SpellComet", new SpellComet());
 	}};
 	
 }

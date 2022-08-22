@@ -8,12 +8,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import com.perceus.spellcasting2.BaseSpellCapsule;
 import com.perceus.spellcasting2.SpellParticles;
 
-import fish.yukiemeralis.eden.Eden;
 import fish.yukiemeralis.eden.utils.PrintUtils;
 
 public class SpellBarrier extends BaseSpellCapsule
@@ -21,7 +19,7 @@ public class SpellBarrier extends BaseSpellCapsule
 
 	public SpellBarrier()
 	{
-		super(Material.WHITE_DYE, "§r§7§ko§r§7§lSpell: §r§fBarrier§r§7§ko§r", "SpellBarrier", 50, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fProtect the caster by raising a barrier around them.","§r§fApply a full health bar of absorption.","§r§fDuration: 20 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.WHITE_DYE, "§r§7§ko§r§7§lSpell: §r§fBarrier§r§7§ko§r", "SpellBarrier", 50, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §6Buff§f.","§r§fProtect the caster by raising a barrier around them.","§r§fApply a full bar of absorption.","§r§fDuration: 1 minute.","§r§fMana cost: 50 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,16 +34,7 @@ public class SpellBarrier extends BaseSpellCapsule
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
-		event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 400, 4));
-		
-		new BukkitRunnable()
-		{
-		  @Override
-		  public void run()
-		  {
-			  event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, SoundCategory.MASTER, 1, 1);
-		  }
-		}.runTaskLater(Eden.getInstance(), 405);
+		event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 4));
 		return true;
 	}
 

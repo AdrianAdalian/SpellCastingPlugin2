@@ -23,7 +23,7 @@ public class SpellGust extends BaseSpellCapsule
 
 	public SpellGust()
 	{
-		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fGust§r§7§kao§r", "SpellGust", 25, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fCreate a strong gust of wind that","§r§fpushes any target a small distance away.","§r§fRange: 3 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.STRING, "§r§7§ko§r§7§lSpell: §r§fGust§r§7§kao§r", "SpellGust", 25, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fCreate a strong gust of wind that","§r§fpushes any target a small distance away.","§r§fRange: 3 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -42,6 +42,7 @@ public class SpellGust extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
 		target.setVelocity(target.getLocation().toVector().subtract(event.getPlayer().getLocation().toVector()));
 		return true;

@@ -27,7 +27,7 @@ public class SpellElectrocute extends BaseSpellCapsule
 
 	public SpellElectrocute()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Electrocute§r§f§ko§r", "SpellElectrocute", 250, false, "§r§fElement: §r§dStorm§r§f.",
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Electrocute§r§f§ko§r", "SpellElectrocute", 250, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fA spellbook radiating §r§dStorm§r§f energy.",
 				"§r§fAllows the caster to emit a short ranged burst of electricity,",
 				"§r§fdamaging and crippling the target.",
@@ -57,6 +57,7 @@ public class SpellElectrocute extends BaseSpellCapsule
 		
 		if (target instanceof LivingEntity) 
 		{
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getWorld().playSound((Location) target.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.MASTER, 1, 1);

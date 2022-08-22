@@ -19,7 +19,7 @@ public class SpellWaveWake extends BaseSpellCapsule
 
 	public SpellWaveWake()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fWave Wake§r§7§ko§r", "SpellWaveWake", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fGreatly boosts the caster through water.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fWave Wake§r§7§ko§r", "SpellWaveWake", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f.","§r§fGreatly boosts the caster through water.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

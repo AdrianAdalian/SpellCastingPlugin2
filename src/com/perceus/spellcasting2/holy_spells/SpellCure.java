@@ -19,7 +19,7 @@ public class SpellCure extends BaseSpellCapsule
 
 	public SpellCure()
 	{
-		super(Material.WHITE_DYE, "§r§7§ko§r§7§lSpell: §r§fCure§r§7§ko§r", "SpellCure", 50, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fRapidly regenerates the caster's cells, curing poison.","§r§fFully §r§aHeals§r§f the caster.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.WHITE_DYE, "§r§7§ko§r§7§lSpell: §r§fCure§r§7§ko§r", "SpellCure", 50, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f.","§r§fRapidly regenerates the caster's cells, curing poison.","§r§fFully §r§aHeals§r§f the caster.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

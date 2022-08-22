@@ -21,7 +21,7 @@ public class SpellRagingCurrent extends BaseSpellCapsule
 
 	public SpellRagingCurrent()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fRaging Current§r§7§ko§r", "SpellRagingCurrent", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSummon a raging current that","§r§fdrastically increases caster swim speed.","§r§fDuration: 30 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fRaging Current§r§7§ko§r", "SpellRagingCurrent", 75, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §6Buff§f.","§r§fSummon a raging current that","§r§fdrastically increases caster swim speed.","§r§fDuration: 30 seconds.","§r§fMana cost: 75 §r§9mana§r§f.");
 	}
 
 	@Override

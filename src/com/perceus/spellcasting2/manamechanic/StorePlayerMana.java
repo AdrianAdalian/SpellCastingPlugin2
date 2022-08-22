@@ -7,9 +7,11 @@ public class StorePlayerMana
 	@Expose
 	private int currentMana = 0;
 	@Expose
-	private int maxMana = 1000;
+	private int maxMana = 500;
 	@Expose
 	private int minMana = 0;
+	@Expose
+	private int negMaxMana = -1000;
 	
 	public int getCurrentMana()
 	{
@@ -40,4 +42,10 @@ public class StorePlayerMana
 	{
 		this.minMana = minMana;
 	}	
+	
+	public int getNegMana() 
+	{
+		return negMaxMana;
+	}
+	
 }

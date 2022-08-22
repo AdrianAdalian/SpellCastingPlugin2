@@ -24,7 +24,7 @@ public class MagicWeapon_WandOfVoid extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfVoid()
 	{
-		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Void", "FFE748","30D5C8","§l§o"), "MagicWeaponWandOfVoid", 25, true, "§r§fElement: §r§3§lVOID§r§f.",
+		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Void", "FFE748","30D5C8","§l§o"), "MagicWeaponWandOfVoid", 25, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f and §6Buff§f.",
 				"§r§fA simple stick infused with the element of §r§3§lVOID§r§f.",
 				"§r§7§lSpell: §r§fVoid Bolt",
 				"§r§fLeft-Click: Cast a void bolt at a target,",

@@ -26,7 +26,7 @@ public class SpellDeath extends BaseSpellCapsule
 
 	public SpellDeath()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§f死§r§7§ko§r", "SpellDeath", 0, false, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fA forbidden spell capable of instantly", "§r§fkilling the target player.", "§r§fThis spell by-passes absorption.", "§r§fRange: 20 meters.", "§r§4Blood Sacrifice§r§f: 15 hearts.","§r§f§o「 お前はもう死んでいる。 」");
+		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§f死§r§7§ko§r", "SpellDeath", 0, false, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §cOffensive§f.", "§r§fA forbidden spell capable of instantly", "§r§fkilling the target player.", "§r§fThis spell by-passes absorption.", "§r§fRange: 20 meters.", "§r§4Blood Sacrifice§r§f: 15 hearts.","§r§f§o「 お前はもう死んでいる。 」");
 		
 	}
 
@@ -53,6 +53,7 @@ public class SpellDeath extends BaseSpellCapsule
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CRIMSON_SPORE, null);
 		event.getPlayer().damage(30);
 		((Player) target).damage(54);
 		

@@ -34,7 +34,7 @@ public class SpellSolarFlare extends BaseSpellCapsule
 	public SpellSolarFlare()
 	{
 		super(Material.ENCHANTED_BOOK, ChatUtils.of("☀ Solar Tome: Solar Flare ☀", "F9812B","FFFFFF",""), "SpellSolarFlare", 0, true, 
-				"§r§fElement: §r§6S§eo§6l§eα§6r§r§f.",
+				"§r§fElement: §r§6S§eo§6l§eα§6r§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fA §5C§de§bl§3e§cs§4t§6i§eal §r§ftome.",
 				"§r§fThe spell within grows stronger during the §6Day§f.",
 				"§r§fDuring the §6Day§f:",

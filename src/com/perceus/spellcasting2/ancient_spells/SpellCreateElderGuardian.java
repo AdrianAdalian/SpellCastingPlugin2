@@ -20,7 +20,7 @@ public class SpellCreateElderGuardian extends BaseSpellCapsule
 
 	public SpellCreateElderGuardian()
 	{
-		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lAncient Rune§f: Materialize Elder Guardian§r§f§ko§r", "SpellCreateElderGuardian", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fAn stable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon world level entities.","§r§fThis rune will summon an Elder Guardian on target block.","§r§fThe rune will be consumed upon use.");
+		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lAncient Rune§f: Materialize Elder Guardian§r§f§ko§r", "SpellCreateElderGuardian", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn stable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon world level entities.","§r§fThis rune will summon an Elder Guardian on target block.","§r§fThe rune will be consumed upon use.");
 	}
 
 	@Override

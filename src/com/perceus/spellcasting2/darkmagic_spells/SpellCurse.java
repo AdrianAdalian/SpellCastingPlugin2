@@ -29,7 +29,7 @@ public class SpellCurse extends BaseSpellCapsule
 
 	public SpellCurse()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fCurse§r§7§ko§r", "SpellCurse", 0, false, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fA tome capable of cursing target player.", "§r§fThe spells effects have a delay that once completed,","§r§fweakens, slows, and fatigues the cursed target.", "§r§fRange: 20 meters.", "§r§fDelay: 30 seconds.","§r§fDuration: 5 minutes.", "§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 5 hearts.");
+		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fCurse§r§7§ko§r", "SpellCurse", 0, false, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §cOffensive§f.", "§r§fA tome capable of cursing target player.", "§r§fThe spells effects have a delay that once completed,","§r§fweakens, slows, and fatigues the cursed target.", "§r§fRange: 20 meters.", "§r§fDelay: 30 seconds.","§r§fDuration: 5 minutes.", "§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 5 hearts.");
 	}
 
 	@Override
@@ -57,6 +57,7 @@ public class SpellCurse extends BaseSpellCapsule
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.MASTER, 1, 1);
 		PrintUtils.sendMessage((Player) target, "You have been cursed.");
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CRIMSON_SPORE, null);
 		event.getPlayer().damage(10);
 		
 		new BukkitRunnable()

@@ -25,7 +25,7 @@ public class SpellPull extends BaseSpellCapsule
 
 	public SpellPull()
 	{
-		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fPull§r§7§ko§r", "SpellPull", 25, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fEmit a collapsing force from the caster's hands","§r§fpulling any target towards them.","§r§fRange: 30 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.CYAN_DYE, "§r§7§ko§r§7§lSpell: §r§fPull§r§7§ko§r", "SpellPull", 25, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fEmit a collapsing force from the caster's hands","§r§fpulling any target towards them.","§r§fRange: 30 meters.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -44,6 +44,7 @@ public class SpellPull extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 		    SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.setVelocity(event.getPlayer().getLocation().toVector().subtract(target.getLocation().toVector()).normalize().multiply(5));

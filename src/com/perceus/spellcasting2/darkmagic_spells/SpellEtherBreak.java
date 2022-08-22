@@ -28,7 +28,7 @@ public class SpellEtherBreak extends BaseSpellCapsule
 
 	public SpellEtherBreak()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fEther Break§r§7§ko§r", "SpellEtherBreak", 0, false, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fAn incantation that when cast,","§r§fis able to disrupt the ether flow", "§r§fof a player target and cripple their","§r§fmana reserves and regeneration.","§r§fEntirely depletes target's mana.","§r§fRange: 20 meters.","§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 7 hearts.");
+		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fEther Break§r§7§ko§r", "SpellEtherBreak", 0, false, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §7Debuff§f.", "§r§fAn incantation that when cast,","§r§fis able to disrupt the ether flow", "§r§fof a player target and cripple their","§r§fmana reserves and regeneration.","§r§fEntirely depletes target's mana.","§r§fRange: 20 meters.","§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 7 hearts.");
 	}
 
 	@Override
@@ -55,6 +55,7 @@ public class SpellEtherBreak extends BaseSpellCapsule
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_ACTIVATE, SoundCategory.MASTER, 1, 1);
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CRIMSON_SPORE, null);
 		event.getPlayer().damage(10);
 		
 		PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getCurrentMana() - 1000);

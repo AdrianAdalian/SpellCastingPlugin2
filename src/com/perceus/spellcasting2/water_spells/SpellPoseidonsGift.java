@@ -19,7 +19,7 @@ public class SpellPoseidonsGift extends BaseSpellCapsule
 
 	public SpellPoseidonsGift()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fPoseidon's Gift§r§f§ko§r", "SpellPoseidonsGift", 0, false, "§r§fElement: §r§9Water§r§f.","§r§fAn enchantment used to soothe one's body.","§r§fRegenerate the caster's mana while swimming.","§r§fRestores 200 §r§9Mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fPoseidon's Gift§r§f§ko§r", "SpellPoseidonsGift", 0, false, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn enchantment used to soothe one's body.","§r§fRegenerate the caster's mana while swimming.","§r§fRestores 200 §r§9Mana§r§f.");
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class SpellAntiGravity extends BaseSpellCapsule
 
 	public SpellAntiGravity()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fAntiGravity§r§7§ko§r", "SpellAntiGravity", 50, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fLevitate a target or the caster into the air,","§r§fdamaging the target", "§r§for protecting the caster at their decent.","§r§fDuration: 3 seconds.","§r§fRange of cast: 10 meters.","§r§fDistance of meters traveled: 12.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fAntiGravity§r§7§ko§r", "SpellAntiGravity", 50, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §6Buff§f.","§r§fLevitate a target or the caster into the air,","§r§fdamaging the target", "§r§for protecting the caster at their decent.","§r§fDuration: 3 seconds.","§r§fRange of cast: 10 meters.","§r§fDistance of meters traveled: 12.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

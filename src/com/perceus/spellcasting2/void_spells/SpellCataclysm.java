@@ -23,7 +23,7 @@ public class SpellCataclysm extends BaseSpellCapsule
 
 	public SpellCataclysm()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fCataclysm§r§7§ko§r", "SpellCataclysm", 500, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSummon a super critical concentration of","§r§3§lVOID§r§f energy that expands and causes a chain of","§r§fexplosions within radius of any target block.","§r§fRange of cast: 30 meters.","§r§fRadius of first exlposion: 1 meter.","§r§fRadius of final explosion: 12 meters.","§r§fTotal explosions: 5.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fCataclysm§r§7§ko§r", "SpellCataclysm", 500, true, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a super critical concentration of","§r§3§lVOID§r§f energy that expands and causes a chain of","§r§fexplosions within radius of any target block.","§r§fRange of cast: 30 meters.","§r§fRadius of first exlposion: 1 meter.","§r§fRadius of final explosion: 12 meters.","§r§fTotal explosions: 5.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -47,7 +47,7 @@ public class SpellCataclysm extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(), "Invalid Target.");
 			return false;
 		}
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.PORTAL, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SHULKER_SHOOT, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 		event.getPlayer().getWorld().createExplosion(target.getLocation(), 1);

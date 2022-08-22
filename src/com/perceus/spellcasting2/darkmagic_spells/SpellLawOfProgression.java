@@ -21,7 +21,7 @@ public class SpellLawOfProgression extends BaseSpellCapsule
 
 	public SpellLawOfProgression()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fLaw of Progression§r§7§ko§r", "SpellLawOfProgression", 0, false, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fA forbidden tome containing an incantation to", "§r§fgrant every possible positive effect of magic.","§r§fDuration: 1 minute.","§r§fAfter the effects have concluded,","§r§fevery negative defect of magic will be applied.","§r§fDuration: 1 minute.","§r§fSome positive/negative effects are excluded.", "§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 9 hearts.");
+		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fLaw of Progression§r§7§ko§r", "SpellLawOfProgression", 0, false, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §6Buff§f.", "§r§fA forbidden tome containing an incantation to", "§r§fgrant every possible positive effect of magic.","§r§fDuration: 1 minute.","§r§fAfter the effects have concluded,","§r§fevery negative defect of magic will be applied.","§r§fDuration: 1 minute.","§r§fSome positive/negative effects are excluded.", "§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 9 hearts.");
 	}
 
 	@Override

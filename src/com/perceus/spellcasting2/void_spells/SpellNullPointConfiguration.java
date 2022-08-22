@@ -17,7 +17,7 @@ public class SpellNullPointConfiguration extends BaseSpellCapsule
 
 	public SpellNullPointConfiguration()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fNullPoint Configuration§r§f§ko§r", "SpellNullPointConfiguration", 35, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fA spelltome containing an incantation to reconfigure matter.","§r§fSummon a portable crafting bench at will.","§r§fMana cost: 35 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fNullPoint Configuration§r§f§ko§r", "SpellNullPointConfiguration", 35, true, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome containing an incantation to reconfigure matter.","§r§fSummon a portable crafting bench at will.","§r§fMana cost: 35 §r§9mana§r§f.");
 	}
 
 	@Override

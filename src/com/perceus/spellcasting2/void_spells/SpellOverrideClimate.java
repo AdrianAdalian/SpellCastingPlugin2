@@ -18,7 +18,7 @@ public class SpellOverrideClimate extends BaseSpellCapsule
 
 	public SpellOverrideClimate()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: OverrideClimate§r§f§ko§r", "SpellOverrideClimate", 1000, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fA tome with an incantation thought to be lost","§r§fin time has the power to change","§r§fthe world's current weather.","§r§fIf storming, changes it to clear and vice versa.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: OverrideClimate§r§f§ko§r", "SpellOverrideClimate", 1000, false, "§r§fElement: §r§3§lVOID§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA tome with an incantation thought to be lost","§r§fin time has the power to change","§r§fthe world's current weather.","§r§fIf storming, changes it to clear and vice versa.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override

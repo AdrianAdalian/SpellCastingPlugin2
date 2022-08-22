@@ -23,7 +23,7 @@ public class SpellProlongedFlight extends BaseSpellCapsule
 
 	public SpellProlongedFlight()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Prolonged Flight§r§f§ko§r", "SpellProlongedFlight", 0, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fAn incantation that allows caster' flight","§r§fso long as they have enough §r§9mana§r§f.","§r§fRight-Click to activate/deactivate the spell.","§r§fMana cost: 20 §r§9mana§r§f/second.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Prolonged Flight§r§f§ko§r", "SpellProlongedFlight", 0, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn incantation that allows caster' flight","§r§fso long as they have enough §r§9mana§r§f.","§r§fRight-Click to activate/deactivate the spell.","§r§fMana cost: 20 §r§9mana§r§f/second.");
 	}
 	
 	Map<UUID, FlightClockForSpellProlongedFlight> clocks = new HashMap<>();

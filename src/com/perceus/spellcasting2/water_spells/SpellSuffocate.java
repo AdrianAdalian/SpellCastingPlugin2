@@ -28,7 +28,7 @@ public class SpellSuffocate extends BaseSpellCapsule
 
 	public SpellSuffocate()
 	{
-		super(Material.BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fSuffocate§r§7§ko§r", "SpellSuffocate", 125, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSuffocate any target and as they struggle,","§r§fapply slowness, weakness, and fatigue.","§r§fDeals 4 hearts of §r§cdamage§r§f.","§r§fDuration: 10 seconds.","§r§fRange: 10 meters.","§r§fMana cost: 125 §r§9mana§r§f.");
+		super(Material.BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fSuffocate§r§7§ko§r", "SpellSuffocate", 125, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSuffocate any target and as they struggle,","§r§fapply slowness, weakness, and fatigue.","§r§fDeals 4 hearts of §r§cdamage§r§f.","§r§fDuration: 10 seconds.","§r§fRange: 10 meters.","§r§fMana cost: 125 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -47,15 +47,16 @@ public class SpellSuffocate extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 			return false;
 		}
-			SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.WATER_DROP, null);
-
-			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.AMBIENT_UNDERWATER_EXIT, SoundCategory.MASTER, 1, 1);
-			
-			((Damageable) target).damage(8, event.getPlayer());
-			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
-			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 2));
-			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 200, 2));
-			return true;
+		
+		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.WATER_DROP, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
+		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.AMBIENT_UNDERWATER_EXIT, SoundCategory.MASTER, 1, 1);
+		
+		((Damageable) target).damage(8, event.getPlayer());
+		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 2));
+		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 2));
+		((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 200, 2));
+		return true;
 	}
 	private Entity getNearestEntityInSight(Player player, int range) 
 	{

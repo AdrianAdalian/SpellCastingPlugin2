@@ -21,7 +21,7 @@ public class SpellDemonicReflexes extends BaseSpellCapsule
 
 	public SpellDemonicReflexes()
 	{
-		super(Material.LIGHT_GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fDemonic Reflexes§r§7§ko§r", "SpellDemonicReflexes", 50, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fBoost caster's ability to vertically scale objects.","§r§fAlso slightly boosts movement speed.","§r§fDuration: 20 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.LIGHT_GRAY_DYE, "§r§7§ko§r§7§lSpell: §r§fDemonic Reflexes§r§7§ko§r", "SpellDemonicReflexes", 50, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §6Buff§f.","§r§fBoost caster's ability to vertically scale objects.","§r§fAlso slightly boosts movement speed.","§r§fDuration: 20 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

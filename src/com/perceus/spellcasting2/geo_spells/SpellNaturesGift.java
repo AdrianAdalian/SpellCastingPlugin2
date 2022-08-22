@@ -20,7 +20,7 @@ public class SpellNaturesGift extends BaseSpellCapsule
 
 	public SpellNaturesGift()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fNature's Gift§r§7§ko§r", "SpellNaturesGift", 500, true, true, "§r§fElement: §r§6Geo§r§f.",
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fNature's Gift§r§7§ko§r", "SpellNaturesGift", 500, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §bUtility§f §dAOE§f.",
 				"§r§fThe caster concentrates pure §r§6Geo§r§f energy,",
 				"§r§fCausing all wildlife to rapidly accelerate their growth.",
 				"§r§fRange: 50 square meters.",

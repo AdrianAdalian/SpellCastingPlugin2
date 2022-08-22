@@ -28,7 +28,7 @@ public class SpellSandBlast extends BaseSpellCapsule
 
 	public SpellSandBlast()
 	{
-		super(Material.COCOA_BEANS, "§r§7§ko§r§7§lSpell: §r§fSand Blast§r§7§ko§r", "SpellSandBlast", 60, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fExpell a blast of sand at a target,","§r§fbriefly blinding and slowing them.","§r§fAlso deals 1 heart of §r§cdamage§r§f.","§r§fDuration: 10 seconds.","§r§fRange: 10 meters.","§r§fMana cost: 60 §r§9mana§r§f.");
+		super(Material.COCOA_BEANS, "§r§7§ko§r§7§lSpell: §r§fSand Blast§r§7§ko§r", "SpellSandBlast", 60, true, true, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fExpell a blast of sand at a target,","§r§fbriefly blinding and slowing them.","§r§fAlso deals 1 heart of §r§cdamage§r§f.","§r§fDuration: 10 seconds.","§r§fRange: 10 meters.","§r§fMana cost: 60 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -48,10 +48,11 @@ public class SpellSandBlast extends BaseSpellCapsule
 			return false;
 		}
 		
+		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CAMPFIRE_COSY_SMOKE, null);
+		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_SAND_BREAK, SoundCategory.MASTER, 1, 1);
 		if (target instanceof LivingEntity)
 		{
-			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CAMPFIRE_COSY_SMOKE, null);
-			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_SAND_BREAK, SoundCategory.MASTER, 1, 1);
+			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CAMPFIRE_COSY_SMOKE, null);
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 200, 0, true));
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 200, 0, true));
 			((Damageable) target).damage(2);

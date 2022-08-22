@@ -28,7 +28,8 @@ public class SpellChaosMeteor extends BaseSpellCapsule
 	public SpellChaosMeteor()
 	{
 		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Chaos Meteor§r§f§ko§r", "SpellChaosMeteor", 200, true, 
-				"§r§fElement: §r§cFire§r§f.", 
+				"§r§fElement: §r§cFire§r§f.",
+				"§r§fSpell Type: §cOffensive§f.", 
 				"§r§fSummons a ball of fire engulfed in void energy.",
 				"§r§fThe fire ball will then plummit downwards upon the target.",
 				"§r§fDeals extreme §r§cdamage§r§f","§r§fand leaves behind damaging void energy upon impact.",
@@ -57,9 +58,9 @@ public class SpellChaosMeteor extends BaseSpellCapsule
 		}
 		
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.FLAME, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.FLAME, null);
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ITEM_FIRECHARGE_USE, SoundCategory.MASTER, 1, 1);
-		
 		Location newlocation = target.getLocation().add(new Location(event.getPlayer().getWorld(), 0, 20, 0)) ;
 		newlocation.add(0, 20, 0);
 		

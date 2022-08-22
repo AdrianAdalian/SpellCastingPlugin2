@@ -29,7 +29,7 @@ public class SpellHex extends BaseSpellCapsule
 
 	public SpellHex()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fHex§r§7§ko§r", "SpellHex", 0, false, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fA tome capable of cursing target player.", "§r§fThis spell's effects have a delay that once completed,","§r§4Wither §r§f16-20 hearts over 20 seconds.", "§r§fRange: 10 meters.", "§r§fDelay: 1 minute.", "§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 8 hearts.");
+		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fHex§r§7§ko§r", "SpellHex", 0, false, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §7Debuff§f.", "§r§fA tome capable of cursing target player.", "§r§fThis spell's effects have a delay that once completed,","§r§4Wither §r§f16-20 hearts over 20 seconds.", "§r§fRange: 10 meters.", "§r§fDelay: 1 minute.", "§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 8 hearts.");
 	}
 
 	@Override
@@ -56,6 +56,7 @@ public class SpellHex extends BaseSpellCapsule
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_DEACTIVATE, SoundCategory.MASTER, 1, 1);
 		PrintUtils.sendMessage((Player) target, "You have been hexed.");
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CRIMSON_SPORE, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
 		event.getPlayer().damage(10);
 		

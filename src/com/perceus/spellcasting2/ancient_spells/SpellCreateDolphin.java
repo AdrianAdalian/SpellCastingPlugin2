@@ -20,7 +20,7 @@ public class SpellCreateDolphin extends BaseSpellCapsule
 
 	public SpellCreateDolphin()
 	{
-		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lRune§f: Materialize Dolphin§r§f§ko§r", "SpellCreateDolphin", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fAn unstable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon living organisms.","§r§fThis rune will summon a Dolphin on target block.","§r§fThe rune will be consumed upon use.");
+		super(Material.END_CRYSTAL, "§r§f§ko§r§e§lRune§f: Materialize Dolphin§r§f§ko§r", "SpellCreateDolphin", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fSpell Type: §bUtility§f.","§r§fAn unstable mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon living organisms.","§r§fThis rune will summon a Dolphin on target block.","§r§fThe rune will be consumed upon use.");
 	}
 
 	@Override

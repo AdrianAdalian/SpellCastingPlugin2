@@ -23,7 +23,7 @@ public class SpellItem_AetherealScrollPlus extends BaseSpellCapsule
 
 	public SpellItem_AetherealScrollPlus()
 	{
-		super(Material.PAPER, "§r§7§ko§r§7§lMagical Item: §r§bAethereal Scroll§r§e+§r§7§ko§r", "SpellItem_AetherealScrollPlus", 0, true, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fA scroll containing highly unstable §r§b§l§oAethereal§r§f energy.","§r§fA spell is haphazardly", "§r§fwritten on this scroll that allows","§r§fthe caster to randomly enchant normal books.","§r§fEnchantment level reflects the maximum value possible.","§r§fThe scroll will be incinerated on use.");
+		super(Material.PAPER, "§r§7§ko§r§7§lMagical Item: §r§bAethereal Scroll§r§e+§r§7§ko§r", "SpellItem_AetherealScrollPlus", 0, true, "§r§fElement: §r§b§l§oAethereal§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA scroll containing highly unstable §r§b§l§oAethereal§r§f energy.","§r§fA spell is haphazardly", "§r§fwritten on this scroll that allows","§r§fthe caster to randomly enchant normal books.","§r§fEnchantment level reflects the maximum value possible.","§r§fThe scroll will be incinerated on use.");
 		// TODO Auto-generated constructor stub
 	}
 

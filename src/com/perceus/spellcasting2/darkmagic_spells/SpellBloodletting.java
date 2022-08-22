@@ -20,7 +20,7 @@ public class SpellBloodletting extends BaseSpellCapsule
 
 	public SpellBloodletting()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fBloodletting§r§7§ko§r", "SpellBloodletting", 0, false, "§r§fElement: §r§4Dark Magic§r§f.", "§r§fThe caster gashes their arm, opening a vein,","§r§fwhich allows ether to flow", "§r§fdirectly into their bloodstream","§r§frestoring 500 §r§9mana§r§f.","§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 5 hearts.");
+		super(Material.ENCHANTED_BOOK, "§r§7§ko§r§7§lForbidden Spell: §r§fBloodletting§r§7§ko§r", "SpellBloodletting", 0, false, "§r§fElement: §r§4Dark Magic§r§f.","§r§fSpell Type: §bUtility§f.", "§r§fThe caster gashes their arm, opening a vein,","§r§fwhich allows ether to flow", "§r§fdirectly into their bloodstream","§r§frestoring 500 §r§9mana§r§f.","§r§fThis spell by-passes absorption.","§r§4Blood Sacrifice§r§f: 5 hearts.");
 	}
 
 	@Override

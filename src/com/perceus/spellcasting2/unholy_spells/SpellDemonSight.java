@@ -21,7 +21,7 @@ public class SpellDemonSight extends BaseSpellCapsule
 
 	public SpellDemonSight()
 	{
-		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fDemon Sight§r§7§ko§r", "SpellDemonSight", 50, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fGrant caster an elevated ability to see at night.","§r§fDuration: 30 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
+		super(Material.ENDER_EYE, "§r§7§ko§r§7§lSpell: §r§fDemon Sight§r§7§ko§r", "SpellDemonSight", 50, true, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §6Buff§f.","§r§fGrant caster an elevated ability to see at night.","§r§fDuration: 30 seconds.","§r§fMana cost: 50 §r§9mana§r§f.");
 	}
 
 	@Override

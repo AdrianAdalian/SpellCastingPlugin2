@@ -20,7 +20,7 @@ public class SpellCreateZombifiedPiglin extends BaseSpellCapsule
 
 	public SpellCreateZombifiedPiglin()
 	{
-		super(Material.END_CRYSTAL, "§r§f§ko§r§4Corrupted §r§e§lRune§f: Materialize Zombified Piglin§r§f§ko§r", "SpellCreateZombifiedPiglin", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fA corrupted mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon nonliving organisms.","§r§fThis rune will summon a Zombified Piglin on target block.","§r§fThe rune will be consumed upon use.");
+		super(Material.END_CRYSTAL, "§r§f§ko§r§4Corrupted §r§e§lRune§f: Materialize Zombified Piglin§r§f§ko§r", "SpellCreateZombifiedPiglin", 0, false, "§r§fElement: §r§eAncient§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA corrupted mass of §r§eAncient§r§f energy that allows","§r§fthe caster to summon nonliving organisms.","§r§fThis rune will summon a Zombified Piglin on target block.","§r§fThe rune will be consumed upon use.");
 	}
 
 	@Override

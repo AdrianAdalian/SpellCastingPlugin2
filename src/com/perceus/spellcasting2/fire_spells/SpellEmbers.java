@@ -18,7 +18,7 @@ public class SpellEmbers extends BaseSpellCapsule
 
 	public SpellEmbers()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fEmbers§r§7§ko§r", "SpellEmbers", 25, true, true, "§r§fElement: §r§cFire§r§f.", 
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fEmbers§r§7§ko§r", "SpellEmbers", 25, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.", 
 				"§r§fThe caster throws a handful of","§r§fhost embers burning whatever it hits.",
 				"§r§fMana cost: 25 §r§9mana§r§f.");
 	}

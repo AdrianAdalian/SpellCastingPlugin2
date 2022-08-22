@@ -6,6 +6,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 
+import com.perceus.spellcasting2.accounts.StoredInventory;
 import com.perceus.spellcasting2.recipe_book.SC2RecipeBook;
 import com.perceus.spellcasting2.spellitem_recipe.MagicSpellBook_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfFire_Recipe;
@@ -17,12 +18,14 @@ import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfVoid_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfWater_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellCreateAllay_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellCreateElderGuardian_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.SpellCreateItem_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellCreateWarden_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellCreateWither_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_AetherealScrollPlus_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_AetherealScroll_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_BloodCrystalPlus_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_BloodCrystal_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.SpellItem_EtherCrystal_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_Fireball_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_HealthCrystal_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_ManaCrystal_Recipe;
@@ -44,9 +47,9 @@ import fish.yukiemeralis.eden.utils.PrintUtils;
 description = "A reimagined version of my original spell casting plugin.", 
 maintainer = "Perceus Adalian (David Willy)", 
 modIcon = Material.NETHER_STAR, 
-modName = "SpellCastingPlugin2", 
+modName = "§4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2", 
 supportedApiVersions = { "v1_19_R1" }, 
-version = "1.3.9")
+version = "1.4.1")
 public class Spells extends EdenModule
 {
 	@Override
@@ -62,10 +65,12 @@ public class Spells extends EdenModule
 			e.printStackTrace();
 		}
 		
+		FileUtils.ensureFolder("./plugins/Eden/playerdata/storedinventories/");
 		FileUtils.ensureFolder("./plugins/Eden/playerdata/data/");
-		PrintUtils.log("You're a wizard Harry.");
+		PrintUtils.log("§4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 Loaded Successfully.");
+		PrintUtils.log("'You're a wizard Harry.'");
 		PrintUtils.log(CastListener.spell_registry.size() + " Spells Loaded.");
-		
+
 		SC2RecipeBook.Init();
 		SC2RecipeBook.Register();
 		
@@ -140,11 +145,18 @@ public class Spells extends EdenModule
 		SpellCreateWither_Recipe.Init();
 		SpellCreateWither_Recipe.Register();
 		
+		SpellItem_EtherCrystal_Recipe.Init();
+		SpellItem_EtherCrystal_Recipe.Register();
+		
+		SpellCreateItem_Recipe.Init();
+		SpellCreateItem_Recipe.Register();
+		
 	}
 
 	@Override
 	public void onDisable()
 	{
+		StoredInventory.save();
 		Bukkit.getOnlinePlayers().stream().forEach(v -> v.kickPlayer("The server has closed."));
 		PrintUtils.log("Lay down your wand, Harry.");
 	}

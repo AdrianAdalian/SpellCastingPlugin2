@@ -19,7 +19,7 @@ public class SpellExpulsion extends BaseSpellCapsule
 
 	public SpellExpulsion()
 	{
-		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fExpulsion§r§7§ko§r", "SpellExpulsion", 50, true, true, "§r§fElement: §r§cFire§r§f.", 
+		super(Material.BLAZE_POWDER, "§r§7§ko§r§7§lSpell: §r§fExpulsion§r§7§ko§r", "SpellExpulsion", 50, true, true, "§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §bUtility§f.", 
 				"§r§fThe caster concentrates a large pool of","§r§cFire§r§f on whatever block they're looking at.","§r§fRange: 5 meters.",
 				"§r§fMana cost: 50 §r§9mana§r§f.");
 	}
