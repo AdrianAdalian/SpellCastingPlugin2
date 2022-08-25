@@ -25,14 +25,14 @@ public class CastingListener implements Listener
 	{
 		ItemStack held;
 		held = event.getPlayer().getInventory().getItem(EquipmentSlot.HAND) ;
-	
+
 		if (event.getHand() == null) 
 		{
 			return;
 		}
 		
 		if (event.getHand().equals(EquipmentSlot.OFF_HAND))
-		{
+		{	
 			return;
 		}
 		
@@ -44,9 +44,8 @@ public class CastingListener implements Listener
 		
 		String spell = ItemUtils.readFromNamespacedKey(held, "spellname");
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getNegMana()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getNegMana()) 
 		{
-			
 			
 			new BukkitRunnable()
 			{
@@ -60,7 +59,7 @@ public class CastingListener implements Listener
 						return;
 					}
 					
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana()) 
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
 					{
 						this.cancel();
 						return;
@@ -72,7 +71,7 @@ public class CastingListener implements Listener
 					return;
 				}
 			}.runTaskTimer(Eden.getInstance(), 0, 35);
-			if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()<CastListener.spell_registry.get(spell).getManaCost()) 
+			if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()<CastListener.spell_registry.get(spell).getManaCost()) 
 			{
 				event.setUseInteractedBlock(Event.Result.DENY);
 				event.setUseItemInHand(Event.Result.DENY);
@@ -87,7 +86,7 @@ public class CastingListener implements Listener
 			return;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana())
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana())
 		{
 			
 			if(ItemUtils.hasNamespacedKey(held, "spellname")) 
@@ -96,7 +95,7 @@ public class CastingListener implements Listener
 				event.setUseItemInHand(Event.Result.DENY);
 				if(CastListener.spell_registry.get(spell).cast(event)) 
 				{
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - CastListener.spell_registry.get(spell).getManaCost());
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - CastListener.spell_registry.get(spell).getManaCost());
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					return;		
 				}				

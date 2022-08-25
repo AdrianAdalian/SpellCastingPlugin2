@@ -53,12 +53,12 @@ public class CrackedEtherCrystal extends BaseSpellCapsule
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ROOTS_BREAK, SoundCategory.MASTER, 1, 1);
 
-		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana());
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana());
 		ManaInterface.updateScoreBoard(event.getPlayer());
 		
-		PlayerDataMana.getPlayerData(event.getPlayer()).setMaxMana(500);
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setMaxMana(500);
 		
-		PrintUtils.sendMessage(event.getPlayer(),"Maximum Mana Reset. New maximum is now " + PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() + ".");
+		PrintUtils.sendMessage(event.getPlayer(),"Maximum Mana Reset. New maximum is now " + PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() + ".");
 		
 		return true;
 	}

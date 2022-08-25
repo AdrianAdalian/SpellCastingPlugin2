@@ -59,13 +59,13 @@ public class SpellEtherTransference extends BaseSpellCapsule
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana() == PlayerDataMana.getPlayerData((Player) target).getMaxMana()) 
+		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMaxMana()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"That player is already at max mana.");
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana()) 
+		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"You don't have any more mana left to give.");
 			return false;
@@ -74,18 +74,18 @@ public class SpellEtherTransference extends BaseSpellCapsule
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
-		PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getCurrentMana() + 500);
-		if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana()<=PlayerDataMana.getPlayerData((Player) target).getMinMana()) 
+		PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() + 500);
+		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana()<=PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana()) 
 		{
-			PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getMinMana());
+			PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana());
 		}
 		ManaInterface.updateScoreBoard((Player) target);
 		PrintUtils.sendMessage(((Player) target),"You're mana has been restored.");
 		
-		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 250);
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 250);
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 		{
-			PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+			PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 		}
 		ManaInterface.updateScoreBoard(event.getPlayer());
 		PrintUtils.sendMessage(event.getPlayer(),"Your mana has been transfered to " + ((Player) target).getDisplayName() + ".");

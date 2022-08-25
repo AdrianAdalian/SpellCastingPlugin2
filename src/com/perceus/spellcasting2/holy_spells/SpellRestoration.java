@@ -86,7 +86,7 @@ public class SpellRestoration extends BaseSpellCapsule
 				((Player) target).setHealth(((Player) target).getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 			}
 			SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
-			PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getMaxMana());
+			PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMaxMana());
 			ManaInterface.updateScoreBoard((Player) target);
 			
 			PrintUtils.sendMessage((Player)target, event.getPlayer().getDisplayName() + " has restored your Mana, Health and routed all ailments.");

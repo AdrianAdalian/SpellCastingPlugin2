@@ -195,8 +195,8 @@ import com.perceus.spellcasting2.solar_spells.SpellSolGate;
 import com.perceus.spellcasting2.solar_spells.SpellSolarBolt;
 import com.perceus.spellcasting2.solar_spells.SpellSolarEclipse;
 import com.perceus.spellcasting2.solar_spells.SpellSolarFlare;
-import com.perceus.spellcasting2.spellitem_spell.ExhaltedWeapon_Artifice;
-import com.perceus.spellcasting2.spellitem_spell.ExhaltedWeapon_Repentance;
+import com.perceus.spellcasting2.spellitem_spell.Armament_Artifice;
+import com.perceus.spellcasting2.spellitem_spell.Armament_Repentance;
 import com.perceus.spellcasting2.spellitem_spell.MagicTool_PickaxeOfGeo;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_ElementalStaff;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_SpiritualStaff;
@@ -474,8 +474,8 @@ public class CastListener implements Listener
 		put("MagicWeapon_ElementalStaff", new MagicWeapon_ElementalStaff());
 		put("MagicWeapon_SpiritualStaff", new MagicWeapon_SpiritualStaff());
 		
-		put("ExhaltedWeapon_Repentance", new ExhaltedWeapon_Repentance());
-		put("ExhaltedWeapon_Artifice", new ExhaltedWeapon_Artifice());
+		put("Armament_Repentance", new Armament_Repentance());
+		put("Armament_Artifice", new Armament_Artifice());
 		
 		//tools 
 		put("MagicTool_PickaxeOfGeo", new MagicTool_PickaxeOfGeo());

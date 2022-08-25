@@ -19,14 +19,14 @@ public class ManaInterface implements Listener
 	@EventHandler
 	public void uponLogin(PlayerJoinEvent event) 
 	{
-		PlayerDataMana.getPlayerData(event.getPlayer());
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId());
 		setScoreBoard(event.getPlayer());
 	}
 	
 	@EventHandler
 	public void uponLogout(PlayerQuitEvent event) 
 	{
-		JsonUtils.toJsonFile("./plugins/Eden/playerdata/data/" + event.getPlayer().getUniqueId().toString() + ".json", PlayerDataMana.getPlayerData(event.getPlayer()));
+		JsonUtils.toJsonFile("./plugins/Eden/playerdata/data/" + event.getPlayer().getUniqueId().toString() + ".json", PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()));
 	}
 	
 	public void setScoreBoard(Player player) 
@@ -37,7 +37,7 @@ public class ManaInterface implements Listener
         //Creates our new objective and scoreboard. For whatever reason, Java wants a format of 3's in the cast of scoreboard titles.
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
         //Sets the display to the right side of the screen.
-        obj.getScore(ChatColor.BLACK + "§r§fCurrent Mana:" + ChatColor.WHITE).setScore(PlayerDataMana.getPlayerData(player).getCurrentMana());
+        obj.getScore(ChatColor.BLACK + "§r§fCurrent Mana:" + ChatColor.WHITE).setScore(PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana());
         //Gets the title and the basic score for our mana.
         player.setScoreboard(board);
         //Sets the scoreboard once we've made it.
@@ -47,7 +47,7 @@ public class ManaInterface implements Listener
     	 Scoreboard board = player.getScoreboard();
     	 Objective obj = board.getObjective(DisplaySlot.SIDEBAR);
     	 
-    	 obj.getScore(ChatColor.BLACK + "§r§fCurrent Mana:" + ChatColor.WHITE).setScore(PlayerDataMana.getPlayerData(player).getCurrentMana());
+    	 obj.getScore(ChatColor.BLACK + "§r§fCurrent Mana:" + ChatColor.WHITE).setScore(PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana());
 	}
     
 }

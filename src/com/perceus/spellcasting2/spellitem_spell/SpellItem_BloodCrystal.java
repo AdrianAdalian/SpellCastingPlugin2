@@ -32,7 +32,7 @@ public class SpellItem_BloodCrystal extends BaseSpellCapsule
 			return false;
 		}	
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() && event.getPlayer().getHealth() == event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() && event.getPlayer().getHealth() == event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Your current Mana and Health is already full.");
 			return false;
@@ -49,7 +49,7 @@ public class SpellItem_BloodCrystal extends BaseSpellCapsule
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_STEM_BREAK, SoundCategory.MASTER, 1, 1);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
-		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 		ManaInterface.updateScoreBoard(event.getPlayer());		
 		event.getPlayer().setHealth(event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 		return true;		

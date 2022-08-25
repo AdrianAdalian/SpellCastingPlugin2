@@ -21,16 +21,16 @@ public class FlightClockForSpellProlongedFlight extends BukkitClock
 	@Override
 	public void executeCycle()
 	{
-		if(PlayerDataMana.getPlayerData(player).getCurrentMana() > PlayerDataMana.getPlayerData(player).getMinMana())
+		if(PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(player.getUniqueId()).getMinMana())
 	    {
-	       PlayerDataMana.getPlayerData(player).setCurrentMana(PlayerDataMana.getPlayerData(player).getCurrentMana() - 20);
+	       PlayerDataMana.getPlayerData(player.getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana() - 20);
 	            
 	       isFlying = true;
 	    }
 	        
-	    if(PlayerDataMana.getPlayerData(player).getCurrentMana() < PlayerDataMana.getPlayerData(player).getMinMana())
+	    if(PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(player.getUniqueId()).getMinMana())
 	    {
-	       PlayerDataMana.getPlayerData(player).setCurrentMana(PlayerDataMana.getPlayerData(player).getMinMana());
+	       PlayerDataMana.getPlayerData(player.getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(player.getUniqueId()).getMinMana());
 	            
 	       isFlying  = false;
 	    }

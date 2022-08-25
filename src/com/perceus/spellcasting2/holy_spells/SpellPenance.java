@@ -59,7 +59,7 @@ public class SpellPenance extends BaseSpellCapsule
 				return false;
 			}
 			
-			if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+			if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"You're already at full Mana.");
 				return false;
@@ -68,10 +68,10 @@ public class SpellPenance extends BaseSpellCapsule
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_ACTIVATE, SoundCategory.MASTER, 1, 1);
 			event.getPlayer().setHealth(event.getPlayer().getHealth() / 2.0);
-			PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 450);
-			if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+			PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 450);
+			if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 			{
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 			}
 			ManaInterface.updateScoreBoard(event.getPlayer());
 			return true;
@@ -89,7 +89,7 @@ public class SpellPenance extends BaseSpellCapsule
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana() == PlayerDataMana.getPlayerData((Player) target).getMaxMana()) 
+		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMaxMana()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"That player is already at maximum mana.");
 			return false;
@@ -99,10 +99,10 @@ public class SpellPenance extends BaseSpellCapsule
 		event.getPlayer().setHealth(event.getPlayer().getHealth() / 2.0);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_ACTIVATE, SoundCategory.MASTER, 1, 1);
 		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_CONDUIT_ACTIVATE, SoundCategory.MASTER, 1, 1);
-		PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getCurrentMana() + 750);
-		if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana()>PlayerDataMana.getPlayerData((Player) target).getMaxMana()) 
+		PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() + 750);
+		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana()>PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMaxMana()) 
 		{
-			PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getMaxMana());
+			PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMaxMana());
 		}
 		ManaInterface.updateScoreBoard((Player) target);
 		return true;

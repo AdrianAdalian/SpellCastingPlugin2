@@ -38,19 +38,19 @@ public class SpellItem_EtherCrystal extends BaseSpellCapsule
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() == 2000) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() == 2000) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"You've obtained true maximum mana. This crystal has no effect on you.");
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() != PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() != PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 		{
-			PrintUtils.sendMessage(event.getPlayer(),"§r§fFIZZLE! Mana expansion requires the caster to expend §r§f§oall§r§f of their maximum mana. You are currently at " + PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + " §r§fof " + PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() + "§r§f.");
+			PrintUtils.sendMessage(event.getPlayer(),"§r§fFIZZLE! Mana expansion requires the caster to expend §r§f§oall§r§f of their maximum mana. You are currently at " + PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + " §r§fof " + PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() + "§r§f.");
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() < 1000) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() < 1000) 
 		{
 			if (event.getPlayer().getInventory().getItemInMainHand().getAmount() > 1) 
 			{
@@ -73,12 +73,12 @@ public class SpellItem_EtherCrystal extends BaseSpellCapsule
 			
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_AMETHYST_CLUSTER_BREAK, SoundCategory.MASTER, 1, 1);
 
-			PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana());
+			PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana());
 			ManaInterface.updateScoreBoard(event.getPlayer());
 			
-			PlayerDataMana.getPlayerData(event.getPlayer()).setMaxMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() + 250);
+			PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setMaxMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() + 250);
 			
-			PrintUtils.sendMessage(event.getPlayer(),"Maximum Mana Increased (+250). New maximum is now " + PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() + ".");
+			PrintUtils.sendMessage(event.getPlayer(),"Maximum Mana Increased (+250). New maximum is now " + PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() + ".");
 			
 			return true;
 		}
@@ -98,12 +98,12 @@ public class SpellItem_EtherCrystal extends BaseSpellCapsule
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_AMETHYST_CLUSTER_BREAK, SoundCategory.MASTER, 1, 1);
 
-		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana());
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana());
 		ManaInterface.updateScoreBoard(event.getPlayer());
 		
-		PlayerDataMana.getPlayerData(event.getPlayer()).setMaxMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() + 50);
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setMaxMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() + 50);
 		
-		PrintUtils.sendMessage(event.getPlayer(),"Maximum Mana Increased (+50). New maximum is now " + PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() + ".");
+		PrintUtils.sendMessage(event.getPlayer(),"Maximum Mana Increased (+50). New maximum is now " + PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() + ".");
 		
 		return true;
 	}

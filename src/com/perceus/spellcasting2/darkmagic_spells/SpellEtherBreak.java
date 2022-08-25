@@ -58,10 +58,10 @@ public class SpellEtherBreak extends BaseSpellCapsule
 		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CRIMSON_SPORE, null);
 		event.getPlayer().damage(10);
 		
-		PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getCurrentMana() - 1000);
-		if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana()<PlayerDataMana.getPlayerData((Player) target).getMinMana()) 
+		PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() - 1000);
+		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana()<PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana()) 
 		{
-			PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getMinMana());
+			PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana());
 		}
 		ManaInterface.updateScoreBoard((Player) target);
 		

@@ -53,13 +53,13 @@ public class SpellManaBurn extends BaseSpellCapsule
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()==PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()==PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(), "Mana Insufficient.");
 			return false;
 		}
 		
-		PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana());
+		PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana());
 		ManaInterface.updateScoreBoard(event.getPlayer());
 		
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_BLAZE_SHOOT, SoundCategory.MASTER, 1, 1);

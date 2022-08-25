@@ -1,7 +1,7 @@
 package com.perceus.spellcasting2;
 
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.HumanEntity;
+import org.bukkit.entity.Player;
 
 import com.perceus.spellcasting2.recipe_book.RecipeBookMainPageGUI;
 
@@ -18,6 +18,6 @@ public class SpellRecipesCMD extends EdenCommand
 	@EdenCommandHandler(usage = "Recipes For Spells", description = "Display spell recipes.", argsCount = 0)
 	public void edencommand_nosubcmd(CommandSender sender, String commandLabel, String[] args) 
 	{
-		new RecipeBookMainPageGUI().display((HumanEntity) sender);
+		new RecipeBookMainPageGUI().display((Player) sender);
 	}
 }

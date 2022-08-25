@@ -22,12 +22,12 @@ import fish.yukiemeralis.eden.Eden;
 import fish.yukiemeralis.eden.utils.ChatUtils;
 import fish.yukiemeralis.eden.utils.PrintUtils;
 
-public class ExhaltedWeapon_Repentance extends BaseSpellCapsule
+public class Armament_Repentance extends BaseSpellCapsule
 {
 
-	public ExhaltedWeapon_Repentance()
+	public Armament_Repentance()
 	{
-		super(Material.BOW, ChatUtils.of("Exhalted Weapon: Repentance", "FFE748","FFFFFF","§l§o"), "ExhaltedWeapon_Repentance", 0, false, "§r§fElement: §r§f§o§lHoly§r§f.",
+		super(Material.BOW, ChatUtils.of("Armament: Repentance", "FFE748","FFFFFF","§l§o"), "Armament_Repentance", 0, false, "§r§fElement: §r§f§o§lHoly§r§f.",
 				"§r§fSpell Type: §cOffensive§f.",
 				"§r§fA bow infused with the element of §r§f§o§lHoly§r§f.",
 				"§r§6Ability§r§f: Quickshot",
@@ -35,7 +35,7 @@ public class ExhaltedWeapon_Repentance extends BaseSpellCapsule
 				"§r§fQuickly fire a §r§f§o§lHoly§r§f infused arrow.",
 				"§r§fAny hit will glow momentarily.",
 				"§r§fDeals 5 hearts of §r§cdamage§r§f.",
-				"§r§fMana cost: 100 §r§9mana§r§f.",
+				"§r§fMana cost: 25 §r§9mana§r§f.",
 				"§r§fThe ability will fail if no arrows are held in offhand.",
 				"§r§fAn arrow will be consumed upon use of ability.");
 	}
@@ -64,7 +64,7 @@ public class ExhaltedWeapon_Repentance extends BaseSpellCapsule
 				event.getPlayer().getInventory().getItemInOffHand().setAmount(0);
 			}
 			
-			PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 100);
+			PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 25);
 			ManaInterface.updateScoreBoard(event.getPlayer());
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_ARROW_SHOOT, SoundCategory.MASTER, 1, 1);
 			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);

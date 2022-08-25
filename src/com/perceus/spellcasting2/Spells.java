@@ -8,8 +8,8 @@ import org.bukkit.Material;
 
 import com.perceus.spellcasting2.accounts.StoredInventory;
 import com.perceus.spellcasting2.recipe_book.SC2RecipeBook;
-import com.perceus.spellcasting2.spellitem_recipe.ExhaltedWeapon_Artifice_Recipe;
-import com.perceus.spellcasting2.spellitem_recipe.ExhaltedWeapon_Repentance_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.Armament_Artifice_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.Armament_Repentance_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicSpellBook_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicTool_PickaxeOfGeo_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_ElementalStaff_Recipe;
@@ -110,11 +110,11 @@ public class Spells extends EdenModule
 		MagicWeapon_SpiritualStaff_Recipe.Init();
 		MagicWeapon_SpiritualStaff_Recipe.Register();
 		
-		ExhaltedWeapon_Repentance_Recipe.Init();
-		ExhaltedWeapon_Repentance_Recipe.Register();
+		Armament_Repentance_Recipe.Init();
+		Armament_Repentance_Recipe.Register();
 		
-		ExhaltedWeapon_Artifice_Recipe.Init();
-		ExhaltedWeapon_Artifice_Recipe.Register();
+		Armament_Artifice_Recipe.Init();
+		Armament_Artifice_Recipe.Register();
 		
 		//tool recipes
 		MagicTool_PickaxeOfGeo_Recipe.Init();

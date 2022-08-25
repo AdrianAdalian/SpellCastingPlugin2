@@ -7,17 +7,17 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 
 import com.perceus.spellcasting2.BaseSpellCapsule;
-import com.perceus.spellcasting2.spellitem_spell.ExhaltedWeapon_Artifice;
+import com.perceus.spellcasting2.spellitem_spell.Armament_Artifice;
 
 import fish.yukiemeralis.eden.Eden;
 
-public class ExhaltedWeapon_Artifice_Recipe
+public class Armament_Artifice_Recipe
 {
 	static ItemStack final_item;
 	
 	public static void Init() 
 	{
-		BaseSpellCapsule p = new ExhaltedWeapon_Artifice();
+		BaseSpellCapsule p = new Armament_Artifice();
 		final_item = p.generate();
 	}
 	

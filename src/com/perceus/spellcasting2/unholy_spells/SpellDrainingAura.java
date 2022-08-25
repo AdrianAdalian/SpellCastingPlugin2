@@ -75,10 +75,10 @@ public class SpellDrainingAura extends BaseSpellCapsule
 		
 		if (event.getAction().equals(Action.LEFT_CLICK_AIR))
 		{
-			PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 175);
-			if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()<PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana()) 
+			PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 175);
+			if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()<PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
 			{
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana());
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana());
 				PrintUtils.sendMessage(event.getPlayer(), "Mana Insufficient.");
 				return false;
 			}
@@ -124,7 +124,7 @@ public class SpellDrainingAura extends BaseSpellCapsule
 					continue;
 				}
 				
-				if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana()<=PlayerDataMana.getPlayerData((Player) target).getMinMana()) 
+				if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana()<=PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana()) 
 				{
 					continue;
 				}
@@ -139,18 +139,18 @@ public class SpellDrainingAura extends BaseSpellCapsule
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
 				((Player) target).playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
-				PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getCurrentMana() - 250);
-				if (PlayerDataMana.getPlayerData((Player) target).getCurrentMana()<=PlayerDataMana.getPlayerData((Player) target).getMinMana()) 
+				PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() - 250);
+				if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana()<=PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana()) 
 				{
-					PlayerDataMana.getPlayerData((Player) target).setCurrentMana(PlayerDataMana.getPlayerData((Player) target).getMinMana());
+					PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMinMana());
 				}
-				ManaInterface.updateScoreBoard((Player) target);
+				ManaInterface.updateScoreBoard(((Player) target));
 				PrintUtils.sendMessage(((Player) target),"You're mana has been drained.");
 				
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 125);
-				if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 125);
+				if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()>PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 				{
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 				}
 				ManaInterface.updateScoreBoard(event.getPlayer());
 				

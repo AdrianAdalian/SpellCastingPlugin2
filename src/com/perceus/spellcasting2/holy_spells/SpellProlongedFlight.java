@@ -38,7 +38,7 @@ public class SpellProlongedFlight extends BaseSpellCapsule
 			return false;
 		}			
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"You don't have enough mana.");
 			return false;

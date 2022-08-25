@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.UUID;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -41,7 +42,7 @@ public class MagicWeapon_SpiritualStaff extends BaseSpellCapsule
 				"§r§fElement: §r§3§lVOID§r§f. §7Spell§f: Void Surge. Spell Type: §6Buff§f.","§r§fAdd a random positive buff to caster for 30 seconds.","§r§fMana cost: 250 §9mana§f.");
 	}
 	
-	private static Map<Player,Integer> intz = new HashMap<>();
+	private static Map<UUID,Integer> intz = new HashMap<>();
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
@@ -61,107 +62,48 @@ public class MagicWeapon_SpiritualStaff extends BaseSpellCapsule
 		
 		if (event.getAction().equals(Action.LEFT_CLICK_AIR)) 
 		{
-			if (!intz.containsKey(event.getPlayer())) 
+			if (!intz.containsKey(event.getPlayer().getUniqueId())) 
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §r§3§lVOID§r§f.");
-				intz.put(event.getPlayer(), 1);
+				intz.put(event.getPlayer().getUniqueId(), 1);
 				return true;
 			}
 			
-			if (intz.containsValue(1))
+			if (intz.get(event.getPlayer().getUniqueId()) == 1)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §r§f§o§lHoly§r§f.");
-				intz.put(event.getPlayer(), 2);
+				intz.put(event.getPlayer().getUniqueId(), 2);
 				return true;
 			}
 			
-			if (intz.containsValue(2))
+			if (intz.get(event.getPlayer().getUniqueId()) == 2)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §r§4§o§lUnholy§r§f.");
-				intz.put(event.getPlayer(), 3);
+				intz.put(event.getPlayer().getUniqueId(), 3);
 				return true;
 			}
 			
-			if (intz.containsValue(3))
+			if (intz.get(event.getPlayer().getUniqueId()) == 3)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §r§3§lVOID§r§f.");
-				intz.put(event.getPlayer(), 1);
+				intz.put(event.getPlayer().getUniqueId(), 1);
 				return true;
 			}
 		}
 		
 		if (event.getAction().equals(Action.RIGHT_CLICK_AIR)) 
 		{
-			if (intz.containsValue(2)) 
+			
+			if (!intz.containsKey(event.getPlayer().getUniqueId())) 
 			{
-				//holy spell
-				Entity target = getNearestEntityInSight(event.getPlayer(), 30);
-				
-				if (target == null) 
-				{
-					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
-					return false; 
-				}
-				
-				if (!(target instanceof Player)) 
-				{
-					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
-					return false; 
-				}
-				
-				if (target instanceof Player) 
-				{
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 100);
-					ManaInterface.updateScoreBoard(event.getPlayer());
-					SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
-				    SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
-					event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
-					((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
-					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 1));
-					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1));
-					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 600, 1));
-				}
-				
-				return true;
+				PrintUtils.sendMessage(event.getPlayer(),"§r§fNo spell has been selected.");
+				return false;
 			}
 			
-			if (intz.containsValue(3)) 
-			{
-				//unholy spell
-				Entity target = getNearestEntityInSight(event.getPlayer(), 30);
-				
-				if (target == null) 
-				{
-					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
-					return false; 
-				}
-				
-				if (!(target instanceof Player)) 
-				{
-					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
-					return false; 
-				}
-				
-				if (target instanceof Player) 
-				{
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 100);
-					ManaInterface.updateScoreBoard(event.getPlayer());
-					SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
-				    SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.SMOKE_LARGE, null);
-					event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
-					((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, SoundCategory.MASTER, 1, 1);
-					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, 1));
-					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 1));
-					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 600, 1));
-				}
-				
-				return true;
-			}
-			
-			if (intz.containsValue(1)) 
+			if (intz.get(event.getPlayer().getUniqueId()) == 1) 
 			{
 				//void spell
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 250);
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 250);
 				ManaInterface.updateScoreBoard(event.getPlayer());
 				List<PotionEffectType> posEffects = List.of(
 						PotionEffectType.ABSORPTION,
@@ -193,6 +135,73 @@ public class MagicWeapon_SpiritualStaff extends BaseSpellCapsule
 				event.getPlayer().addPotionEffect(new PotionEffect(randomPotionEffect, 600, 0, true));
 				return true;
 			}
+			
+			if (intz.get(event.getPlayer().getUniqueId()) == 2) 
+			{
+				//holy spell
+				Entity target = getNearestEntityInSight(event.getPlayer(), 30);
+				
+				if (target == null) 
+				{
+					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
+					return false; 
+				}
+				
+				if (!(target instanceof Player)) 
+				{
+					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
+					return false; 
+				}
+				
+				if (target instanceof Player) 
+				{
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 100);
+					ManaInterface.updateScoreBoard(event.getPlayer());
+					SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
+				    SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
+					event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
+					((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_ACTIVATE, SoundCategory.MASTER, 1, 1);
+					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.INCREASE_DAMAGE, 600, 1));
+					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1));
+					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 600, 1));
+				}
+				
+				return true;
+			}
+			
+			if (intz.get(event.getPlayer().getUniqueId()) == 3) 
+			{
+				//unholy spell
+				Entity target = getNearestEntityInSight(event.getPlayer(), 30);
+				
+				if (target == null) 
+				{
+					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
+					return false; 
+				}
+				
+				if (!(target instanceof Player)) 
+				{
+					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
+					return false; 
+				}
+				
+				if (target instanceof Player) 
+				{
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 100);
+					ManaInterface.updateScoreBoard(event.getPlayer());
+					SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
+				    SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.SMOKE_LARGE, null);
+					event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
+					((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, SoundCategory.MASTER, 1, 1);
+					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 600, 1));
+					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 600, 1));
+					((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 600, 1));
+				}
+				
+				return true;
+			}
+			
 		}
 		
 		return false;

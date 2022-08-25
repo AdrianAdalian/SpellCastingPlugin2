@@ -3,6 +3,7 @@ package com.perceus.spellcasting2.spellitem_spell;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -46,7 +47,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 				"§r§fElement: §dStorm§f. §7Spell§f: Lightning Bolt. Spell Type: §cOffensive§f.","§r§fCast down a small bolt of lightning on target.","§r§fThe lightning is primed for an explosion","§r§fand the target is briefly crippled. §r§fDeals 2 1/2 hearts of §cdamage§f.","§r§fRange: 20 meters. §r§fMana cost: 100 §9mana§f.",
 				"§r§fElement: §6Geo§f. §7Spell§f: Tremor. SpellType: §cOffensive§f §dAOE§f.", "§r§fAll within a 10 meter radius are stunned for 5 seconds.","§r§fDeals 3 hearts of §cdamage§f. §r§fMana cost: 100 §9mana§f.");
 	}
-	private static Map<Player,Integer> intz = new HashMap<>();
+	private static Map<UUID,Integer> intz = new HashMap<>();
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
@@ -66,38 +67,38 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 		
 		if (event.getAction().equals(Action.LEFT_CLICK_AIR)) 
 		{
-			if (!intz.containsKey(event.getPlayer())) 
+			if (!intz.containsKey(event.getPlayer().getUniqueId()))
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §cFire§f.");
-				intz.put(event.getPlayer(), 1);
+				intz.put(event.getPlayer().getUniqueId(), 1);
 				return true;
 			}
 			
-			if (intz.containsValue(1))
+			if (intz.get(event.getPlayer().getUniqueId()) == 1)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §9Water§f.");
-				intz.put(event.getPlayer(), 2);
+				intz.put(event.getPlayer().getUniqueId(), 2);
 				return true;
 			}
 			
-			if (intz.containsValue(2))
+			if (intz.get(event.getPlayer().getUniqueId()) == 2)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §dStorm§f.");
-				intz.put(event.getPlayer(), 3);
+				intz.put(event.getPlayer().getUniqueId(), 3);
 				return true;
 			}
 			
-			if (intz.containsValue(3))
+			if (intz.get(event.getPlayer().getUniqueId()) == 3)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §6Geo§f.");
-				intz.put(event.getPlayer(), 4);
+				intz.put(event.getPlayer().getUniqueId(), 4);
 				return true;
 			}
 			
-			if (intz.containsValue(4))
+			if (intz.get(event.getPlayer().getUniqueId()) == 4)
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fElement Selected: §cFire§f.");
-				intz.put(event.getPlayer(), 1);
+				intz.put(event.getPlayer().getUniqueId(), 1);
 				return true;
 			}
 		}
@@ -105,13 +106,13 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 		if (event.getAction().equals(Action.RIGHT_CLICK_AIR)) 
 		{
 			
-			if (!intz.containsKey(event.getPlayer())) 
+			if (!intz.containsKey(event.getPlayer().getUniqueId())) 
 			{
 				PrintUtils.sendMessage(event.getPlayer(),"§r§fNo spell has been selected.");
 				return false;
 			}
 			
-			if (intz.containsValue(1))
+			if (intz.get(event.getPlayer().getUniqueId()) == 1)
 			{
 				//fire spell
 				LivingEntity target = (LivingEntity) getNearestEntityInSight(event.getPlayer(), 15);
@@ -120,7 +121,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 					return false;
 				}
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 50);
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 50);
 				ManaInterface.updateScoreBoard(event.getPlayer());
 
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.FLAME, null);
@@ -132,10 +133,10 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 				return true;
 			}
 			
-			if (intz.containsValue(2))
+			if (intz.get(event.getPlayer().getUniqueId()) == 2)
 			{
 				//water spell
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 50);
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 50);
 				ManaInterface.updateScoreBoard(event.getPlayer());
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_SNOWBALL_THROW, SoundCategory.MASTER, 1, 1);
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.WATER_DROP, null);
@@ -156,7 +157,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 				return true;
 			}
 			
-			if (intz.containsValue(3)) 
+			if (intz.get(event.getPlayer().getUniqueId()) == 3) 
 			{
 				//storm spell
 				Entity target = getNearestEntityInSight(event.getPlayer(), 20);
@@ -175,7 +176,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 				
 				if (target instanceof LivingEntity) 
 				{
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 100);
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 100);
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.ELECTRIC_SPARK, null);
 					SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
@@ -190,7 +191,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 				return true;
 			}
 			
-			if (intz.containsValue(4)) 
+			if (intz.get(event.getPlayer().getUniqueId()) == 4) 
 			{
 				//geo spell
 				if (event.getPlayer().getNearbyEntities(10, 10, 10).size() == 0)
@@ -198,7 +199,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 					PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 					return false;
 				}
-				PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() - 100);
+				PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() - 100);
 				ManaInterface.updateScoreBoard(event.getPlayer());
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CAMPFIRE_COSY_SMOKE, null);
 				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_STONE_BREAK, SoundCategory.MASTER, 1, 1);

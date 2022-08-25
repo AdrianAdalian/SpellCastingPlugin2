@@ -19,7 +19,7 @@ public class PlayerManaRegeneration implements Listener
 	public void onJoin(PlayerJoinEvent event) 
 	{
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getNegMana()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getNegMana()) 
 		{
 			new BukkitRunnable()
 			{
@@ -33,7 +33,7 @@ public class PlayerManaRegeneration implements Listener
 						return;
 					}
 					
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana()) 
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
 					{
 						this.cancel();
 						return;
@@ -47,7 +47,7 @@ public class PlayerManaRegeneration implements Listener
 			}.runTaskTimer(Eden.getInstance(), 0, 35);
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() == 500)
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() == 500)
 		{
 			new BukkitRunnable()
 			{
@@ -59,10 +59,10 @@ public class PlayerManaRegeneration implements Listener
 						this.cancel();
 						return;
 					}
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 10);
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 10);
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 					{
-						PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+						PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 					}
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					return;
@@ -70,7 +70,7 @@ public class PlayerManaRegeneration implements Listener
 			}.runTaskTimer(Eden.getInstance(), 0, 40);
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() == 750)
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() == 750)
 		{
 			new BukkitRunnable()
 			{
@@ -82,10 +82,10 @@ public class PlayerManaRegeneration implements Listener
 						this.cancel();
 						return;
 					}
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 10);
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 10);
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 					{
-						PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+						PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 					}
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					return;
@@ -93,7 +93,7 @@ public class PlayerManaRegeneration implements Listener
 			}.runTaskTimer(Eden.getInstance(), 0, 40);
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() == 1000)
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() == 1000)
 		{
 			new BukkitRunnable()
 			{
@@ -105,10 +105,10 @@ public class PlayerManaRegeneration implements Listener
 						this.cancel();
 						return;
 					}
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 15);
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 15);
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 					{
-						PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+						PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 					}
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					return;
@@ -116,7 +116,7 @@ public class PlayerManaRegeneration implements Listener
 			}.runTaskTimer(Eden.getInstance(), 0, 40);
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() > 1000 && PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() < 2000)
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() > 1000 && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() < 2000)
 		{
 			new BukkitRunnable()
 			{
@@ -128,10 +128,10 @@ public class PlayerManaRegeneration implements Listener
 						this.cancel();
 						return;
 					}
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 20);
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 20);
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 					{
-						PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+						PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 					}
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					return;
@@ -139,7 +139,7 @@ public class PlayerManaRegeneration implements Listener
 			}.runTaskTimer(Eden.getInstance(), 0, 40);
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana() == 2000)
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana() == 2000)
 		{
 			new BukkitRunnable()
 			{
@@ -151,10 +151,10 @@ public class PlayerManaRegeneration implements Listener
 						this.cancel();
 						return;
 					}
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() + 20);
-					if (PlayerDataMana.getPlayerData(event.getPlayer()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana()) 
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() + 20);
+					if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana()) 
 					{
-						PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMaxMana());
+						PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMaxMana());
 					}
 					ManaInterface.updateScoreBoard(event.getPlayer());
 					return;
@@ -180,12 +180,12 @@ public class PlayerManaRegeneration implements Listener
 
 		if (event.getEntity() instanceof Player) 
 		{
-			PlayerDataMana.getPlayerData(event.getEntity()).setCurrentMana(PlayerDataMana.getPlayerData(event.getEntity()).getMinMana());
+			PlayerDataMana.getPlayerData(event.getEntity().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getEntity().getUniqueId()).getMinMana());
 			ManaInterface.updateScoreBoard(event.getEntity());
 		}
 		if (event.getEntity().getKiller() instanceof Player) 
 		{
-            PlayerDataMana.getPlayerData(event.getEntity()).setCurrentMana(PlayerDataMana.getPlayerData(event.getEntity()).getMaxMana());;
+            PlayerDataMana.getPlayerData(event.getEntity().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getEntity().getUniqueId()).getMaxMana());;
             ManaInterface.updateScoreBoard(event.getEntity().getKiller());
 		}
 		return;

@@ -77,7 +77,7 @@ public class SpellUndyingSoul extends BaseSpellCapsule
 					{
 						event.getPlayer().removePotionEffect(effect);
 					}
-					PlayerDataMana.getPlayerData(event.getPlayer()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer()).getMinMana());
+					PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana());
 					Bukkit.broadcastMessage(event.getPlayer().getDisplayName() + " died but was brought back to life via the spell: Undying Soul.");
 					event.getPlayer().setHealth(event.getPlayer().getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
 					event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 400, 99, true));

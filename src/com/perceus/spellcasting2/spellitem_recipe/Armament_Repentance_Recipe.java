@@ -7,17 +7,17 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapelessRecipe;
 
 import com.perceus.spellcasting2.BaseSpellCapsule;
-import com.perceus.spellcasting2.spellitem_spell.ExhaltedWeapon_Repentance;
+import com.perceus.spellcasting2.spellitem_spell.Armament_Repentance;
 
 import fish.yukiemeralis.eden.Eden;
 
-public class ExhaltedWeapon_Repentance_Recipe
+public class Armament_Repentance_Recipe
 {
 	static ItemStack final_item;
 	
 	public static void Init() 
 	{
-		BaseSpellCapsule p = new ExhaltedWeapon_Repentance();
+		BaseSpellCapsule p = new Armament_Repentance();
 		final_item = p.generate();
 	}
 	

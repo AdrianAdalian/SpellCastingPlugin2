@@ -83,8 +83,8 @@ public class SpellToBookListener implements Listener
 			"MagicWeapon_ElementalStaff",
 			"MagicWeapon_SpiritualStaff",
 			"MagicTool_PickaxeOfGeo",
-			"ExhaltedWeapon_Repentance",
-			"ExhaltedWeapon_Artifice",
+			"Armament_Repentance",
+			"Armament_Artifice",
 			"boonofstrength");
 	
 	
@@ -119,7 +119,12 @@ public class SpellToBookListener implements Listener
 	@EventHandler
 	public void onClick(InventoryClickEvent event)
 	{
-
+		
+		if (event.getClickedInventory() == null) 
+		{
+			return;
+		}
+		
 		if (!event.getClickedInventory().getType().equals(InventoryType.PLAYER))
 		{
 		    return;
