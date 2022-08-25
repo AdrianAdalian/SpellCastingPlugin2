@@ -188,12 +188,18 @@ import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
+import com.perceus.spellcasting2.relics.BoonOfStrength;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
 import com.perceus.spellcasting2.solar_spells.SpellDesolate;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
 import com.perceus.spellcasting2.solar_spells.SpellSolarBolt;
 import com.perceus.spellcasting2.solar_spells.SpellSolarEclipse;
 import com.perceus.spellcasting2.solar_spells.SpellSolarFlare;
+import com.perceus.spellcasting2.spellitem_spell.ExhaltedWeapon_Artifice;
+import com.perceus.spellcasting2.spellitem_spell.ExhaltedWeapon_Repentance;
+import com.perceus.spellcasting2.spellitem_spell.MagicTool_PickaxeOfGeo;
+import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_ElementalStaff;
+import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_SpiritualStaff;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_WandOfFire;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_WandOfGeo;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_WandOfHoly;
@@ -465,6 +471,14 @@ public class CastListener implements Listener
 		put("MagicWeaponWandOfWater", new MagicWeapon_WandOfWater());
 		put("MagicWeaponWandOfVoid", new MagicWeapon_WandOfVoid());
 		put("MagicWeaponWandOfStorm", new MagicWeapon_WandOfStorm());
+		put("MagicWeapon_ElementalStaff", new MagicWeapon_ElementalStaff());
+		put("MagicWeapon_SpiritualStaff", new MagicWeapon_SpiritualStaff());
+		
+		put("ExhaltedWeapon_Repentance", new ExhaltedWeapon_Repentance());
+		put("ExhaltedWeapon_Artifice", new ExhaltedWeapon_Artifice());
+		
+		//tools 
+		put("MagicTool_PickaxeOfGeo", new MagicTool_PickaxeOfGeo());
 		
 		//spell items
 		put("SpellItem_Fireball", new SpellItem_Fireball());
@@ -710,6 +724,9 @@ public class CastListener implements Listener
 		put("SpellSolGate", new SpellSolGate()); 
 		put("SpellSolarFlare", new SpellSolarFlare());
 		put("SpellComet", new SpellComet());
+		
+		//boons / relics
+		put("boonofstrength", new BoonOfStrength());
 	}};
 	
 }

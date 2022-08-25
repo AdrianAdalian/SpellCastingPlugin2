@@ -42,7 +42,11 @@ public class SpellEarthquake extends BaseSpellCapsule
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_STONE_BREAK, SoundCategory.MASTER, 1, 1);
 		for (Entity target : event.getPlayer().getNearbyEntities(30, 30, 30))
 		{
-			if (target instanceof Damageable)
+			if (!(target instanceof LivingEntity)) 
+			{
+				continue;
+			}
+			if (target instanceof LivingEntity)
 			{
 				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CAMPFIRE_COSY_SMOKE, null);
 				((Damageable) target).damage(10, event.getPlayer());

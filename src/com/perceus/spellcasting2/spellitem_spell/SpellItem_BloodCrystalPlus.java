@@ -67,7 +67,6 @@ public class SpellItem_BloodCrystalPlus extends BaseSpellCapsule
 		while (!(negEffects.contains((PotionEffectType)randomPotionEffect))) 
 		{
 			randomPotionEffect = PotionEffectType.values()[random.nextInt(PotionEffectType.values().length)];
-			break;
 		}
 
 		event.getPlayer().addPotionEffect(new PotionEffect(randomPotionEffect, 600, 0, true));

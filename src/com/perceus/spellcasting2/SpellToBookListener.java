@@ -79,7 +79,13 @@ public class SpellToBookListener implements Listener
 			"SpellMoonBlast",
 			"SpellKarma",
 			"SpellEquilibrium",
-			"SpellUndyingSoul");
+			"SpellUndyingSoul",
+			"MagicWeapon_ElementalStaff",
+			"MagicWeapon_SpiritualStaff",
+			"MagicTool_PickaxeOfGeo",
+			"ExhaltedWeapon_Repentance",
+			"ExhaltedWeapon_Artifice",
+			"boonofstrength");
 	
 	
 	/**

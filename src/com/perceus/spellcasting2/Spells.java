@@ -8,7 +8,12 @@ import org.bukkit.Material;
 
 import com.perceus.spellcasting2.accounts.StoredInventory;
 import com.perceus.spellcasting2.recipe_book.SC2RecipeBook;
+import com.perceus.spellcasting2.spellitem_recipe.ExhaltedWeapon_Artifice_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.ExhaltedWeapon_Repentance_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicSpellBook_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.MagicTool_PickaxeOfGeo_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_ElementalStaff_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_SpiritualStaff_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfFire_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfGeo_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfHoly_Recipe;
@@ -98,6 +103,22 @@ public class Spells extends EdenModule
 		
 		MagicWeapon_WandOfStorm_Recipe.Init();
 		MagicWeapon_WandOfStorm_Recipe.Register();
+		
+		MagicWeapon_ElementalStaff_Recipe.Init();
+		MagicWeapon_ElementalStaff_Recipe.Register();
+		
+		MagicWeapon_SpiritualStaff_Recipe.Init();
+		MagicWeapon_SpiritualStaff_Recipe.Register();
+		
+		ExhaltedWeapon_Repentance_Recipe.Init();
+		ExhaltedWeapon_Repentance_Recipe.Register();
+		
+		ExhaltedWeapon_Artifice_Recipe.Init();
+		ExhaltedWeapon_Artifice_Recipe.Register();
+		
+		//tool recipes
+		MagicTool_PickaxeOfGeo_Recipe.Init();
+		MagicTool_PickaxeOfGeo_Recipe.Register();
 		
 		//spell item recipes
 		SpellItem_Fireball_Recipe.Init();

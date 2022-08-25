@@ -47,7 +47,7 @@ public class SpellElectrocute extends BaseSpellCapsule
 			return false; 
 		}
 		
-		Entity target = getNearestPlayerInSight(event.getPlayer(), 5);
+		Entity target = getNearestEntityInSight(event.getPlayer(), 5);
 		
 		if (target == null) 
 		{
@@ -68,7 +68,7 @@ public class SpellElectrocute extends BaseSpellCapsule
 		
 		return true;
 	}
-	private Entity getNearestPlayerInSight(Player player, int range) 
+	private Entity getNearestEntityInSight(Player player, int range) 
 	{
 		
 	    ArrayList<Entity> entities = (ArrayList<Entity>) player.getNearbyEntities(range, range, range);
