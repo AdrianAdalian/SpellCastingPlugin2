@@ -49,6 +49,14 @@ public class RecipeBook_WandRecipes extends SurfaceGui
 		{
 			new DisplayWOS().display(event.getWhoClicked());
 		}));
+		this.updateSingleComponent(player, 40, SimpleComponentBuilder.build(Material.STICK, "§r§f§lMagic Weapon §r§f: Sp§3ir§bit§cua§4l §fStaff", (event) -> 
+		{
+			new DisplaySS().display(event.getWhoClicked());
+		}));
+		this.updateSingleComponent(player, 41, SimpleComponentBuilder.build(Material.STICK, "§r§f§lMagic Weapon §r§f: §4E§cl§6e§em§ae§9n§bt§da§5l§f Staff", (event) -> 
+		{
+			new DisplayES().display(event.getWhoClicked());
+		}));
 		
 		this.updateSingleComponent(player, 19, SimpleComponentBuilder.build(Material.LIME_STAINED_GLASS_PANE, "Go Back", (event) -> 
 		{

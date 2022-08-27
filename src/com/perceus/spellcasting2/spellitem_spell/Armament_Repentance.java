@@ -27,9 +27,8 @@ public class Armament_Repentance extends BaseSpellCapsule
 
 	public Armament_Repentance()
 	{
-		super(Material.BOW, ChatUtils.of("Armament: Repentance", "FFE748","FFFFFF","§l§o"), "Armament_Repentance", 0, false, "§r§fElement: §r§f§o§lHoly§r§f.",
-				"§r§fSpell Type: §cOffensive§f.",
-				"§r§fA bow infused with the element of §r§f§o§lHoly§r§f.",
+		super(Material.BOW, ChatUtils.of("Armament: Repentance", "FFE748","FFFFFF","§l§o"), "Armament_Repentance", 0, false, "§r§fElement: §r§6§lConstruct§r§f.",
+				"§r§fA simple Bow infused with §r§f§o§lHoly§r§f energy.",
 				"§r§6Ability§r§f: Quickshot",
 				"§r§fLeft-Click:",
 				"§r§fQuickly fire a §r§f§o§lHoly§r§f infused arrow.",

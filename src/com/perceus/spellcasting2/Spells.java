@@ -8,10 +8,22 @@ import org.bukkit.Material;
 
 import com.perceus.spellcasting2.accounts.StoredInventory;
 import com.perceus.spellcasting2.recipe_book.SC2RecipeBook;
+import com.perceus.spellcasting2.robes.FireRobe_Boots;
+import com.perceus.spellcasting2.robes.FireRobe_Hat;
+import com.perceus.spellcasting2.robes.FireRobe_Pants;
+import com.perceus.spellcasting2.robes.FireRobe_Tunic;
 import com.perceus.spellcasting2.spellitem_recipe.Armament_Artifice_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.Armament_Firebrand_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.Armament_Repentance_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.Armament_War_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.LivingArmor_DragonScaleBoots_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.LivingArmor_DragonScaleChestplate_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.LivingArmor_DragonScaleHelmet_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.LivingArmor_DragonScaleLeggings_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicSpellBook_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicTool_PickaxeOfGeo_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.MagicTool_ScytheOfUnholy_Recipe;
+import com.perceus.spellcasting2.spellitem_recipe.MagicTool_ShovelOfGeo_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_ElementalStaff_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_SpiritualStaff_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.MagicWeapon_WandOfFire_Recipe;
@@ -52,15 +64,16 @@ import fish.yukiemeralis.eden.utils.PrintUtils;
 description = "A reimagined version of my original spell casting plugin.", 
 maintainer = "Perceus Adalian (David Willy)", 
 modIcon = Material.NETHER_STAR, 
-modName = "§4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2", 
+modName = "SpellCastingPlugin2", 
 supportedApiVersions = { "v1_19_R1" }, 
 version = "1.4.1")
 public class Spells extends EdenModule
 {
+	
 	@Override
 	public void onEnable()
 	{
-		
+		this.addListener(new RobeListenerFire());
 		try
 		{
 			CompletionsManager.registerCompletion("ALLSPELLS", new ObjectMethodPair(this, "allSpells"), true);
@@ -116,9 +129,35 @@ public class Spells extends EdenModule
 		Armament_Artifice_Recipe.Init();
 		Armament_Artifice_Recipe.Register();
 		
+		Armament_Firebrand_Recipe.Init();
+		Armament_Firebrand_Recipe.Register();
+		
+		Armament_War_Recipe.Init();
+		Armament_War_Recipe.Register();
+		
 		//tool recipes
 		MagicTool_PickaxeOfGeo_Recipe.Init();
 		MagicTool_PickaxeOfGeo_Recipe.Register();
+		
+		MagicTool_ScytheOfUnholy_Recipe.Init();
+		MagicTool_ScytheOfUnholy_Recipe.Register();
+		
+		MagicTool_ShovelOfGeo_Recipe.Init();
+		MagicTool_ShovelOfGeo_Recipe.Register();
+		
+		//armor recipes
+		LivingArmor_DragonScaleChestplate_Recipe.Init();
+		LivingArmor_DragonScaleChestplate_Recipe.Register();
+		
+		LivingArmor_DragonScaleHelmet_Recipe.Init();
+		LivingArmor_DragonScaleHelmet_Recipe.Register();
+		
+		LivingArmor_DragonScaleLeggings_Recipe.Init();
+		LivingArmor_DragonScaleLeggings_Recipe.Register();
+		
+		LivingArmor_DragonScaleBoots_Recipe.Init();
+		LivingArmor_DragonScaleBoots_Recipe.Register();
+		
 		
 		//spell item recipes
 		SpellItem_Fireball_Recipe.Init();
@@ -171,6 +210,21 @@ public class Spells extends EdenModule
 		
 		SpellCreateItem_Recipe.Init();
 		SpellCreateItem_Recipe.Register();
+		
+		//robes
+		
+		//fire
+		FireRobe_Hat.Init();
+		FireRobe_Hat.Register();
+		
+		FireRobe_Tunic.Init();
+		FireRobe_Tunic.Register();
+		
+		FireRobe_Pants.Init();
+		FireRobe_Pants.Register();
+		
+		FireRobe_Boots.Init();
+		FireRobe_Boots.Register();
 		
 	}
 

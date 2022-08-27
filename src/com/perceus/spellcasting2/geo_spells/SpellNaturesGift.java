@@ -35,9 +35,9 @@ public class SpellNaturesGift extends BaseSpellCapsule
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");
 			return false;
 		}
-		int radius = 50; 
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CAMPFIRE_COSY_SMOKE, null);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ITEM_BONE_MEAL_USE, SoundCategory.MASTER, 1, 1);
+		int radius = 50; 
 		for (int iy = (radius * -1); iy < (radius * 2); iy++)
 		{
 			for (int ix = (radius * -1); ix < (radius * 2); ix++)
@@ -51,7 +51,8 @@ public class SpellNaturesGift extends BaseSpellCapsule
 					{
 						if (target1.getBlockData() instanceof Ageable) // org.bukkit.blockdata.Ageable, not org.bukkit.entity.Ageable
 						{
-							
+							SpellParticles.drawLine(event.getPlayer().getLocation(), target1.getLocation(), 1, Particle.CLOUD, null);
+							target1.getWorld().spawnParticle(Particle.VILLAGER_HAPPY, target1.getLocation().add(new Location(target1.getWorld(), 0,1,0)), 1);
 							Ageable data = (Ageable) target1.getBlockData();
 							data.getMaximumAge(); 
 							data.setAge(data.getMaximumAge());

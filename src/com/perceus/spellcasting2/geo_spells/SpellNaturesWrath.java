@@ -47,17 +47,20 @@ public class SpellNaturesWrath extends BaseSpellCapsule
 				for (int iz = (radius * -1); iz < (radius * 2); iz++)
 				{
 					
-					Block target = event.getPlayer().getWorld().getBlockAt(event.getPlayer().getLocation().add(new Location(event.getPlayer().getWorld(), ix, iy, iz)));
+					Block target1 = event.getPlayer().getWorld().getBlockAt(event.getPlayer().getLocation().add(new Location(event.getPlayer().getWorld(), ix, iy, iz)));
 						
-					if (target.getBlockData() != null)
+					if (target1.getBlockData() != null)
 					{
-						if (target.getBlockData() instanceof Ageable) // org.bukkit.blockdata.Ageable, not org.bukkit.entity.Ageable
+						if (target1.getBlockData() instanceof Ageable) // org.bukkit.blockdata.Ageable, not org.bukkit.entity.Ageable
 						{	
-							Ageable data = (Ageable) target.getBlockData();
+							Ageable data = (Ageable) target1.getBlockData();
 							if (data.getMaximumAge() == data.getAge())
 							{
+								SpellParticles.drawLine(event.getPlayer().getLocation(), target1.getLocation(), 1, Particle.SMOKE_LARGE, null);
+								target1.getWorld().spawnParticle(Particle.VILLAGER_ANGRY, target1.getLocation().add(new Location(target1.getWorld(), 0,1,0)), 1);
+								target1.getWorld().playSound(target1.getLocation(), Sound.BLOCK_CROP_BREAK, SoundCategory.MASTER, 1, 1);
 								data.setAge(0);
-								target.setBlockData(data);
+								target1.setBlockData(data);
 							}
 						}
 					}	

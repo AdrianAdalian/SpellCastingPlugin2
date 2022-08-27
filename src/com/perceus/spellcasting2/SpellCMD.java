@@ -5,6 +5,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import fish.yukiemeralis.eden.command.EdenCommand;
+import fish.yukiemeralis.eden.command.annotations.EdenCommandHandler;
 import fish.yukiemeralis.eden.module.EdenModule;
 
 public class SpellCMD extends EdenCommand

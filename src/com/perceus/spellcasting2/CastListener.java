@@ -190,14 +190,22 @@ import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
 import com.perceus.spellcasting2.relics.BoonOfStrength;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
-import com.perceus.spellcasting2.solar_spells.SpellDesolate;
+import com.perceus.spellcasting2.solar_spells.SpellInferno;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
 import com.perceus.spellcasting2.solar_spells.SpellSolarBolt;
 import com.perceus.spellcasting2.solar_spells.SpellSolarEclipse;
 import com.perceus.spellcasting2.solar_spells.SpellSolarFlare;
 import com.perceus.spellcasting2.spellitem_spell.Armament_Artifice;
+import com.perceus.spellcasting2.spellitem_spell.Armament_Firebrand;
 import com.perceus.spellcasting2.spellitem_spell.Armament_Repentance;
+import com.perceus.spellcasting2.spellitem_spell.Armament_War;
+import com.perceus.spellcasting2.spellitem_spell.LivingArmor_DragonScaleBoots;
+import com.perceus.spellcasting2.spellitem_spell.LivingArmor_DragonScaleChestplate;
+import com.perceus.spellcasting2.spellitem_spell.LivingArmor_DragonScaleHelmet;
+import com.perceus.spellcasting2.spellitem_spell.LivingArmor_DragonScaleLeggings;
 import com.perceus.spellcasting2.spellitem_spell.MagicTool_PickaxeOfGeo;
+import com.perceus.spellcasting2.spellitem_spell.MagicTool_ScytheOfUnholy;
+import com.perceus.spellcasting2.spellitem_spell.MagicTool_ShovelOfGeo;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_ElementalStaff;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_SpiritualStaff;
 import com.perceus.spellcasting2.spellitem_spell.MagicWeapon_WandOfFire;
@@ -476,9 +484,19 @@ public class CastListener implements Listener
 		
 		put("Armament_Repentance", new Armament_Repentance());
 		put("Armament_Artifice", new Armament_Artifice());
+		put("Armament_Firebrand", new Armament_Firebrand());
+		put("Armament_War", new Armament_War());
 		
 		//tools 
 		put("MagicTool_PickaxeOfGeo", new MagicTool_PickaxeOfGeo());
+		put("MagicTool_ScytheOfUnholy", new MagicTool_ScytheOfUnholy());
+		put("MagicTool_ShovelOfGeo", new MagicTool_ShovelOfGeo());
+		
+		//armor
+		put("LivingArmor_DragonScaleChestplate", new LivingArmor_DragonScaleChestplate());
+		put("LivingArmor_DragonScaleHelmet", new LivingArmor_DragonScaleHelmet());
+		put("LivingArmor_DragonScaleLeggings", new LivingArmor_DragonScaleLeggings());
+		put("LivingArmor_DragonScaleBoots", new LivingArmor_DragonScaleBoots());
 		
 		//spell items
 		put("SpellItem_Fireball", new SpellItem_Fireball());
@@ -720,7 +738,7 @@ public class CastListener implements Listener
 		//solar spell
 		put("SpellSolarEclipse", new SpellSolarEclipse());
 		put("SpellSolarBolt", new SpellSolarBolt());
-		put("SpellDesolate", new SpellDesolate());
+		put("SpellDesolate", new SpellInferno());
 		put("SpellSolGate", new SpellSolGate()); 
 		put("SpellSolarFlare", new SpellSolarFlare());
 		put("SpellComet", new SpellComet());

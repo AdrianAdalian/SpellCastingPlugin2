@@ -18,12 +18,12 @@ import fish.yukiemeralis.eden.Eden;
 import fish.yukiemeralis.eden.utils.ChatUtils;
 import fish.yukiemeralis.eden.utils.PrintUtils;
 
-public class SpellDesolate extends BaseSpellCapsule
+public class SpellInferno extends BaseSpellCapsule
 {
 
-	public SpellDesolate()
+	public SpellInferno()
 	{
-		super(Material.ENCHANTED_BOOK, ChatUtils.of("☀ Solar Tome: Desolate ☀", "F9812B","FFFFFF",""), "SpellDesolate", 1000, false, "§r§fElement: §r§6S§eo§6l§eα§6r§r§f.",
+		super(Material.ENCHANTED_BOOK, ChatUtils.of("☀ Solar Tome: Inferno ☀", "F9812B","FFFFFF",""), "SpellInferno", 1000, false, "§r§fElement: §r§6S§eo§6l§eα§6r§r§f.",
 				"§r§fA §5c§de§bl§3e§cs§4t§6i§eal §r§ftome.","§r§fSpell Type: §cOffensive§f §dAOE§f.",
 				"§r§fAn immesely powerful script within allows",
 				"§r§fthe caster to to turn a part of", 

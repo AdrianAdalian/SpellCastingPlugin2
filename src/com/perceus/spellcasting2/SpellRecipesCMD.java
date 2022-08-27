@@ -6,13 +6,14 @@ import org.bukkit.entity.Player;
 import com.perceus.spellcasting2.recipe_book.RecipeBookMainPageGUI;
 
 import fish.yukiemeralis.eden.command.EdenCommand;
+import fish.yukiemeralis.eden.command.annotations.EdenCommandHandler;
 import fish.yukiemeralis.eden.module.EdenModule;
 
 public class SpellRecipesCMD extends EdenCommand
 {
 	public SpellRecipesCMD(EdenModule parent_module) 
 	{
-		super("SpellRecipes", parent_module);
+		super("spellrecipes", parent_module);
 	}
 	
 	@EdenCommandHandler(usage = "Recipes For Spells", description = "Display spell recipes.", argsCount = 0)

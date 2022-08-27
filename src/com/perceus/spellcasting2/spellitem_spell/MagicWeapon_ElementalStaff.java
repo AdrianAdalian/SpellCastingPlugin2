@@ -38,7 +38,7 @@ public class MagicWeapon_ElementalStaff extends BaseSpellCapsule
 
 	public MagicWeapon_ElementalStaff()
 	{
-		super(Material.STICK, "§r§f§lMagic Weapon §r: §4E§cl§6e§em§ae§9n§bt§da§5l§f Staff", "MagicWeapon_ElementalStaff", 0, true, "§r§fA magical weapon containing various elements.",
+		super(Material.STICK, "§r§f§lMagic Weapon §r§f: §4E§cl§6e§em§ae§9n§bt§da§5l§f Staff", "MagicWeapon_ElementalStaff", 0, true, "§r§fA magical weapon containing various elements.",
 				"§r§fLeft-Click to cycle between different spells.",
 				"§r§fRight-Click to cast each spell.",
 				

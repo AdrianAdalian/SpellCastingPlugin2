@@ -21,13 +21,14 @@ public class Armament_Artifice extends BaseSpellCapsule
 
 	public Armament_Artifice()
 	{
-		super(Material.SHIELD, ChatUtils.of("Armament: Artifice", "FFE748","FFFFFF","§l§o"), "Armament_Artifice", 0, false, "§r§fElement: §r§6Geo§r§f.",
-				"§r§fA simple shield infused with the element of §r§6Geo§f.",
+		super(Material.SHIELD, ChatUtils.of("Armament: Artifice", "FFE748","FFFFFF","§l§o"), "Armament_Artifice", 0, false, "§r§fElement: §r§6§lConstruct§r§f.",
+				"§r§fA simple Shield infused with §6Geo§f energy.",
 				"§r§6Ability§r§f: Fortress.",
 				"§r§fWhile the caster is blocking,",
 				"§r§fgrant total immunity to all damage.",
 				"§r§fAs consequence for immunity to damage,",
-				"§r§fthe spell will only activate while", "§r§fusing the shield in the main hand.",
+				"§r§fthe spell will only activate while", 
+				"§r§fusing the shield in the main hand.",
 				"§r§fMana cost: 30 §r§9mana§f/second.");
 	}
 

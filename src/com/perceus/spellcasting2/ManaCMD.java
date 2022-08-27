@@ -7,6 +7,7 @@ import com.perceus.spellcasting2.manamechanic.ManaInterface;
 import com.perceus.spellcasting2.manamechanic.PlayerDataMana;
 
 import fish.yukiemeralis.eden.command.EdenCommand;
+import fish.yukiemeralis.eden.command.annotations.EdenCommandHandler;
 import fish.yukiemeralis.eden.module.EdenModule;
 
 public class ManaCMD extends EdenCommand

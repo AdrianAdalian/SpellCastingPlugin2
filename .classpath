@@ -6,9 +6,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="libs/Eden-071522-1.5.5.jar"/>
 	<classpathentry kind="lib" path="libs/Rosetta.jar"/>
 	<classpathentry kind="lib" path="libs/spigot-api-1.19-R0.1-SNAPSHOT-shaded.jar"/>
-	<classpathentry kind="lib" path="libs/Surface2.jar"/>
+	<classpathentry kind="lib" path="libs/Checkpoint.jar"/>
+	<classpathentry kind="lib" path="libs/Eden-082522-1.7.3.jar"/>
+	<classpathentry kind="lib" path="libs/Flock.jar"/>
+	<classpathentry kind="lib" path="libs/Surface.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

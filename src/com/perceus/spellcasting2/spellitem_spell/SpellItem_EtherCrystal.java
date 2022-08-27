@@ -26,6 +26,10 @@ public class SpellItem_EtherCrystal extends BaseSpellCapsule
 				"§r§fEvery other use of an Ether Crystal grants +50 max mana.",
 				"§r§fThe crystal is very brittle and will break on use.",
 				"§r§fCurrent mana will also be reset to 0.",
+				"§r§fAt 1000 mana, regen will increase to 15 mana/2s.",
+				"§r§fWhile => 1000 <= 2000 mana, regen will increase to 20 mana/2s.",
+				"§r§fAt 2000 mana, regen will increase to 20 mana/s.",
+				"§r§fNew regen values take effect after relog.",
 				"§r§4Warning§r§f: This action cannot be undone.");
 	}
 

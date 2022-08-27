@@ -141,7 +141,7 @@ import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
-import com.perceus.spellcasting2.solar_spells.SpellDesolate;
+import com.perceus.spellcasting2.solar_spells.SpellInferno;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
 import com.perceus.spellcasting2.solar_spells.SpellSolarBolt;
 import com.perceus.spellcasting2.solar_spells.SpellSolarEclipse;
@@ -223,7 +223,7 @@ public class ChestLootTablesListener implements Listener
 				new KBSpellRegenerate(),new KBSpellAccolades(),new KBSpellExtricate(),new KBSpellPenance(),
 				new KBSpellJudgement(), new SpellFertility(), new SpellProtectOther(), new SpellHealingAura(), new SpellItem_EtherCrystal(), new SpellUndyingSoul());
 		
-		List<BaseSpellCapsule> lootList2 = List.of(new SpellLunarBolt(), new SpellLunarEclipse(), new SpellDesolate(), new SpellItem_BloodCrystalPlus(), new MagicWeapon_WandOfVoid(),
+		List<BaseSpellCapsule> lootList2 = List.of(new SpellLunarBolt(), new SpellLunarEclipse(), new SpellInferno(), new SpellItem_BloodCrystalPlus(), new MagicWeapon_WandOfVoid(),
 				new SpellSolarEclipse(), new SpellComet(), new SpellSolarFlare(), new SpellSolGate(), new SpellSuspendedMatter(), new SpellSolarBolt(), new SpellItem_EtherCrystal(), new SpellUrgentTeleport(),
 				new SpellNullifyGravity(), new SpellMoonBeam(), new SpellMoonBlast(), new SpellKarma(), new SpellEquilibrium());
 		

@@ -360,7 +360,8 @@ public class SpellItemDropListener implements Listener
 		put(EntityType.ZOMBIE, new BaseSpellCapsule[] {new KBSpellLifeSteal(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), new KBSpellEmitDamagingForce()});
 		put(EntityType.ZOGLIN, new BaseSpellCapsule[] {new KBSpellReapSouls(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), new KBSpellDebilitate()});
 		put(EntityType.ZOMBIFIED_PIGLIN, new BaseSpellCapsule[] {new KBSpellLifeSteal(), new KBSpellReapSouls(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), new KBSpellDebilitate()});
-		put(EntityType.STRAY, new BaseSpellCapsule[] {new KBSpellLifeSteal(), new KBSpellReapSouls(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), new KBSpellEmitDamagingForce(), new KBSpellDebilitate()});
+		put(EntityType.STRAY, new BaseSpellCapsule[] {new KBSpellLifeSteal(), new KBSpellReapSouls(), new KBSpellDemonSight(), new KBSpellDemonicReflexes(), 
+				new KBSpellEmitDamagingForce(), new KBSpellDebilitate(), new SpellFrostBite(), new SpellBlizzard()});
 		
 		//msc mobs that can drop any element of spell
 		put(EntityType.SILVERFISH, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellPoisonGas(), new KBSpellSuffocate(), new KBSpellGeoMorph(), new KBSpellTerraform()});

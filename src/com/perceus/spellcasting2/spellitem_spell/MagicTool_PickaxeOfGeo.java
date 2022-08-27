@@ -27,11 +27,12 @@ public class MagicTool_PickaxeOfGeo extends BaseSpellCapsule
 
 	public MagicTool_PickaxeOfGeo()
 	{
-		super(Material.NETHERITE_PICKAXE, "§r§f§lMagic Tool§r§f: Pickaxe of §6Geo§f", "MagicTool_PickaxeOfGeo", 0, false, "§r§fElement: §r§6Geo§r§f.",
-				"§r§fSpell Type: §6Buff§f and §bUtility§f.",
+		super(Material.NETHERITE_PICKAXE, "§r§f§lMagic Tool§r§f: Netherite Pickaxe§e+", "MagicTool_PickaxeOfGeo", 0, false, "§r§fElement: §r§6§lConstruct§r§f.",
 				"§r§fA Netherite Pickaxe infused with §6Geo§f energy.",
+				"§r§6Ability§f: Miner's Haste.",
 				"§r§fOn Right-Click Air: grant haste (lv3) for 1 minute.",
 				"§r§fMana cost: 100 §r§9mana§r§f.",
+				"§r§6Ability§f: Miner's Greed.",
 				"§r§fOn Right-Click Block: if the target is an ore, instantly mine it.",
 				"§r§fMana cost: 25 §r§9mana§r§f.");
 	}
