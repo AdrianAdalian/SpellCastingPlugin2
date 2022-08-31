@@ -54,6 +54,7 @@ public class SpellPolarize extends BaseSpellCapsule
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 		for (Entity TargetsOfTarget : InitialTarget.getNearbyEntities(7, 7, 7)) 
 		{
+			SpellParticles.drawLine(InitialTarget.getLocation(), TargetsOfTarget.getLocation(), 1, Particle.PORTAL, null);
 			TargetsOfTarget.setVelocity(TargetsOfTarget.getLocation().toVector().subtract(InitialTarget.getLocation().toVector()).normalize().multiply(5));
 			if(!(TargetsOfTarget instanceof LivingEntity)) 
 			{ 

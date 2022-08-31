@@ -27,7 +27,7 @@ public class Armament_War_Recipe
 		NamespacedKey key = new NamespacedKey(Eden.getInstance(), "war");
 		ShapelessRecipe recipe = new ShapelessRecipe(key, final_item);
 
-		recipe.addIngredient(Material.NETHERITE_SWORD);
+		recipe.addIngredient(Material.NETHERITE_AXE);
 		recipe.addIngredient(Material.NETHER_STAR);
 		recipe.addIngredient(Material.AMETHYST_SHARD);
 		

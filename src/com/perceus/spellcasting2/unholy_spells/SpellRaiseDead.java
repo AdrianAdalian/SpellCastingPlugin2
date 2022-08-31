@@ -59,8 +59,8 @@ public class SpellRaiseDead extends BaseSpellCapsule
 		}
 
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
-		
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
+		SpellParticles.drawDisc(target.getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
 		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.SMOKE_LARGE, null);
 		event.getPlayer().setHealth(event.getPlayer().getHealth() / 2.0);
 		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);

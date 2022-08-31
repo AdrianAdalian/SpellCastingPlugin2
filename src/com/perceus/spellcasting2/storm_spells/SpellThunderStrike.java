@@ -2,6 +2,7 @@ package com.perceus.spellcasting2.storm_spells;
 
 import java.util.ArrayList;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -25,12 +26,21 @@ public class SpellThunderStrike extends BaseSpellCapsule
 
 	public SpellThunderStrike()
 	{
-		super(Material.LARGE_AMETHYST_BUD, "§r§7§ko§r§7§lSpell: §r§fThunderStrike§r§7§ko§r", "SpellThunderStrike", 200, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon two consecutive lightning bolts on any target.","§r§fRange: 55 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.LARGE_AMETHYST_BUD, "§r§7§ko§r§7§lSpell: §r§fThunderStrike§r§7§ko§r", "SpellThunderStrike", 450, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon two consecutive lightning bolts on any target.","§r§fRange: 55 meters.","§r§fMana cost: 450 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
+		
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR))
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");

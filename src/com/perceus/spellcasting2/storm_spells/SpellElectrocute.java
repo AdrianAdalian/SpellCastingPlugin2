@@ -2,6 +2,7 @@ package com.perceus.spellcasting2.storm_spells;
 
 import java.util.ArrayList;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -9,6 +10,7 @@ import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -27,20 +29,29 @@ public class SpellElectrocute extends BaseSpellCapsule
 
 	public SpellElectrocute()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Electrocute§r§f§ko§r", "SpellElectrocute", 250, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.",
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Electrocute§r§f§ko§r", "SpellElectrocute", 350, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fA spellbook radiating §r§dStorm§r§f energy.",
 				"§r§fAllows the caster to emit a short ranged burst of electricity,",
 				"§r§fdamaging and crippling the target.",
-				"§r§fDeals 5 hearts of §r§cdamage§r§f.",
+				"§r§fDeals 7 hearts of §r§cdamage§r§f.",
 				"§r§fCripple for 10 seconds.",
 				"§r§fRange: 5 meters.",
-				"§r§fMana cost: 250 §r§9mana§r§f.");
-		// TODO Auto-generated constructor stub
+				"§r§fMana cost: 350 §r§9mana§r§f.",
+				"§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
+		
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR)) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");
@@ -62,7 +73,7 @@ public class SpellElectrocute extends BaseSpellCapsule
 			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 			target.getWorld().playSound((Location) target.getLocation(), Sound.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.MASTER, 1, 1);
 			target.getWorld().strikeLightningEffect(target.getLocation());
-			((LivingEntity) target).damage(10);
+			((Damageable) target).damage(14);
 			((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 200, 99));
 		}
 		

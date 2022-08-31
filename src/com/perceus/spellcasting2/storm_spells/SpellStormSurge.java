@@ -1,5 +1,6 @@
 package com.perceus.spellcasting2.storm_spells;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
@@ -19,12 +20,21 @@ public class SpellStormSurge extends BaseSpellCapsule
 
 	public SpellStormSurge()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Storm Surge§r§f§ko§r", "SpellStormSurge", 500, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThe caster summons a cursed thunderstorm","§r§fthat casts down lightning on all those within range.","§r§fThe storm's effects cause an energy drain on those hit","§r§fwhich heals the caster.","§r§fDeals 2.5 hearts of §r§cdamage §r§fper lightning bolt.","§r§4Drain §r§f1/2 hearts health for each target.","§r§fRange: 30 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Storm Surge§r§f§ko§r", "SpellStormSurge", 500, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThe caster summons a cursed thunderstorm","§r§fthat casts down lightning on all those within range.","§r§fThe storm's effects cause an energy drain on those hit","§r§fwhich heals the caster.","§r§fDeals 2.5 hearts of §r§cdamage §r§fper lightning bolt.","§r§4Drain §r§f1/2 hearts health for each target.","§r§fRange: 30 meters.","§r§fMana cost: 500 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
+		
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR)) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");

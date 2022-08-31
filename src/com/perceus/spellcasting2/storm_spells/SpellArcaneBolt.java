@@ -2,6 +2,7 @@ package com.perceus.spellcasting2.storm_spells;
 
 import java.util.ArrayList;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -26,12 +27,21 @@ public class SpellArcaneBolt extends BaseSpellCapsule
 
 	public SpellArcaneBolt()
 	{
-		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fArcane Bolt§r§7§ko§r", "SpellArcaneBolt", 1000, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fHarness the true power of storm.","§r§fOverload any target with the","§r§felemental power of the non-spiritual elements.","§r§fSummon a small bolt of lightning at the target.","§r§fPoisons, burns, and slows thenafter.","§r§fDuration: 10 seconds.","§r§fRange: 100 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fArcane Bolt§r§7§ko§r", "SpellArcaneBolt", 1000, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fHarness the true power of storm.","§r§fOverload any target with the","§r§felemental power of the non-spiritual elements.","§r§fSummon a small bolt of lightning at the target.","§r§fPoisons, burns, and slows thenafter.","§r§fDuration: 10 seconds.","§r§fRange: 100 meters.","§r§fMana cost: 1000 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
+		
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR))
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");

@@ -19,6 +19,7 @@ public class LivingArmor_DragonScaleChestplate_Recipe
 	{
 		BaseSpellCapsule chest = new LivingArmor_DragonScaleChestplate();
 		final_item = chest.generate();
+
 	}
 	
 	public static void Register()

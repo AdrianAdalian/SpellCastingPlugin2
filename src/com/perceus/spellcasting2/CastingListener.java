@@ -44,6 +44,11 @@ public class CastingListener implements Listener
 		
 		String spell = ItemUtils.readFromNamespacedKey(held, "spellname");
 		
+		if (!CastListener.spell_registry.containsKey(spell)) 
+		{
+			return;
+		}
+		
 		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() < PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana() && PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getNegMana()) 
 		{
 			
@@ -71,6 +76,7 @@ public class CastingListener implements Listener
 					return;
 				}
 			}.runTaskTimer(Eden.getInstance(), 0, 35);
+			
 			if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana()<CastListener.spell_registry.get(spell).getManaCost()) 
 			{
 				event.setUseInteractedBlock(Event.Result.DENY);

@@ -27,7 +27,7 @@ public class MagicWeapon_WandOfStorm extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfStorm()
 	{
-		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Storm", "FFE748","CC8899","§l§o"), "MagicWeaponWandOfStorm", 0, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f and §6Buff§f.",
+		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Storm", "FFE748","CC8899","§l§o"), "MagicWeaponWandOfStorm", 0, true, "§r§fElement: §r§dStorm§r§f.",
 				"§r§fA simple stick infused with the element of §r§dStorm§r§f.",
 				"§r§7§lSpell: §r§fDischarge",
 				"§r§fLeft-Click: Summon a bolt of electricity that",

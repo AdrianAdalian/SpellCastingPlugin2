@@ -25,7 +25,7 @@ public class MagicWeapon_WandOfWater extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfWater()
 	{
-		super(Material.STICK,  ChatUtils.of("Magic Weapon: Wand of Water", "FFE748","89CFF0","§l§o"), "MagicWeaponWandOfWater", 0, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §7Debuff§f and §bUtility§f.",
+		super(Material.STICK,  ChatUtils.of("Magic Weapon: Wand of Water", "FFE748","89CFF0","§l§o"), "MagicWeaponWandOfWater", 0, true, "§r§fElement: §r§9Water§r§f.",
 				"§r§fA simple stick infused with the element of §r§9Water§r§f.",
 				"§r§7§lSpell: §r§fWater Lash",
 				"§r§fLeft-Click: Cast out a large blob of water,",

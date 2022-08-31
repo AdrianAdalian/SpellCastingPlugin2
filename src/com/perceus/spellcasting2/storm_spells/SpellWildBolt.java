@@ -2,6 +2,7 @@ package com.perceus.spellcasting2.storm_spells;
 
 import java.util.Random;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -23,12 +24,21 @@ public class SpellWildBolt extends BaseSpellCapsule
 
 	public SpellWildBolt()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fWildBolt§r§f§ko§r", "SpellWildBolt", 350, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThis unstable spell randomly summons five","§r§fbolts of lightning to a target block.","§r§fRange to cast: 50 meters.","§r§fRange of lightning: 7 meters.","§r§fMana cost: 350 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fWildBolt§r§f§ko§r", "SpellWildBolt", 225, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThis unstable spell randomly summons five","§r§fbolts of lightning to a target block.","§r§fRange to cast: 50 meters.","§r§fRange of lightning: 7 meters.","§r§fMana cost: 225 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
+		
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR))
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");

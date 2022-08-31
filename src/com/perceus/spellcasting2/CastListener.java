@@ -46,6 +46,7 @@ import com.perceus.spellcasting2.aethereal_spells.SpellFortifySoulSpeed;
 import com.perceus.spellcasting2.aethereal_spells.SpellFortifySweepingEdge;
 import com.perceus.spellcasting2.aethereal_spells.SpellFortifySwiftSneak;
 import com.perceus.spellcasting2.aethereal_spells.SpellFortifyThorns;
+import com.perceus.spellcasting2.aethereal_spells.SpellPurify;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateAllay;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateAxolotl;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateBat;
@@ -108,6 +109,7 @@ import com.perceus.spellcasting2.ancient_spells.SpellCreateZoglin;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombie;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombifiedPiglin;
 import com.perceus.spellcasting2.astral_spells.SpellEquilibrium;
+import com.perceus.spellcasting2.astral_spells.SpellEtherEquilibrium;
 import com.perceus.spellcasting2.astral_spells.SpellKarma;
 import com.perceus.spellcasting2.astral_spells.SpellNullifyGravity;
 import com.perceus.spellcasting2.astral_spells.SpellSuspendedMatter;
@@ -181,14 +183,26 @@ import com.perceus.spellcasting2.holy_spells.SpellProlongedFlight;
 import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
 import com.perceus.spellcasting2.holy_spells.SpellRegenerate;
+import com.perceus.spellcasting2.holy_spells.SpellRemedy;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
 import com.perceus.spellcasting2.holy_spells.SpellSatiate;
-import com.perceus.spellcasting2.holy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
+import com.perceus.spellcasting2.relics.BoonOfAbsoluteProtection;
+import com.perceus.spellcasting2.relics.BoonOfAntiGravity;
+import com.perceus.spellcasting2.relics.BoonOfDefense;
+import com.perceus.spellcasting2.relics.BoonOfInsulation;
+import com.perceus.spellcasting2.relics.BoonOfInteraction;
+import com.perceus.spellcasting2.relics.BoonOfManaRegeneration;
+import com.perceus.spellcasting2.relics.BoonOfNightVision;
+import com.perceus.spellcasting2.relics.BoonOfRegeneration;
+import com.perceus.spellcasting2.relics.BoonOfSpeed;
 import com.perceus.spellcasting2.relics.BoonOfStrength;
+import com.perceus.spellcasting2.relics.BoonOfTheAngels;
+import com.perceus.spellcasting2.relics.BoonOfTheSeaGod;
+import com.perceus.spellcasting2.relics.BoonOfWaterbreathing;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
 import com.perceus.spellcasting2.solar_spells.SpellInferno;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
@@ -241,6 +255,7 @@ import com.perceus.spellcasting2.storm_spells.SpellStormSurge;
 import com.perceus.spellcasting2.storm_spells.SpellTailWind;
 import com.perceus.spellcasting2.storm_spells.SpellThunderStorm;
 import com.perceus.spellcasting2.storm_spells.SpellThunderStrike;
+import com.perceus.spellcasting2.storm_spells.SpellTornado;
 import com.perceus.spellcasting2.storm_spells.SpellUberCharge;
 import com.perceus.spellcasting2.storm_spells.SpellVaporize;
 import com.perceus.spellcasting2.storm_spells.SpellWildBolt;
@@ -261,6 +276,7 @@ import com.perceus.spellcasting2.unholy_spells.SpellRot;
 import com.perceus.spellcasting2.unholy_spells.SpellSapEther;
 import com.perceus.spellcasting2.unholy_spells.SpellUndeadEffigy;
 import com.perceus.spellcasting2.unholy_spells.SpellUndeadRecall;
+import com.perceus.spellcasting2.unholy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.void_spells.SpellAccelerateLife;
 import com.perceus.spellcasting2.void_spells.SpellAntiGravity;
 import com.perceus.spellcasting2.void_spells.SpellAntimatter;
@@ -301,6 +317,7 @@ import com.perceus.spellcasting2.water_spells.SpellSoak;
 import com.perceus.spellcasting2.water_spells.SpellSplash;
 import com.perceus.spellcasting2.water_spells.SpellSuffocate;
 import com.perceus.spellcasting2.water_spells.SpellTidalForce;
+import com.perceus.spellcasting2.water_spells.SpellTsunami;
 import com.perceus.spellcasting2.water_spells.SpellWaveWake;
 
 public class CastListener implements Listener
@@ -357,7 +374,7 @@ public class CastListener implements Listener
 		put("SpellFertility", new SpellFertility());
 		put("SpellHealingAura", new SpellHealingAura());
 		put("SpellProtectOther", new SpellProtectOther());
-		put("SpellUndyingSoul", new SpellUndyingSoul());
+		put("SpellRemedy", new SpellRemedy());
 		
 		//void spells
 		put("SpellBanishGreaterEvil", new SpellBanishGreaterEvil());
@@ -424,6 +441,7 @@ public class CastListener implements Listener
 		put("SpellFrostBite", new SpellFrostBite());
 		put("SpellBlizzard", new SpellBlizzard());
 		put("SpellIceAge", new SpellIceAge());
+		put("SpellTsunami", new SpellTsunami());
 		
 		//unholy spells
 		put("SpellLifeSteal", new SpellLifeSteal());
@@ -443,6 +461,7 @@ public class CastListener implements Listener
 		put("SpellDrainingAura", new SpellDrainingAura());
 		put("SpellUndeadRecall", new SpellUndeadRecall());
 		put("SpellReapAndSew", new SpellReapAndSew());
+		put("SpellUndyingSoul", new SpellUndyingSoul());
 		
 		//storm spells
 		put("SpellSmite", new SpellSmite());
@@ -462,6 +481,7 @@ public class CastListener implements Listener
 		put("SpellExplosiveBolt", new SpellExplosiveBolt());
 		put("SpellArcaneBolt", new SpellArcaneBolt());
 		put("SpellElectrocute", new SpellElectrocute());
+		put("SpellTornado", new SpellTornado());
 		
 		//dark magic spells
 		put("SpellBloodletting", new SpellBloodletting());
@@ -553,6 +573,7 @@ public class CastListener implements Listener
 		put("SpellFortifyRipTide", new SpellFortifyRipTide());
 		put("SpellAetherealOverride", new SpellAetherealOverride());
 		put("SpellAetherealOverridePlus", new SpellAetherealOverridePlus());
+		put("SpellPurify", new SpellPurify());
 		
 		//ancient spells
 		put("SpellCreateCow", new SpellCreateCow());
@@ -717,6 +738,8 @@ public class CastListener implements Listener
 		put("KBSpellPenance", new KBSpellPenance());
 		put("KBSpellJudgement", new KBSpellJudgement());
 		
+		put("ObfuscatedSpellpage", new ObfuscatedSpellPage());
+		
 		//dev items
 		put("SpellResetTome", new SpellResetTome());
 		put("SpellUnlockTome", new SpellUnlockTome());	
@@ -728,6 +751,7 @@ public class CastListener implements Listener
 		put("SpellSuspendGravity", new SpellNullifyGravity());
 		put("SpellKarma", new SpellKarma());
 		put("SpellEquilibrium", new SpellEquilibrium());
+		put("SpellEtherEquilibrium", new SpellEtherEquilibrium());
 		
 		//lunar spells
 		put("SpellLunarBolt", new SpellLunarBolt());
@@ -744,7 +768,20 @@ public class CastListener implements Listener
 		put("SpellComet", new SpellComet());
 		
 		//boons / relics
-		put("boonofstrength", new BoonOfStrength());
+		put("BoonOfStrength", new BoonOfStrength());
+		put("BoonOfRegeneration", new BoonOfRegeneration());
+		put("BoonOfManaRegeneration", new BoonOfManaRegeneration());
+		put("BoonOfWaterBreathing", new BoonOfWaterbreathing());
+		put("BoonOfTheSeaGod", new BoonOfTheSeaGod());
+		put("BoonOfAbsoluteProtection", new BoonOfAbsoluteProtection());
+		put("BoonOfTheAngels", new BoonOfTheAngels());
+		put("BoonOfDefense", new BoonOfDefense());
+		put("BoonOfInteraction", new BoonOfInteraction());
+		put("BoonOfSpeed", new BoonOfSpeed());
+		put("BoonOfAntiGravity", new BoonOfAntiGravity());
+		put("BoonOfInsulation", new BoonOfInsulation());
+		put("BoonOfNightVision", new BoonOfNightVision());
+		
 	}};
 	
 }

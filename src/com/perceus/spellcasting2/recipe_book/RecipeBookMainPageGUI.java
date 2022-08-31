@@ -33,7 +33,10 @@ public class RecipeBookMainPageGUI extends SurfaceGui
 		{
 			new RecipeBook_BossSpawnItemsRecipes().display(event.getWhoClicked());
 		}));
-		
+		this.updateSingleComponent(player, 13, SimpleComponentBuilder.build(Material.NETHER_STAR, "§r§fArmaments and Robes", (event) -> 
+		{
+			new RecipeBook_ArmamentsAndRobes().display(event.getWhoClicked());
+		}));
 		this.updateSingleComponent(player, 14, SimpleComponentBuilder.build(Material.STICK, "§r§fWand Recipes", (event) -> 
 		{
 			new RecipeBook_WandRecipes().display(event.getWhoClicked());

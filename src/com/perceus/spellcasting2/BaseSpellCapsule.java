@@ -42,7 +42,7 @@ public abstract class BaseSpellCapsule implements GuiComponent
 	}
 	
 	public int getManaCost() 
-	{
+	{	
 		return manaCost;
 	}
 	

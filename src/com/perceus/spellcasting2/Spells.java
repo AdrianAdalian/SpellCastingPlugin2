@@ -8,10 +8,35 @@ import org.bukkit.Material;
 
 import com.perceus.spellcasting2.accounts.StoredInventory;
 import com.perceus.spellcasting2.recipe_book.SC2RecipeBook;
+import com.perceus.spellcasting2.robes.ArchmageRobe_Hat;
 import com.perceus.spellcasting2.robes.FireRobe_Boots;
 import com.perceus.spellcasting2.robes.FireRobe_Hat;
 import com.perceus.spellcasting2.robes.FireRobe_Pants;
 import com.perceus.spellcasting2.robes.FireRobe_Tunic;
+import com.perceus.spellcasting2.robes.GeoRobe_Boots;
+import com.perceus.spellcasting2.robes.GeoRobe_Hat;
+import com.perceus.spellcasting2.robes.GeoRobe_Pants;
+import com.perceus.spellcasting2.robes.GeoRobe_Tunic;
+import com.perceus.spellcasting2.robes.HolyRobe_Boots;
+import com.perceus.spellcasting2.robes.HolyRobe_Hat;
+import com.perceus.spellcasting2.robes.HolyRobe_Pants;
+import com.perceus.spellcasting2.robes.HolyRobe_Tunic;
+import com.perceus.spellcasting2.robes.StormRobe_Boots;
+import com.perceus.spellcasting2.robes.StormRobe_Hat;
+import com.perceus.spellcasting2.robes.StormRobe_Pants;
+import com.perceus.spellcasting2.robes.StormRobe_Tunic;
+import com.perceus.spellcasting2.robes.UnholyRobe_Boots;
+import com.perceus.spellcasting2.robes.UnholyRobe_Hat;
+import com.perceus.spellcasting2.robes.UnholyRobe_Pants;
+import com.perceus.spellcasting2.robes.UnholyRobe_Tunic;
+import com.perceus.spellcasting2.robes.VoidRobe_Boots;
+import com.perceus.spellcasting2.robes.VoidRobe_Hat;
+import com.perceus.spellcasting2.robes.VoidRobe_Pants;
+import com.perceus.spellcasting2.robes.VoidRobe_Tunic;
+import com.perceus.spellcasting2.robes.WaterRobe_Boots;
+import com.perceus.spellcasting2.robes.WaterRobe_Hat;
+import com.perceus.spellcasting2.robes.WaterRobe_Pants;
+import com.perceus.spellcasting2.robes.WaterRobe_Tunic;
 import com.perceus.spellcasting2.spellitem_recipe.Armament_Artifice_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.Armament_Firebrand_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.Armament_Repentance_Recipe;
@@ -50,6 +75,9 @@ import com.perceus.spellcasting2.spellitem_recipe.SpellItem_ProtectivePaste_Reci
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_SmokeBomb_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_Updraft_Recipe;
 import com.perceus.spellcasting2.spellitem_recipe.SpellItem_XpCrystal_Recipe;
+import com.perceus.spellcasting2.spellitem_spell.ArchmageRobe_Boots;
+import com.perceus.spellcasting2.spellitem_spell.ArchmageRobe_Pants;
+import com.perceus.spellcasting2.spellitem_spell.ArchmageRobe_Tunic;
 
 import fish.yukiemeralis.eden.core.CompletionsManager;
 import fish.yukiemeralis.eden.core.CompletionsManager.ObjectMethodPair;
@@ -66,14 +94,13 @@ maintainer = "Perceus Adalian (David Willy)",
 modIcon = Material.NETHER_STAR, 
 modName = "SpellCastingPlugin2", 
 supportedApiVersions = { "v1_19_R1" }, 
-version = "1.4.1")
+version = "1.5.0")
 public class Spells extends EdenModule
 {
 	
 	@Override
 	public void onEnable()
 	{
-		this.addListener(new RobeListenerFire());
 		try
 		{
 			CompletionsManager.registerCompletion("ALLSPELLS", new ObjectMethodPair(this, "allSpells"), true);
@@ -212,8 +239,7 @@ public class Spells extends EdenModule
 		SpellCreateItem_Recipe.Register();
 		
 		//robes
-		
-		//fire
+
 		FireRobe_Hat.Init();
 		FireRobe_Hat.Register();
 		
@@ -225,6 +251,90 @@ public class Spells extends EdenModule
 		
 		FireRobe_Boots.Init();
 		FireRobe_Boots.Register();
+
+		WaterRobe_Boots.Init();
+		WaterRobe_Boots.Register();
+		
+		WaterRobe_Pants.Init();
+		WaterRobe_Pants.Register();
+		
+		WaterRobe_Tunic.Init();
+		WaterRobe_Tunic.Register();
+		
+		WaterRobe_Hat.Init();
+		WaterRobe_Hat.Register();
+
+		GeoRobe_Boots.Init();
+		GeoRobe_Boots.Register();
+		
+		GeoRobe_Pants.Init();
+		GeoRobe_Pants.Register();
+		
+		GeoRobe_Tunic.Init();
+		GeoRobe_Tunic.Register();
+		
+		GeoRobe_Hat.Init();
+		GeoRobe_Hat.Register();
+		
+		StormRobe_Hat.Init();
+		StormRobe_Hat.Register();
+		
+		StormRobe_Tunic.Init();
+		StormRobe_Tunic.Register();
+		
+		StormRobe_Pants.Init();
+		StormRobe_Pants.Register();
+		
+		StormRobe_Boots.Init();
+		StormRobe_Boots.Register();
+		
+		HolyRobe_Hat.Init();
+		HolyRobe_Hat.Register();
+		
+		HolyRobe_Tunic.Init();
+		HolyRobe_Tunic.Register();
+		
+		HolyRobe_Pants.Init();
+		HolyRobe_Pants.Register();
+		
+		HolyRobe_Boots.Init();
+		HolyRobe_Boots.Register();
+		
+		UnholyRobe_Hat.Init();
+		UnholyRobe_Hat.Register();
+		
+		UnholyRobe_Tunic.Init();
+		UnholyRobe_Tunic.Register();
+		
+		UnholyRobe_Pants.Init();
+		UnholyRobe_Pants.Register();
+		
+		UnholyRobe_Boots.Init();
+		UnholyRobe_Boots.Register();
+		
+		VoidRobe_Hat.Init();
+		VoidRobe_Hat.Register();
+		
+		VoidRobe_Tunic.Init();
+		VoidRobe_Tunic.Register();
+		
+		VoidRobe_Pants.Init();
+		VoidRobe_Pants.Register();
+		
+		VoidRobe_Boots.Init();
+		VoidRobe_Boots.Register();
+		
+		ArchmageRobe_Hat.Init();
+		ArchmageRobe_Hat.Register();
+		
+		ArchmageRobe_Tunic.Init();
+		ArchmageRobe_Tunic.Register();
+		
+		ArchmageRobe_Pants.Init();
+		ArchmageRobe_Pants.Register();
+		
+		ArchmageRobe_Boots.Init();
+		ArchmageRobe_Boots.Register();
 		
 	}
 

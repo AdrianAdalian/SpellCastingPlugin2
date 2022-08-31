@@ -65,11 +65,11 @@ public class SpellEmitForce extends BaseSpellCapsule
 				PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
 				return false;
 			}
+			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
+			SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 			for (Entity target2 : event.getPlayer().getNearbyEntities(5, 5, 5))
 			{
 				SpellParticles.drawLine(event.getPlayer().getLocation(), target2.getLocation(), 1, Particle.END_ROD, null);
-				event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
-				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 				target2.setVelocity(target2.getLocation().toVector().subtract(event.getPlayer().getLocation().toVector()));
 				
 			}

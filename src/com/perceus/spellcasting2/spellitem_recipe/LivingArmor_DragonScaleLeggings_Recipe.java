@@ -19,6 +19,7 @@ public class LivingArmor_DragonScaleLeggings_Recipe
 	{
 		BaseSpellCapsule legs = new LivingArmor_DragonScaleLeggings();
 		final_item = legs.generate();
+
 	}
 	
 	public static void Register()

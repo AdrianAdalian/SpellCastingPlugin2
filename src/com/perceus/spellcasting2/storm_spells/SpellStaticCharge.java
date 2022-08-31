@@ -8,12 +8,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import com.perceus.spellcasting2.BaseSpellCapsule;
 import com.perceus.spellcasting2.SpellParticles;
 
-import fish.yukiemeralis.eden.Eden;
 import fish.yukiemeralis.eden.utils.PrintUtils;
 
 public class SpellStaticCharge extends BaseSpellCapsule
@@ -37,15 +35,6 @@ public class SpellStaticCharge extends BaseSpellCapsule
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 20, Particle.ELECTRIC_SPARK, null);
 		event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 600, 1));
 		event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.FAST_DIGGING, 600, 0));
-		
-		new BukkitRunnable()
-		{
-		  @Override
-		  public void run()
-		  {
-			event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_BEACON_DEACTIVATE, SoundCategory.MASTER, 1, 1);
-		  }
-		}.runTaskLater(Eden.getInstance(), 605);
 		return true;
 	}
 

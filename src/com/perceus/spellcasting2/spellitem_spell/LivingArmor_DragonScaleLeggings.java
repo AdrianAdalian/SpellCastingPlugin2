@@ -4,6 +4,7 @@ import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.block.Action;
@@ -16,6 +17,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 import com.perceus.spellcasting2.BaseSpellCapsule;
 import com.perceus.spellcasting2.SpellParticles;
+import com.perceus.spellcasting2.manamechanic.ManaInterface;
+import com.perceus.spellcasting2.manamechanic.PlayerDataMana;
 
 import fish.yukiemeralis.eden.Eden;
 import fish.yukiemeralis.eden.utils.ItemUtils;
@@ -26,12 +29,13 @@ public class LivingArmor_DragonScaleLeggings extends BaseSpellCapsule
 
 	public LivingArmor_DragonScaleLeggings()
 	{
-		super(Material.NETHERITE_LEGGINGS, "§r§b§lLiving §r§eArmor§f: Dragonscale Leggings", "LivingArmor_DragonScaleLeggings", 0, false, "§r§fElement: §r§6§lConstruct§r§f.",
+		super(Material.NETHERITE_LEGGINGS, "§r§4§lLiving §r§eArmor§f: Dragonscale Leggings", "LivingArmor_DragonScaleLeggings", 0, false, "§r§fElement: §r§6§lConstruct§r§f.",
 				"§r§fA Netherite Leggings infused with §r§6§lConstruct§r§f energy.",
-				"§r§fThis armor has magical properties,",
-				"§r§fhowever does not cost mana.",
+				"§r§fThis armor has mysterious magical properties,",
+				"§r§fhowever does not cost mana to use.",
 				"§r§fRight-Click to equip.",
-				"§r§fWhile worn, grants Lv1 jumpboost and regeneration.");
+				"§r§fWhile worn, grants Lv1 slow falling and regeneration.",
+				"§r§f+20 §9mana§f regen/s.");
 	}
 
 	@Override
@@ -50,6 +54,8 @@ public class LivingArmor_DragonScaleLeggings extends BaseSpellCapsule
 				SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
 				event.getPlayer().getInventory().setLeggings(legItem);
 				event.getPlayer().getInventory().getItemInMainHand().setAmount(0);
+				PrintUtils.sendMessage(player,"You feel the leggings begin to sink into your skin, almost as if becoming a part of you.");
+				event.getPlayer().getInventory().getItem(EquipmentSlot.LEGS).addEnchantment(Enchantment.BINDING_CURSE, 1);
 				legsRunnable(event, player);
 				return true;
 			}
@@ -60,13 +66,15 @@ public class LivingArmor_DragonScaleLeggings extends BaseSpellCapsule
 			event.getPlayer().getInventory().getItem(EquipmentSlot.LEGS).setAmount(0);
 			event.getPlayer().getInventory().setLeggings(legItem);
 			event.getPlayer().getInventory().getItemInMainHand().setAmount(0);
+			PrintUtils.sendMessage(player,"You feel the leggings begin to sink into your skin, almost as if becoming a part of you.");
+			event.getPlayer().getInventory().getItem(EquipmentSlot.LEGS).addEnchantment(Enchantment.BINDING_CURSE, 1);
 			legsRunnable(event, player);
 			return true;
 		}
 		
 		return true;
 	}
-	private static void legsRunnable(PlayerInteractEvent event, Player player) 
+	public static void legsRunnable(PlayerInteractEvent event, Player player) 
 	{
 		
 		new BukkitRunnable() 
@@ -93,7 +101,13 @@ public class LivingArmor_DragonScaleLeggings extends BaseSpellCapsule
 					this.cancel();
 					return;
 				}
-				player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 40, 0, true));
+				PlayerDataMana.getPlayerData(player.getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana() + 20);
+				if (PlayerDataMana.getPlayerData(player.getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(player.getUniqueId()).getMaxMana()) 
+				{
+					 PlayerDataMana.getPlayerData(player.getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(player.getUniqueId()).getMaxMana());
+				}
+				ManaInterface.updateScoreBoard(player);
+				player.addPotionEffect(new PotionEffect(PotionEffectType.SLOW_FALLING, 40, 0, true));
 				player.addPotionEffect(new PotionEffect(PotionEffectType.REGENERATION, 40, 0, true));
 			}
 		}.runTaskTimer(Eden.getInstance(), 10, 20);

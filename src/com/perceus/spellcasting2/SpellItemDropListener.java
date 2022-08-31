@@ -9,104 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 
-import com.perceus.spellcasting2.accounts.KBSpellAccelerateLife;
-import com.perceus.spellcasting2.accounts.KBSpellAccolades;
-import com.perceus.spellcasting2.accounts.KBSpellAngelicFlight;
-import com.perceus.spellcasting2.accounts.KBSpellAntiGravity;
-import com.perceus.spellcasting2.accounts.KBSpellAntimatter;
-import com.perceus.spellcasting2.accounts.KBSpellArcaneBolt;
-import com.perceus.spellcasting2.accounts.KBSpellBanishGreaterEvil;
-import com.perceus.spellcasting2.accounts.KBSpellBarrier;
-import com.perceus.spellcasting2.accounts.KBSpellBlink;
-import com.perceus.spellcasting2.accounts.KBSpellBoulder;
-import com.perceus.spellcasting2.accounts.KBSpellCataclysm;
-import com.perceus.spellcasting2.accounts.KBSpellCombustion;
-import com.perceus.spellcasting2.accounts.KBSpellConduitEther;
-import com.perceus.spellcasting2.accounts.KBSpellCrush;
-import com.perceus.spellcasting2.accounts.KBSpellCrystalize;
-import com.perceus.spellcasting2.accounts.KBSpellCure;
-import com.perceus.spellcasting2.accounts.KBSpellDarkHarvest;
-import com.perceus.spellcasting2.accounts.KBSpellDebilitate;
-import com.perceus.spellcasting2.accounts.KBSpellDemonSight;
-import com.perceus.spellcasting2.accounts.KBSpellDemonicReflexes;
-import com.perceus.spellcasting2.accounts.KBSpellDoom;
-import com.perceus.spellcasting2.accounts.KBSpellDracoMorph;
-import com.perceus.spellcasting2.accounts.KBSpellEarthquake;
-import com.perceus.spellcasting2.accounts.KBSpellEmbers;
-import com.perceus.spellcasting2.accounts.KBSpellEmitDamagingForce;
-import com.perceus.spellcasting2.accounts.KBSpellEmitForce;
-import com.perceus.spellcasting2.accounts.KBSpellExpellLiving;
-import com.perceus.spellcasting2.accounts.KBSpellExpellUndead;
-import com.perceus.spellcasting2.accounts.KBSpellExplosiveBolt;
-import com.perceus.spellcasting2.accounts.KBSpellExpulsion;
-import com.perceus.spellcasting2.accounts.KBSpellExtricate;
-import com.perceus.spellcasting2.accounts.KBSpellFireball;
-import com.perceus.spellcasting2.accounts.KBSpellFishScales;
-import com.perceus.spellcasting2.accounts.KBSpellFlamethrower;
-import com.perceus.spellcasting2.accounts.KBSpellGaleForce;
-import com.perceus.spellcasting2.accounts.KBSpellGalvanicNeedle;
-import com.perceus.spellcasting2.accounts.KBSpellGate;
-import com.perceus.spellcasting2.accounts.KBSpellGeoMorph;
-import com.perceus.spellcasting2.accounts.KBSpellGills;
-import com.perceus.spellcasting2.accounts.KBSpellGravitas;
-import com.perceus.spellcasting2.accounts.KBSpellGust;
-import com.perceus.spellcasting2.accounts.KBSpellHealingHands;
-import com.perceus.spellcasting2.accounts.KBSpellHellFire;
-import com.perceus.spellcasting2.accounts.KBSpellIgnite;
-import com.perceus.spellcasting2.accounts.KBSpellIgnitionDrive;
-import com.perceus.spellcasting2.accounts.KBSpellInsulate;
-import com.perceus.spellcasting2.accounts.KBSpellJudgement;
-import com.perceus.spellcasting2.accounts.KBSpellKindleFlame;
-import com.perceus.spellcasting2.accounts.KBSpellLawOfRegression;
-import com.perceus.spellcasting2.accounts.KBSpellLifeSteal;
-import com.perceus.spellcasting2.accounts.KBSpellLightShift;
-import com.perceus.spellcasting2.accounts.KBSpellMageMorph;
-import com.perceus.spellcasting2.accounts.KBSpellMagicBolt;
-import com.perceus.spellcasting2.accounts.KBSpellManaBurn;
-import com.perceus.spellcasting2.accounts.KBSpellMendingWater;
-import com.perceus.spellcasting2.accounts.KBSpellMetalMorph;
-import com.perceus.spellcasting2.accounts.KBSpellMeteor;
-import com.perceus.spellcasting2.accounts.KBSpellNaturesGift;
-import com.perceus.spellcasting2.accounts.KBSpellNaturesWrath;
-import com.perceus.spellcasting2.accounts.KBSpellOverclockProtocol;
-import com.perceus.spellcasting2.accounts.KBSpellPenance;
-import com.perceus.spellcasting2.accounts.KBSpellPoisonCloud;
-import com.perceus.spellcasting2.accounts.KBSpellPoisonGas;
-import com.perceus.spellcasting2.accounts.KBSpellPolarize;
-import com.perceus.spellcasting2.accounts.KBSpellPull;
-import com.perceus.spellcasting2.accounts.KBSpellRagingCurrent;
-import com.perceus.spellcasting2.accounts.KBSpellRaiseDead;
-import com.perceus.spellcasting2.accounts.KBSpellReapSouls;
-import com.perceus.spellcasting2.accounts.KBSpellReconstitute;
-import com.perceus.spellcasting2.accounts.KBSpellRegenerate;
-import com.perceus.spellcasting2.accounts.KBSpellRift;
-import com.perceus.spellcasting2.accounts.KBSpellRipTide;
-import com.perceus.spellcasting2.accounts.KBSpellRot;
-import com.perceus.spellcasting2.accounts.KBSpellSandBlast;
-import com.perceus.spellcasting2.accounts.KBSpellSapEther;
-import com.perceus.spellcasting2.accounts.KBSpellSatiate;
-import com.perceus.spellcasting2.accounts.KBSpellSaturate;
-import com.perceus.spellcasting2.accounts.KBSpellSmite;
-import com.perceus.spellcasting2.accounts.KBSpellSmokescreen;
-import com.perceus.spellcasting2.accounts.KBSpellSoak;
-import com.perceus.spellcasting2.accounts.KBSpellSoothingCurrent;
-import com.perceus.spellcasting2.accounts.KBSpellSplash;
-import com.perceus.spellcasting2.accounts.KBSpellStaticCharge;
-import com.perceus.spellcasting2.accounts.KBSpellSuffocate;
-import com.perceus.spellcasting2.accounts.KBSpellTailWind;
-import com.perceus.spellcasting2.accounts.KBSpellTeleport;
-import com.perceus.spellcasting2.accounts.KBSpellTerraform;
-import com.perceus.spellcasting2.accounts.KBSpellThunderStorm;
-import com.perceus.spellcasting2.accounts.KBSpellThunderStrike;
-import com.perceus.spellcasting2.accounts.KBSpellTidalForce;
-import com.perceus.spellcasting2.accounts.KBSpellToxicGas;
-import com.perceus.spellcasting2.accounts.KBSpellUberCharge;
-import com.perceus.spellcasting2.accounts.KBSpellUndeadEffigy;
-import com.perceus.spellcasting2.accounts.KBSpellVaporize;
-import com.perceus.spellcasting2.accounts.KBSpellVectorPlate;
-import com.perceus.spellcasting2.accounts.KBSpellVoidBurst;
-import com.perceus.spellcasting2.accounts.KBSpellVoidGate;
-import com.perceus.spellcasting2.accounts.KBSpellWaveWake;
+import com.perceus.spellcasting2.accounts.*;
 import com.perceus.spellcasting2.aethereal_spells.SpellAetherealOverride;
 import com.perceus.spellcasting2.aethereal_spells.SpellAetherealOverridePlus;
 import com.perceus.spellcasting2.aethereal_spells.SpellCleanse;
@@ -147,6 +50,7 @@ import com.perceus.spellcasting2.aethereal_spells.SpellFortifySoulSpeed;
 import com.perceus.spellcasting2.aethereal_spells.SpellFortifySweepingEdge;
 import com.perceus.spellcasting2.aethereal_spells.SpellFortifySwiftSneak;
 import com.perceus.spellcasting2.aethereal_spells.SpellFortifyThorns;
+import com.perceus.spellcasting2.aethereal_spells.SpellPurify;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateAxolotl;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateBat;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateBee;
@@ -231,15 +135,17 @@ import com.perceus.spellcasting2.holy_spells.SpellPacify;
 import com.perceus.spellcasting2.holy_spells.SpellProlongedFlight;
 import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
+import com.perceus.spellcasting2.holy_spells.SpellRemedy;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
-import com.perceus.spellcasting2.holy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_EtherCrystal;
 import com.perceus.spellcasting2.storm_spells.SpellElectrocute;
 import com.perceus.spellcasting2.storm_spells.SpellStormSurge;
+import com.perceus.spellcasting2.storm_spells.SpellTornado;
 import com.perceus.spellcasting2.storm_spells.SpellWildBolt;
 import com.perceus.spellcasting2.unholy_spells.SpellDrainingAura;
 import com.perceus.spellcasting2.unholy_spells.SpellReapAndSew;
 import com.perceus.spellcasting2.unholy_spells.SpellUndeadRecall;
+import com.perceus.spellcasting2.unholy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.void_spells.SpellEtherContinuity;
 import com.perceus.spellcasting2.void_spells.SpellNullPointConfiguration;
 import com.perceus.spellcasting2.void_spells.SpellOverrideClimate;
@@ -253,10 +159,11 @@ import com.perceus.spellcasting2.water_spells.SpellBlizzard;
 import com.perceus.spellcasting2.water_spells.SpellFrostBite;
 import com.perceus.spellcasting2.water_spells.SpellIceAge;
 import com.perceus.spellcasting2.water_spells.SpellPoseidonsGift;
+import com.perceus.spellcasting2.water_spells.SpellTsunami;
 
 public class SpellItemDropListener implements Listener
 {
-	
+	private static final Random random = new Random();
 	@EventHandler
 	public void onEntityDeath(EntityDeathEvent event) 
 	{	
@@ -303,12 +210,12 @@ public class SpellItemDropListener implements Listener
 	private static Map<EntityType, BaseSpellCapsule[]> mapOfMobs = new HashMap<>() 
 	{{
 		//holy spell drops
-		put(EntityType.COW, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new SpellHeal(), new KBSpellEmitForce(), new KBSpellHealingHands(), new KBSpellCure()});
+		put(EntityType.COW, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new SpellHeal(), new KBSpellEmitForce(), new KBSpellHealingHands(), new KBSpellCure(), new ObfuscatedSpellPage()});
 		put(EntityType.PIG, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellHealingHands(), new KBSpellSatiate()});
 		put(EntityType.CHICKEN, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellHealingHands(), new KBSpellAccolades()});
 		put(EntityType.SHEEP, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellHealingHands()});
 		put(EntityType.PARROT, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellAccolades(), new SpellHealingAura()});
-		put(EntityType.PANDA, new BaseSpellCapsule[]{new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure(), new KBSpellSatiate(), new SpellHealingAura()});
+		put(EntityType.PANDA, new BaseSpellCapsule[]{new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure(), new KBSpellSatiate(), new SpellHealingAura(), new SpellRemedy()});
 		put(EntityType.GOAT, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new KBSpellBarrier(), new KBSpellCure(), new SpellHealingAura(), new SpellProtectOther()});
 		put(EntityType.FOX, new BaseSpellCapsule[]{new SpellPacify(), new SpellDisarm(), new KBSpellEmitForce(), new KBSpellAccolades()});
 		put(EntityType.MULE, new BaseSpellCapsule[]{new SpellPacify(), new KBSpellEmitForce(), new SpellHealingAura(), new SpellProtectOther()});
@@ -317,25 +224,25 @@ public class SpellItemDropListener implements Listener
 		//void spell drops
 		put(EntityType.ENDERMAN, new BaseSpellCapsule[] {new KBSpellVoidBurst(), new KBSpellPull(), new KBSpellVectorPlate(), new KBSpellTeleport(), new KBSpellRift(), new KBSpellAntimatter(),
 				new KBSpellCrush(), new KBSpellPolarize(), new KBSpellAccelerateLife(), new KBSpellCataclysm(), 
-				new KBSpellGate(), new KBSpellVoidGate(), new SpellVoidContainment(), new SpellNullPointConfiguration(), new SpellRecallAnchor(), new SpellTelekinesis()});
+				new KBSpellGate(), new KBSpellVoidGate(), new SpellVoidContainment(), new SpellNullPointConfiguration(), new SpellRecallAnchor(), new SpellTelekinesis(), new ObfuscatedSpellPage()});
 		
 		//water spell drops
-		put(EntityType.DROWNED, new BaseSpellCapsule[] {new KBSpellRipTide(), new KBSpellSuffocate(), new KBSpellSoak()});
-		put(EntityType.COD, new BaseSpellCapsule[] {new KBSpellGills()});
+		put(EntityType.DROWNED, new BaseSpellCapsule[] {new KBSpellRipTide(), new KBSpellSuffocate(), new KBSpellSoak(), new ObfuscatedSpellPage()});
+		put(EntityType.COD, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellSplash()});
 		put(EntityType.POLAR_BEAR, new BaseSpellCapsule[] {new KBSpellReconstitute(), new KBSpellSoak(), new SpellFrostBite()});
 		put(EntityType.SLIME, new BaseSpellCapsule[] {new KBSpellReconstitute()});
 		put(EntityType.SNOWMAN, new BaseSpellCapsule[] {new KBSpellReconstitute(), new KBSpellSuffocate(), new SpellBlizzard()});
-		put(EntityType.FROG, new BaseSpellCapsule[] {new KBSpellGills()});
-		put(EntityType.TADPOLE, new BaseSpellCapsule[] {new KBSpellGills()});
-		put(EntityType.SALMON, new BaseSpellCapsule[] {new KBSpellGills()});
-		put(EntityType.TROPICAL_FISH, new BaseSpellCapsule[] {new KBSpellGills()});
+		put(EntityType.FROG, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellSplash()});
+		put(EntityType.TADPOLE, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellSplash()});
+		put(EntityType.SALMON, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellSplash()});
+		put(EntityType.TROPICAL_FISH, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellSplash()});
 		put(EntityType.SQUID, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellSplash()});
 		put(EntityType.DOLPHIN, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellRagingCurrent()});
 		put(EntityType.GUARDIAN, new BaseSpellCapsule[] {new KBSpellConduitEther(), new KBSpellFishScales(), new KBSpellGills(), new KBSpellSaturate(), new KBSpellTidalForce()});
 		put(EntityType.GLOW_SQUID, new BaseSpellCapsule[] {new KBSpellConduitEther(), new KBSpellGills(), new SpellRadiance()});
 		
 		//fire spell drops
-		put(EntityType.BLAZE, new BaseSpellCapsule[] {new KBSpellKindleFlame(), new KBSpellEmbers(), new KBSpellFireball(), new KBSpellIgnite(),
+		put(EntityType.BLAZE, new BaseSpellCapsule[] {new KBSpellKindleFlame(), new KBSpellEmbers(), new KBSpellFireball(), new KBSpellIgnite(), new ObfuscatedSpellPage(),
 				new KBSpellMeteor(), new KBSpellFlamethrower(), new KBSpellCombustion(), new KBSpellHellFire(), new SpellEruption(), new SpellOverheat()});
 		put(EntityType.STRIDER, new BaseSpellCapsule[] {new KBSpellKindleFlame(), new KBSpellExpulsion(), new KBSpellHellFire(), new KBSpellFireball(), new SpellLavaBomb()});
 		put(EntityType.MAGMA_CUBE, new BaseSpellCapsule[] {new KBSpellKindleFlame(),new KBSpellEmbers(), new KBSpellIgnite(), new KBSpellInsulate(), 
@@ -371,22 +278,24 @@ public class SpellItemDropListener implements Listener
 				new KBSpellGeoMorph(), new KBSpellMetalMorph(), new KBSpellNaturesGift(), new KBSpellNaturesWrath(), new SpellTillEarth(), new SpellInscribeLuck(), new KBSpellEarthquake(), new SpellTransmute()});
 		put(EntityType.WITHER_SKELETON, new BaseSpellCapsule[] {new KBSpellExpulsion(),
 				new KBSpellHellFire(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellDemonicReflexes(), new KBSpellDoom(), new KBSpellRot()});
-		put(EntityType.WITCH, new BaseSpellCapsule[] {new KBSpellKindleFlame(),
+		put(EntityType.WITCH, new BaseSpellCapsule[] {new KBSpellKindleFlame(), new ObfuscatedSpellPage(),
 				new KBSpellIgnite(), new KBSpellSoak(), new SpellPacify(), new KBSpellPoisonGas(), new KBSpellArcaneBolt(), new KBSpellDebilitate(), new KBSpellRaiseDead(), new KBSpellCure(),
 				new SpellDisarm(), new KBSpellMageMorph(), new KBSpellBarrier(), new SpellProtectOther()});
-		put(EntityType.PHANTOM, new BaseSpellCapsule[] {new KBSpellAngelicFlight(), new KBSpellSmite(), new KBSpellGust(), new KBSpellGaleForce(), new KBSpellTailWind()});
+		put(EntityType.PHANTOM, new BaseSpellCapsule[] {new KBSpellAngelicFlight(), new KBSpellSmite(), new KBSpellGust(), new KBSpellGaleForce(), new KBSpellTailWind(), new SpellRemedy(), new SpellTornado()});
 		put(EntityType.VEX, new BaseSpellCapsule[] {new KBSpellAngelicFlight(),
 				new KBSpellSmite(), new KBSpellGust(), new KBSpellLifeSteal(), new KBSpellReapSouls(), new KBSpellEmitForce(), new KBSpellEmitDamagingForce(), new KBSpellTailWind(), new KBSpellBlink()});
-		put(EntityType.EVOKER, new BaseSpellCapsule[] {new KBSpellBlink(), new SpellWildBolt(),
-				new SpellStormSurge(), new KBSpellMageMorph(), new KBSpellArcaneBolt(),
+		put(EntityType.EVOKER, new BaseSpellCapsule[] {new SpellRemedy(), new KBSpellBlink(), new SpellWildBolt(),
+				new SpellStormSurge(), new KBSpellMageMorph(), new KBSpellArcaneBolt(), new ObfuscatedSpellPage(),
 				new KBSpellVoidBurst(), new KBSpellUndeadEffigy(), new KBSpellAccelerateLife(),
 				new KBSpellPolarize(), new KBSpellRaiseDead(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellPull(), new SpellEtherTransference(), new SpellFertility(), new SpellProtectOther()});
 		put(EntityType.RAVAGER, new BaseSpellCapsule[] {new KBSpellGeoMorph(), new KBSpellEmitDamagingForce(), new KBSpellCrush(), new KBSpellVectorPlate(), new KBSpellUndeadEffigy()});
 		put(EntityType.AXOLOTL, new BaseSpellCapsule[] {new KBSpellGills(), new KBSpellReconstitute(), new KBSpellRegenerate(), new KBSpellSplash(), new KBSpellMendingWater(), new KBSpellPenance()});
 		put(EntityType.BEE, new BaseSpellCapsule[] {new KBSpellTailWind(), new KBSpellGust(), new KBSpellCure(), new KBSpellHealingHands(), new KBSpellPoisonGas(), new KBSpellBarrier()});
-		put(EntityType.TURTLE, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellBoulder(), new KBSpellGills(), new KBSpellSoak(), new KBSpellRipTide(), new SpellTillEarth(), new KBSpellBarrier()});
-		put(EntityType.GHAST, new BaseSpellCapsule[]{new SpellFertility(), new SpellPacify(), new KBSpellFireball(), new KBSpellIgnite(), new KBSpellRegenerate(), new KBSpellAngelicFlight(), new KBSpellPenance(), new KBSpellExtricate(), new SpellProtectOther()});
-		put(EntityType.WOLF, new BaseSpellCapsule[] {new KBSpellCure(), new KBSpellSatiate(), new KBSpellAccolades(), new KBSpellEmitForce(), new SpellFertility(), new SpellProtectOther()});
+		put(EntityType.TURTLE, new BaseSpellCapsule[] {new KBSpellTerraform(), new KBSpellGeoMorph(), new KBSpellBoulder(), 
+				new KBSpellGills(), new KBSpellSoak(), new KBSpellRipTide(), new SpellTillEarth(), new KBSpellBarrier()});
+		put(EntityType.GHAST, new BaseSpellCapsule[]{new SpellFertility(), new SpellPacify(), new KBSpellFireball(), new ObfuscatedSpellPage(), 
+				new KBSpellIgnite(), new KBSpellRegenerate(), new KBSpellAngelicFlight(), new KBSpellPenance(), new KBSpellExtricate(), new SpellProtectOther()});
+		put(EntityType.WOLF, new BaseSpellCapsule[] {new KBSpellCure(), new KBSpellSatiate(), new KBSpellAccolades(), new KBSpellEmitForce(), new SpellFertility(), new SpellProtectOther(), new SpellRemedy()});
 	}};
 	
 	@SuppressWarnings("serial")
@@ -395,10 +304,11 @@ public class SpellItemDropListener implements Listener
 		//bosses' drops 
 		put(EntityType.ELDER_GUARDIAN, new BaseSpellCapsule[] {new SpellIceAge(), new KBSpellConduitEther(), 
 				new KBSpellWaveWake(), new KBSpellCrystalize(), new KBSpellMendingWater(), new KBSpellFishScales(), new KBSpellGills(), new SpellPoseidonsGift(), 
-				new KBSpellSoothingCurrent(), new SpellLivingRecall(), new KBSpellPenance(), new SpellEtherTransference(), new KBSpellBarrier(), new SpellItem_EtherCrystal()});
-		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), new KBSpellBarrier(), 
-				new KBSpellDracoMorph(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellVoidGate(), new KBSpellGate(), new SpellItem_EtherCrystal()});
-		put(EntityType.WITHER, new BaseSpellCapsule[] {new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), 
+				new KBSpellSoothingCurrent(), new SpellLivingRecall(), new KBSpellPenance(), new SpellEtherTransference(), new KBSpellBarrier(), new SpellItem_EtherCrystal(), new SpellTsunami(), 
+				new ObfuscatedSpellPage()});
+		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), new KBSpellBarrier(), new ObfuscatedSpellPage(), 
+				new KBSpellDracoMorph(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellVoidGate(), new KBSpellGate(), new SpellItem_EtherCrystal(), new SpellTornado()});
+		put(EntityType.WITHER, new BaseSpellCapsule[] {new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), new ObfuscatedSpellPage(), 
 				new SpellLawOfProgression(), new SpellEtherBreak(), new KBSpellArcaneBolt(), new SpellNullify(), 
 				new SpellDrainingAura(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellReapSouls(),
 				new KBSpellDemonSight(), new KBSpellSapEther(), new KBSpellRaiseDead(), new KBSpellUndeadEffigy(), 
@@ -406,9 +316,9 @@ public class SpellItemDropListener implements Listener
 				new KBSpellRot(), new KBSpellBarrier(), new SpellReapAndSew(), new SpellItem_EtherCrystal(),new SpellUndyingSoul()});
 		put(EntityType.ALLAY, new BaseSpellCapsule[] {new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellJudgement(), new SpellAmeliorate(), 
 				new KBSpellVaporize(), new KBSpellArcaneBolt(), new SpellProlongedFlight(), new SpellGuardianAngel(), new KBSpellLawOfRegression(), 
-				new KBSpellPenance(), new SpellRestoration(), new SpellEtherTransference(), 
-				new SpellHealingAura(), new SpellProtectOther(), new SpellFertility(), new KBSpellBarrier(), new SpellItem_EtherCrystal(),new SpellUndyingSoul()});
-		put(EntityType.WARDEN, new BaseSpellCapsule[] {new KBSpellBanishGreaterEvil(), new SpellPrimordialShift(), new SpellVoidShift(), 
+				new KBSpellPenance(), new SpellRestoration(), new SpellEtherTransference(), new ObfuscatedSpellPage(), 
+				new SpellHealingAura(), new SpellProtectOther(), new SpellFertility(), new KBSpellBarrier(), new SpellItem_EtherCrystal(),new SpellUndyingSoul(), new SpellRemedy()});
+		put(EntityType.WARDEN, new BaseSpellCapsule[] {new KBSpellBanishGreaterEvil(), new SpellPrimordialShift(), new SpellVoidShift(), new ObfuscatedSpellPage(), 
 				new SpellEtherContinuity(), new SpellOverrideClimate(), new SpellSingularity(), new KBSpellBarrier(), new SpellItem_EtherCrystal()});
 	}};
 	
@@ -487,8 +397,6 @@ public class SpellItemDropListener implements Listener
 				new SpellFortifySwiftSneak(), new SpellFortifyDepthStrider(), new SpellFortifyFrostWalker(), new SpellFortifySoulSpeed(), new SpellFortifySmite(), new SpellFortifyBaneOfArthropods(), new SpellFortifyLooting(),
 				new SpellFortifySweepingEdge(), new SpellFortifyKnockback(), new SpellFortifyFireAspect(), new SpellFortifyPower(), new SpellFortifyPunch(), new SpellFortifyInfinity(), new SpellFortifyFlame(), 
 				new SpellFortifyMultishot(), new SpellFortifyQuickCharge(), new SpellFortifyPiercing(), new SpellFortifyChanneling(), new SpellFortifyImpaling(), new SpellFortifyLoyalty(),
-				new SpellFortifyRipTide(), new SpellAetherealOverride(), new SpellAetherealOverridePlus()});
+				new SpellFortifyRipTide(), new SpellAetherealOverride(), new SpellAetherealOverridePlus(), new SpellPurify()});
 	}};
-	
-	private static final Random random = new Random();
 }

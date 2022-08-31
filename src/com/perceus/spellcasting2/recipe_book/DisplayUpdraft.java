@@ -15,7 +15,6 @@ public class DisplayUpdraft extends SurfaceGui
 	public DisplayUpdraft()
 	{
 		super(54, "Updraft Recipe", DefaultClickAction.CANCEL, InventoryAction.PICKUP_ALL, InventoryAction.PICKUP_HALF);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

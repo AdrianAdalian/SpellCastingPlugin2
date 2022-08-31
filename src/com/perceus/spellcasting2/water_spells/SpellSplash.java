@@ -21,7 +21,7 @@ public class SpellSplash extends BaseSpellCapsule
 
 	public SpellSplash()
 	{
-		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fSplash§r§7§ko§r", "SpellSplash", 125, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fConduct and expell a current of §r§9Water§r§f,","§r§ffatiguing, slowing, and weakens all within range.","§r§fDuration: 25 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 125 §r§9mana§r§f.");
+		super(Material.LIGHT_BLUE_DYE, "§r§7§ko§r§7§lSpell: §r§fSplash§r§7§ko§r", "SpellSplash", 125, true, true, "§r§fElement: §r§9Water§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fConduct and expell a current of §r§9Water§r§f,","§r§ffatiguing, slowing, and weakens all within range.","§r§fDuration: 20 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 125 §r§9mana§r§f.");
 	}
 
 	@Override
@@ -51,9 +51,9 @@ public class SpellSplash extends BaseSpellCapsule
 			if (target instanceof LivingEntity) 
 			{
 				SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.DRIP_WATER, null);
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 500, 1));
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 500, 1));
-				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 500, 1));
+				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.WEAKNESS, 400, 1));
+				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 400, 1));
+				((LivingEntity) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW_DIGGING, 400, 1));
 			}
 		}
 		return true;

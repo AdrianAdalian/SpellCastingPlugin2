@@ -36,7 +36,7 @@ public class PlayerAccountManagement implements Listener
 		
 		if (!(event.getPlayer().hasPlayedBefore())) 
 		{
-			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.4.1§f)");
+			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.0§f)");
 			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
 			PrintUtils.sendMessage(event.getPlayer(), "Welcome to the server, " + event.getPlayer().getDisplayName() + "!");
 			PrintUtils.sendMessage(event.getPlayer(), "As a first time join event, please accept these beginner magic items. -Server Admininstrator");
@@ -52,7 +52,7 @@ public class PlayerAccountManagement implements Listener
 		
 		if (event.getPlayer().hasPlayedBefore()) 
 		{
-			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.4.1§f)");
+			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.0§f)");
 			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
 		}
 		

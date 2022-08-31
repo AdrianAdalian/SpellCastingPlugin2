@@ -28,7 +28,11 @@ public class SpellHealingHands extends BaseSpellCapsule
 
 	public SpellHealingHands()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fHealing Hands§r§7§ko§r", "SpellHealingHands", 100, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.","§r§fBathe the target in healing light.","§r§aHeals §r§f5 hearts to target.", "§r§fRange: 7 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fHealing Hands§r§7§ko§r", "SpellHealingHands", 100, true, false,"§r§fElement: §r§f§o§lHoly§r§f.",
+				"§r§fSpell Type: §aSupport§f.",
+				"§r§fBathe the target in healing light.",
+				"§r§aHeals §r§f5 hearts to target.", 
+				"§r§fRange: 7 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

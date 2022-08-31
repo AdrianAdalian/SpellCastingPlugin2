@@ -19,6 +19,7 @@ public class LivingArmor_DragonScaleHelmet_Recipe
 	{
 		BaseSpellCapsule helm = new LivingArmor_DragonScaleHelmet();
 		final_item = helm.generate();
+
 	}
 	
 	public static void Register()

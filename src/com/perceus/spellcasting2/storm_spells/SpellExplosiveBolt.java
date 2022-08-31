@@ -1,5 +1,6 @@
 package com.perceus.spellcasting2.storm_spells;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.block.Block;
@@ -18,20 +19,28 @@ public class SpellExplosiveBolt extends BaseSpellCapsule
 
 	public SpellExplosiveBolt()
 	{
-		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fExplosive Bolt§r§7§ko§r", "SpellExplosiveBolt", 250, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a bolt of lightning that is charged for explosion.","§r§fRange: 25 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
+		super(Material.AMETHYST_SHARD, "§r§7§ko§r§7§lSpell: §r§fExplosive Bolt§r§7§ko§r", "SpellExplosiveBolt", 250, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon a bolt of lightning that is charged for explosion.","§r§fRange: 40 meters.","§r§fMana cost: 250 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
 
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR))
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");
 			return false;
 		}
 		
-		int TARGETRANGE = 25 ;
+		int TARGETRANGE = 40 ;
 		
 		Block target = event.getPlayer().getTargetBlock(null, TARGETRANGE) ;
 		
@@ -49,7 +58,7 @@ public class SpellExplosiveBolt extends BaseSpellCapsule
 		  @Override
 		  public void run()
 		  {
-			  event.getPlayer().getWorld().createExplosion(target.getLocation(), 3);
+			  event.getPlayer().getWorld().createExplosion(target.getLocation(), 7);
 		  }
 		}.runTaskLater(Eden.getInstance(), 20);
 		return true;

@@ -66,13 +66,12 @@ public class SpellToBookListener implements Listener
 			"SpellCreateZombifiedPiglin","SpellCreateIronGolem","SpellCreateSnowGolem","SpellCreateWither","SpellCreateElderGuardian","SpellCreateWarden","SpellFrostBite","SpellBlizzard","SpellIceAge",
 			"SpellTelekinesis","SpellSingularity","SpellRestoration","SpellEtherTransference","SpellElectrocute","SpellReapAndSew","SpellInferno","SpellLunarBolt","SpellLunarEclipse","SpellSolarEclipse",
 			"SpellSuspendedMatter","SpellSolarBolt","SpellFertility","SpellProtectOther","SpellHealingAura","EtherCrystal","CrackedEtherCrystal","SpellUrgentTeleport","SpellSuspendGravity",
-			"SpellCreateItem","SpellMoonBeam","SpellMoonBlast","SpellKarma","SpellEquilibrium","SpellUndyingSoul","MagicWeapon_ElementalStaff","MagicWeapon_SpiritualStaff","MagicTool_PickaxeOfGeo","Armament_Repentance",
-			"Armament_Artifice","boonofstrength","Armament_Firebrand","Armament_War","MagicTool_ScytheOfUnholy",
-			"MagicTool_ShovelOfGeo",
-			"LivingArmor_DragonScaleChestplate",
-			"LivingArmor_DragonScaleHelmet",
-			"LivingArmor_DragonScaleLeggings",
-			"LivingArmor_DragonScaleBoots");
+			"SpellCreateItem","SpellMoonBeam","SpellMoonBlast","SpellKarma","SpellEquilibrium","SpellUndyingSoul","MagicWeapon_ElementalStaff","MagicWeapon_SpiritualStaff","MagicTool_PickaxeOfGeo",
+			"Armament_Repentance","Armament_Artifice","BoonOfStrength","Armament_Firebrand","Armament_War","MagicTool_ScytheOfUnholy",
+			"MagicTool_ShovelOfGeo","LivingArmor_DragonScaleChestplate","LivingArmor_DragonScaleHelmet","LivingArmor_DragonScaleLeggings","LivingArmor_DragonScaleBoots","SpellRemedy","SpellEtherEquilibrium",
+			"SpellPurify","SpellTornado","SpellTsunami","ObfuscatedSpellpage","BoonOfRegeneration","BoonOfManaRegeneration","BoonOfWaterBreathing","BoonOfTheSeaGod","BoonOfAbsoluteProtection","BoonOfTheAngels",
+			"BoonOfDefense","BoonOfInteraction","BoonOfSpeed","BoonOfAntiGravity","BoonOfInsulation",
+			"BoonOfNightVision");
 	
 	
 	/**

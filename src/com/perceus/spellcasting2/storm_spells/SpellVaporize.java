@@ -2,6 +2,7 @@ package com.perceus.spellcasting2.storm_spells;
 
 import java.util.ArrayList;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.Particle;
@@ -25,12 +26,21 @@ public class SpellVaporize extends BaseSpellCapsule
 
 	public SpellVaporize()
 	{
-		super(Material.AMETHYST_CLUSTER, "§r§7§ko§7§lSpell: §r§fVaporize§r§7§ko§r", "SpellVaporize", 300, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon three consecutive lightning bolts on any target.","§r§fRange: 100 meters.","§r§fMana cost: 300 §r§9mana§r§f.");
+		super(Material.AMETHYST_CLUSTER, "§r§7§ko§7§lSpell: §r§fVaporize§r§7§ko§r", "SpellVaporize", 750, true, true, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fSummon three consecutive lightning bolts on any target.","§r§fRange: 100 meters.","§r§fMana cost: 750 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
+		
+		boolean weather = Bukkit.getWorlds().get(0).isClearWeather();
+		
+		if (weather == true) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(),"FIZZLE! It's not currently storming.");
+			return false;
+		}
+		
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR))
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");

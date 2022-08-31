@@ -24,7 +24,7 @@ public class MagicWeapon_WandOfUnholy extends BaseSpellCapsule
 
 	public MagicWeapon_WandOfUnholy()
 	{
-		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Unholy", "FFE748","8B0000","§l§o"), "MagicWeaponWandOfUnholy", 0, true, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f and §6Buff§f.",
+		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Unholy", "FFE748","8B0000","§l§o"), "MagicWeaponWandOfUnholy", 0, true, "§r§fElement: §r§4§o§lUnholy§r§f.",
 				"§r§fA simple stick infused with the element of §r§4§o§lUnholy§r§f.",
 				"§r§7§lSpell: §r§fDark Pulse",
 				"§r§fLeft-Click: Summon a bolt of darkness,",
