@@ -68,7 +68,7 @@ public class ObfuscatedSpellPage extends BaseSpellCapsule
 		
 		ItemStack s = lootList.get(random.nextInt(lootList.size())).generate();
 		SpellParticles.drawCylinder(event.getPlayer().getLocation(), 1, 50, 4, 1, Particle.ENCHANTMENT_TABLE, null);
-		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_SMITHING_TABLE_USE, SoundCategory.MASTER, 1, 1);
+		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 		event.getPlayer().getInventory().addItem(s);
 		
 		return true;

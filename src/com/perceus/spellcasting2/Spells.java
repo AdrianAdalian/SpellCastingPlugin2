@@ -3,7 +3,6 @@ package com.perceus.spellcasting2;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 
 import com.perceus.spellcasting2.accounts.StoredInventory;
@@ -94,7 +93,7 @@ maintainer = "Perceus Adalian (David Willy)",
 modIcon = Material.NETHER_STAR, 
 modName = "SpellCastingPlugin2", 
 supportedApiVersions = { "v1_19_R1" }, 
-version = "1.5.0")
+version = "1.5.1")
 public class Spells extends EdenModule
 {
 	
@@ -113,8 +112,8 @@ public class Spells extends EdenModule
 		FileUtils.ensureFolder("./plugins/Eden/playerdata/storedinventories/");
 		FileUtils.ensureFolder("./plugins/Eden/playerdata/data/");
 		PrintUtils.log("§4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 Loaded Successfully.");
-		PrintUtils.log("'You're a wizard Harry.'");
 		PrintUtils.log(CastListener.spell_registry.size() + " Spells Loaded.");
+		PrintUtils.log("'You're a wizard Harry.'");
 
 		SC2RecipeBook.Init();
 		SC2RecipeBook.Register();
@@ -342,7 +341,6 @@ public class Spells extends EdenModule
 	public void onDisable()
 	{
 		StoredInventory.save();
-		Bukkit.getOnlinePlayers().stream().forEach(v -> v.kickPlayer("The server has closed."));
 		PrintUtils.log("Lay down your wand, Harry.");
 	}
 	

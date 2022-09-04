@@ -36,14 +36,11 @@ public class PlayerAccountManagement implements Listener
 		
 		if (!(event.getPlayer().hasPlayedBefore())) 
 		{
-			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.0§f)");
-			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
 			PrintUtils.sendMessage(event.getPlayer(), "Welcome to the server, " + event.getPlayer().getDisplayName() + "!");
-			PrintUtils.sendMessage(event.getPlayer(), "As a first time join event, please accept these beginner magic items. -Server Admininstrator");
-			PrintUtils.sendMessage(event.getPlayer(), "The Magical Spellbook has been added to your inventory.");
-			PrintUtils.sendMessage(event.getPlayer(), "Spell Recipe Book has been added to your inventory.");
-			PrintUtils.sendMessage(event.getPlayer(), "Magic Missile Spell Page has been added to your inventory.");
-			PrintUtils.sendMessage(event.getPlayer(), "Spell Tome Heal has been added to your inventory.");
+			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.1§f)");
+			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
+			PrintUtils.sendMessage(event.getPlayer(), "Items added to player inventory as first time join event:");
+			PrintUtils.sendMessage(event.getPlayer(), "Spellbook, Spell Recipe Book, Spell Page: Magic Missile, Spell: Heal.");
 			event.getPlayer().getInventory().addItem(new KBSpellMagicBolt().generate());
 			event.getPlayer().getInventory().addItem(new SpellHeal().generate());
 			event.getPlayer().getInventory().addItem(SC2RecipeBook.getFinal_item());
@@ -52,7 +49,7 @@ public class PlayerAccountManagement implements Listener
 		
 		if (event.getPlayer().hasPlayedBefore()) 
 		{
-			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.0§f)");
+			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.1§f)");
 			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
 		}
 		

@@ -137,6 +137,7 @@ import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
 import com.perceus.spellcasting2.holy_spells.SpellRemedy;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
+import com.perceus.spellcasting2.relics.BoonGrimoire;
 import com.perceus.spellcasting2.spellitem_spell.SpellItem_EtherCrystal;
 import com.perceus.spellcasting2.storm_spells.SpellElectrocute;
 import com.perceus.spellcasting2.storm_spells.SpellStormSurge;
@@ -302,23 +303,23 @@ public class SpellItemDropListener implements Listener
 	private static Map<EntityType, BaseSpellCapsule[]> bossMobs = new HashMap<>() 
 	{{
 		//bosses' drops 
-		put(EntityType.ELDER_GUARDIAN, new BaseSpellCapsule[] {new SpellIceAge(), new KBSpellConduitEther(), 
+		put(EntityType.ELDER_GUARDIAN, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellIceAge(), new KBSpellConduitEther(), 
 				new KBSpellWaveWake(), new KBSpellCrystalize(), new KBSpellMendingWater(), new KBSpellFishScales(), new KBSpellGills(), new SpellPoseidonsGift(), 
 				new KBSpellSoothingCurrent(), new SpellLivingRecall(), new KBSpellPenance(), new SpellEtherTransference(), new KBSpellBarrier(), new SpellItem_EtherCrystal(), new SpellTsunami(), 
 				new ObfuscatedSpellPage()});
-		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), new KBSpellBarrier(), new ObfuscatedSpellPage(), 
+		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), new KBSpellBarrier(), new ObfuscatedSpellPage(), 
 				new KBSpellDracoMorph(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellVoidGate(), new KBSpellGate(), new SpellItem_EtherCrystal(), new SpellTornado()});
-		put(EntityType.WITHER, new BaseSpellCapsule[] {new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), new ObfuscatedSpellPage(), 
+		put(EntityType.WITHER, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), new ObfuscatedSpellPage(), 
 				new SpellLawOfProgression(), new SpellEtherBreak(), new KBSpellArcaneBolt(), new SpellNullify(), 
 				new SpellDrainingAura(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellReapSouls(),
 				new KBSpellDemonSight(), new KBSpellSapEther(), new KBSpellRaiseDead(), new KBSpellUndeadEffigy(), 
 				new KBSpellDemonicReflexes(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellDoom(), 
 				new KBSpellRot(), new KBSpellBarrier(), new SpellReapAndSew(), new SpellItem_EtherCrystal(),new SpellUndyingSoul()});
-		put(EntityType.ALLAY, new BaseSpellCapsule[] {new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellJudgement(), new SpellAmeliorate(), 
+		put(EntityType.ALLAY, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellJudgement(), new SpellAmeliorate(), 
 				new KBSpellVaporize(), new KBSpellArcaneBolt(), new SpellProlongedFlight(), new SpellGuardianAngel(), new KBSpellLawOfRegression(), 
 				new KBSpellPenance(), new SpellRestoration(), new SpellEtherTransference(), new ObfuscatedSpellPage(), 
 				new SpellHealingAura(), new SpellProtectOther(), new SpellFertility(), new KBSpellBarrier(), new SpellItem_EtherCrystal(),new SpellUndyingSoul(), new SpellRemedy()});
-		put(EntityType.WARDEN, new BaseSpellCapsule[] {new KBSpellBanishGreaterEvil(), new SpellPrimordialShift(), new SpellVoidShift(), new ObfuscatedSpellPage(), 
+		put(EntityType.WARDEN, new BaseSpellCapsule[] {new BoonGrimoire(), new KBSpellBanishGreaterEvil(), new SpellPrimordialShift(), new SpellVoidShift(), new ObfuscatedSpellPage(), 
 				new SpellEtherContinuity(), new SpellOverrideClimate(), new SpellSingularity(), new KBSpellBarrier(), new SpellItem_EtherCrystal()});
 	}};
 	

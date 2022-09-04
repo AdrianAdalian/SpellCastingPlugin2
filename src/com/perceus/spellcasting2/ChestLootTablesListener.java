@@ -44,6 +44,7 @@ import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
+import com.perceus.spellcasting2.relics.BoonGrimoire;
 import com.perceus.spellcasting2.solar_spells.SpellComet;
 import com.perceus.spellcasting2.solar_spells.SpellInferno;
 import com.perceus.spellcasting2.solar_spells.SpellSolGate;
@@ -129,12 +130,12 @@ public class ChestLootTablesListener implements Listener
 				new KBSpellSatiate(),new KBSpellLawOfRegression(),new KBSpellExpellUndead(),new KBSpellAngelicFlight(),
 				new KBSpellRegenerate(),new KBSpellAccolades(),new KBSpellExtricate(),new KBSpellPenance(),
 				new KBSpellJudgement(), new SpellFertility(), new SpellProtectOther(), new SpellHealingAura(), 
-				new SpellItem_EtherCrystal(), new SpellUndyingSoul(), new SpellRemedy(), new SpellTsunami(), new SpellTornado(), new ObfuscatedSpellPage()
+				new SpellItem_EtherCrystal(), new SpellUndyingSoul(), new SpellRemedy(), new SpellTsunami(), new SpellTornado(), new ObfuscatedSpellPage(), new BoonGrimoire()
 				);
 		
 		List<BaseSpellCapsule> lootList2 = List.of(new SpellLunarBolt(), new SpellLunarEclipse(), new SpellInferno(), new SpellItem_BloodCrystalPlus(), new MagicWeapon_WandOfVoid(),
 				new SpellSolarEclipse(), new SpellComet(), new SpellSolarFlare(), new SpellSolGate(), new SpellSuspendedMatter(), new SpellSolarBolt(), new SpellItem_EtherCrystal(), new SpellUrgentTeleport(),
-				new SpellNullifyGravity(), new SpellMoonBeam(), new SpellMoonBlast(), new SpellKarma(), new SpellEquilibrium(), new SpellEtherEquilibrium());
+				new SpellNullifyGravity(), new SpellMoonBeam(), new SpellMoonBlast(), new SpellKarma(), new SpellEquilibrium(), new SpellEtherEquilibrium(), new BoonGrimoire());
 		
 		if (event.getWorld() == Bukkit.getWorld("world") && random.nextDouble() < 1.0)
 		{	

@@ -71,7 +71,15 @@ public class SpellToBookListener implements Listener
 			"MagicTool_ShovelOfGeo","LivingArmor_DragonScaleChestplate","LivingArmor_DragonScaleHelmet","LivingArmor_DragonScaleLeggings","LivingArmor_DragonScaleBoots","SpellRemedy","SpellEtherEquilibrium",
 			"SpellPurify","SpellTornado","SpellTsunami","ObfuscatedSpellpage","BoonOfRegeneration","BoonOfManaRegeneration","BoonOfWaterBreathing","BoonOfTheSeaGod","BoonOfAbsoluteProtection","BoonOfTheAngels",
 			"BoonOfDefense","BoonOfInteraction","BoonOfSpeed","BoonOfAntiGravity","BoonOfInsulation",
-			"BoonOfNightVision");
+			"BoonOfNightVision",
+			"BoonGrimoire",
+			"AuraOfFire",
+			"AuraOfHoly",
+			"AuraOfStorm",
+			"AuraOfWater",
+			"AuraOfGeo",
+			"AuraOfUnholy",
+			"AuraOfVoid");
 	
 	
 	/**

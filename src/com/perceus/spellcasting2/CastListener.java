@@ -190,6 +190,14 @@ import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBlast;
+import com.perceus.spellcasting2.relics.AuraOfFire;
+import com.perceus.spellcasting2.relics.AuraOfGeo;
+import com.perceus.spellcasting2.relics.AuraOfHoly;
+import com.perceus.spellcasting2.relics.AuraOfStorm;
+import com.perceus.spellcasting2.relics.AuraOfUnholy;
+import com.perceus.spellcasting2.relics.AuraOfVoid;
+import com.perceus.spellcasting2.relics.AuraOfWater;
+import com.perceus.spellcasting2.relics.BoonGrimoire;
 import com.perceus.spellcasting2.relics.BoonOfAbsoluteProtection;
 import com.perceus.spellcasting2.relics.BoonOfAntiGravity;
 import com.perceus.spellcasting2.relics.BoonOfDefense;
@@ -767,7 +775,7 @@ public class CastListener implements Listener
 		put("SpellSolarFlare", new SpellSolarFlare());
 		put("SpellComet", new SpellComet());
 		
-		//boons / relics
+		//boons / auras / relics
 		put("BoonOfStrength", new BoonOfStrength());
 		put("BoonOfRegeneration", new BoonOfRegeneration());
 		put("BoonOfManaRegeneration", new BoonOfManaRegeneration());
@@ -782,6 +790,15 @@ public class CastListener implements Listener
 		put("BoonOfInsulation", new BoonOfInsulation());
 		put("BoonOfNightVision", new BoonOfNightVision());
 		
+		put("AuraOfFire", new AuraOfFire());
+		put("AuraOfHoly", new AuraOfHoly());
+		put("AuraOfStorm", new AuraOfStorm());
+		put("AuraOfWater", new AuraOfWater());
+		put("AuraOfGeo", new AuraOfGeo());
+		put("AuraOfUnholy", new AuraOfUnholy());
+		put("AuraOfVoid", new AuraOfVoid());
+
+		put("BoonGrimoire", new BoonGrimoire());
 	}};
 	
 }
