@@ -93,7 +93,7 @@ public class SpellRift extends BaseSpellCapsule
 		entityLocation.setYaw(YAW);
 		playerLocation.setPitch(entityPITCH);
 		playerLocation.setYaw(entityYAW);
-		
+		SpellParticles.drawLine(event.getPlayer().getLocation(), targetEntity.getLocation(), 1, Particle.PORTAL, null);
 		SpellParticles.drawDisc(event.getPlayer().getLocation(), 2, 2, 60, Particle.PORTAL, null);
 		SpellParticles.drawDisc(targetEntity.getLocation(), 2, 2, 60, Particle.PORTAL, null);
 		event.getPlayer().teleport(entityLocation);

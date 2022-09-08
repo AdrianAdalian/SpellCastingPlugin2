@@ -29,7 +29,7 @@ public class MagicWeapon_WandOfGeo extends BaseSpellCapsule
 		super(Material.STICK, ChatUtils.of("Magic Weapon: Wand of Geo", "FFE748","964B00","§l§o"), "MagicWeaponWandOfGeo", 0, true, "§r§fElement: §r§6Geo§r§f.",
 				"§r§fA simple stick infused with the element of §r§6Geo§r§f.",
 				"§r§7§lSpell: §r§fPoison Dart",
-				"§r§fLeft-Click: Summon a dart that poisons those that it hits.",
+				"§r§fLeft-Click: Summon a dart that inflicts §2Poison§f.",
 				"§r§fDeals 2 hearts of §r§cdamage§r§f over 5 seconds.",
 				"§r§fMana cost: 20 §r§9mana§r§f.",
 				"§r§6Ability§r§f: Claymorph",

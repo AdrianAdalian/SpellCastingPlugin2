@@ -22,7 +22,7 @@ public class SpellFertility extends BaseSpellCapsule
 
 	public SpellFertility()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Fertility§r§f§ko§r", "SpellFertility", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f §dAOE§f.","§r§fA tome that allows the caster to instantly","§r§fgrow all animals within a radius.","§r§fTargets affected will begin to glow.","§r§fThis spell will also reset breed timers.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Fertility", "SpellFertility", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §bUtility§f §dAOE§f.","§r§fA tome that allows the caster to instantly","§r§fgrow all animals within a radius.","§r§fTargets affected will begin to glow.","§r§fThis spell will also reset breed timers.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 		// TODO Auto-generated constructor stub
 	}
 

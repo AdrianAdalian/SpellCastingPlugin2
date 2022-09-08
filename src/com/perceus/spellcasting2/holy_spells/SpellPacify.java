@@ -27,7 +27,7 @@ public class SpellPacify extends BaseSpellCapsule
 
 	public SpellPacify()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Pacify§r§f§ko§r", "SpellPacify", 200, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §7Debuff§f.", "§r§fAn incantation capable of disabling target", "§r§fplayer's ability to deal damage.","§r§fDuration: 20 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Pacify", "SpellPacify", 200, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §7Debuff§f.", "§r§fAn incantation capable of disabling target", "§r§fplayer's ability to deal damage.","§r§fDuration: 20 seconds.","§r§fRange: 15 meters.","§r§fMana cost: 200 §r§9mana§r§f.");
 	}
 
 	@Override

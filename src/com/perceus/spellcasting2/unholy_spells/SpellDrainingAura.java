@@ -26,7 +26,7 @@ public class SpellDrainingAura extends BaseSpellCapsule
 
 	public SpellDrainingAura()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Draining Aura§r§f§ko§r", "SpellDrainingAura", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.",
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Draining Aura", "SpellDrainingAura", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.",
 				"§r§fA spelltome radiating §r§4§o§lUnholy§r§f energy.",
 				"§r§fThis spelltome has two incantations each with",
 				"§r§ftheir own varying effects.",

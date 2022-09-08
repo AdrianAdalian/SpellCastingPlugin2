@@ -31,7 +31,7 @@ public class MagicWeapon_WandOfStorm extends BaseSpellCapsule
 				"§r§fA simple stick infused with the element of §r§dStorm§r§f.",
 				"§r§7§lSpell: §r§fDischarge",
 				"§r§fLeft-Click: Summon a bolt of electricity that",
-				"§r§fbriefly cripples the target's damage output.",
+				"§r§fbriefly cripples the target.",
 				"§r§fDuration: 5 seconds.",
 				"§r§fMana cost: 75 §r§9mana§r§f.",
 				"§r§6Ability§r§f: Lightning Rod",

@@ -20,7 +20,7 @@ public class SpellUnlockTome extends BaseSpellCapsule
 
 	public SpellUnlockTome()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§4§ko§r§4§lDeveloper Item: §r§fSpell Unlock Tome§r§4§ko§r", "SpellUnlockTome", 0, true, "§r§fA tome containing unknown energy.", "§r§fA mysterious insription is written within that seemingly","§r§fallows the caster to unlock all known knowledge of spells.","§r§4§lWARNING§r§f: using this tome is an action that cannot be undone.","§r§fUsing this item will unlock all spellbook spells.","§r§c§oDeveloper Item§r§f");
+		super(Material.ENCHANTED_BOOK, "§r§4§ko§r§4§lDeveloper Item: §r§fSpell Unlock Tome§r§4§ko§r", "SpellUnlockTome", 0, true, "§r§fA tome containing unknown energy.","§r§fSpell Type: §bUtility§f.", "§r§fA mysterious insription is written within that seemingly","§r§fallows the caster to unlock all known knowledge of spells.","§r§4§lWARNING§r§f: using this tome is an action that cannot be undone.","§r§fUsing this item will unlock all spellbook spells.","§r§c§oDeveloper Item§r§f");
 	}
 
 	@Override

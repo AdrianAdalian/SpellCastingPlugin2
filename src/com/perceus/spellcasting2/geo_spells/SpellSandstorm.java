@@ -22,7 +22,7 @@ public class SpellSandstorm extends BaseSpellCapsule
 
 	public SpellSandstorm()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fSandstorm§r§f§ko§r", "SpellSandstorm", 250, false, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fThe caster summons a brief sandstorm around them,","§r§fcausing any within to be briefly blinded and slowed.","§r§fAlso deals 3 hearts of §r§cdamage§r§f.","§r§fDuration: 15 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Sandstorm", "SpellSandstorm", 250, false, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fThe caster summons a brief sandstorm around them,","§r§fcausing any within to be briefly blinded and slowed.","§r§fAlso deals 3 hearts of §r§cdamage§r§f.","§r§fDuration: 15 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 250 §r§9mana§r§f.");
 	}
 
 	@Override

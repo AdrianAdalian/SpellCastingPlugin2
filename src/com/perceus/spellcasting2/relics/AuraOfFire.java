@@ -6,6 +6,7 @@ import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.event.Event;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
@@ -41,7 +42,8 @@ public class AuraOfFire extends BaseSpellCapsule
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
-		
+		event.setUseInteractedBlock(Event.Result.DENY);
+		event.setUseItemInHand(Event.Result.DENY);
 		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR))
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");

@@ -79,7 +79,13 @@ public class SpellToBookListener implements Listener
 			"AuraOfWater",
 			"AuraOfGeo",
 			"AuraOfUnholy",
-			"AuraOfVoid");
+			"AuraOfVoid",
+			"SpellBestowLife",
+			"DevSpellBanish",
+			"SpellSkullOfNight",
+			"SpellToxicSludge",
+			"SpellDesintegrationAmpule",
+			"SpellUrgentSupport");
 	
 	
 	/**

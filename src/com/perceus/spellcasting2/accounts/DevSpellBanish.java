@@ -1,4 +1,4 @@
-package com.perceus.spellcasting2.holy_spells;
+package com.perceus.spellcasting2.accounts;
 
 import java.util.ArrayList;
 
@@ -9,12 +9,12 @@ import org.bukkit.Sound;
 import org.bukkit.SoundCategory;
 import org.bukkit.block.Block;
 import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.Damageable;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import com.perceus.spellcasting2.BaseSpellCapsule;
@@ -22,44 +22,48 @@ import com.perceus.spellcasting2.SpellParticles;
 
 import fish.yukiemeralis.eden.utils.PrintUtils;
 
-public class SpellProtectOther extends BaseSpellCapsule
+public class DevSpellBanish extends BaseSpellCapsule
 {
 
-	public SpellProtectOther()
+	public DevSpellBanish()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§fTome: Protect Other", "SpellProtectOther", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §6Buff§f.","§r§fProtect the target by raising a barrier around them.","§r§fApply a full bar of absorption to target player.","§r§fDuration: 1 minute.","§r§fRange: 10 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§4§ko§r§4§lDeveloper §r§fTome: Banish§r§4§ko§r", "DevSpellBanish", 0, false, "§r§fOverload a target with Ether, killing them.", "§r§fRange: 20 meters.","§r§c§oDeveloper Item§r§f");
+		
 	}
 
 	@Override
 	public boolean cast(PlayerInteractEvent event)
 	{
-		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR)) 
-		{
-			PrintUtils.sendMessage(event.getPlayer(),"Invalid Cast Method.");
-			return false; 
-		}
-		
-		Entity target = getNearestPlayerInSight(event.getPlayer(), 10);
-		if (target == null) 
-		{
-			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
+		if (!event.getAction().equals(Action.RIGHT_CLICK_AIR)) {
+			PrintUtils.sendMessage(event.getPlayer(), "Invalid Cast Method.");
 			return false;
 		}
 		
-		if (!(target instanceof Player)) 
+		Entity target = getNearestEntityInSight(event.getPlayer(), 20);
+		
+		if (!(target instanceof LivingEntity)) 
 		{
-			PrintUtils.sendMessage(event.getPlayer(),"Invalid Target.");
+			PrintUtils.sendMessage(event.getPlayer(), "Invalid Target.");
 			return false;
 		}
-		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
-		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 20, Particle.CLOUD, null);
-		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
-		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
-		((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.ABSORPTION, 1200, 4, true));
+		
+		if (event.getPlayer().hasPotionEffect(PotionEffectType.ABSORPTION)) 
+		{
+			event.getPlayer().removePotionEffect(PotionEffectType.ABSORPTION);
+		}
+		
+		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
+		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
+		SpellParticles.drawDisc(target.getLocation(), 1, 1, 100, Particle.CRIMSON_SPORE, null);
+		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.CRIMSON_SPORE, null);
+		if (target instanceof Damageable) 
+		{
+			((Damageable) target).damage(2000);
+		}
 		
 		return true;
 	}
-	private Entity getNearestPlayerInSight(Player player, int range) 
+	private Entity getNearestEntityInSight(Player player, int range) 
 	{
 		
 	    ArrayList<Entity> entities = (ArrayList<Entity>) player.getNearbyEntities(range, range, range);

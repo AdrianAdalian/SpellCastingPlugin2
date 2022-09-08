@@ -29,7 +29,7 @@ public class MagicWeapon_WandOfWater extends BaseSpellCapsule
 				"§r§fA simple stick infused with the element of §r§9Water§r§f.",
 				"§r§7§lSpell: §r§fWater Lash",
 				"§r§fLeft-Click: Cast out a large blob of water,",
-				"§r§fslowing whatever it hits briefly.",
+				"§r§fbriefly slowing whatever it hits.",
 				"§r§fDuration: 10 seconds.",
 				"§r§fMana cost: 30 §r§9mana§r§f.",
 				"§r§6Ability§r§f: Ethereal Reconstitution",

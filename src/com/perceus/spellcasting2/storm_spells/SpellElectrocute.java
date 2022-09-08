@@ -29,7 +29,7 @@ public class SpellElectrocute extends BaseSpellCapsule
 
 	public SpellElectrocute()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Electrocute§r§f§ko§r", "SpellElectrocute", 350, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.",
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Electrocute", "SpellElectrocute", 350, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fA spellbook radiating §r§dStorm§r§f energy.",
 				"§r§fAllows the caster to emit a short ranged burst of electricity,",
 				"§r§fdamaging and crippling the target.",

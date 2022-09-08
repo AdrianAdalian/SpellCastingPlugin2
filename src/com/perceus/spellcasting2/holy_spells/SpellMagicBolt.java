@@ -19,7 +19,7 @@ public class SpellMagicBolt extends BaseSpellCapsule
 
 	public SpellMagicBolt()
 	{
-		super(Material.SPECTRAL_ARROW, "§r§7§ko§r§7§lSpell: §r§fMagic Missile§r§7§ko§r", "SpellMagicBolt", 25, true, true, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fExpell a bolt of light that deals minor damage.","§r§fDeals 1 heart of §r§cdamage§r§f.","§r§fMana cost: 25 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fMagic Missile§r§7§ko§r", "SpellMagicBolt", 25, true, true, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §cOffensive§f.","§r§fExpell a bolt of light that deals minor damage.","§r§fDeals 1 heart of §r§cdamage§r§f.","§r§fMana cost: 25 §r§9mana§r§f.");
 	}
 
 	@Override

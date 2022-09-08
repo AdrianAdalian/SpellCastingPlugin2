@@ -21,7 +21,7 @@ public class SpellLavaBomb extends BaseSpellCapsule
 
 	public SpellLavaBomb()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Lava Bomb§r§f§ko§r", "SpellLavaBomb", 250, true, 
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Lava Bomb", "SpellLavaBomb", 250, true, 
 				"§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.", 
 				"§r§fFire a blob of lava which after a delay,",
 				"§r§fcauses an explosion.",

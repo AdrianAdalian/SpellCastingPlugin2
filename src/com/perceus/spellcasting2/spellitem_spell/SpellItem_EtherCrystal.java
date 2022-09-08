@@ -19,7 +19,7 @@ public class SpellItem_EtherCrystal extends BaseSpellCapsule
 
 	public SpellItem_EtherCrystal()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fEther Crystal§r§7§ko§r", "EtherCrystal", 0, true, "§r§fElement: §bE§ft§bh§fe§br.",
+		super(Material.QUARTZ, "§r§7§ko§r§7§lMagical Item: §r§fEther Crystal§r§7§ko§r", "EtherCrystal", 0, true, "§r§fElement: §bE§ft§bh§fe§br§f.",
 				"§r§fSpell Type: §9Unique§f §bUtility§f.",
 				"§r§fA crystalized source of pure §bE§ft§bh§fe§br energy.",
 				"§r§fFirst two uses will grant +250 max mana.",

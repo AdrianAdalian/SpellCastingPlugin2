@@ -18,7 +18,7 @@ public class SpellChaosFireball extends BaseSpellCapsule
 
 	public SpellChaosFireball()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Chaos Fireball§r§f§ko§r", "SpellChaosFireball", 75, true, 
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Chaos Fireball", "SpellChaosFireball", 75, true, 
 				"§r§fElement: §r§cFire§r§f.","§r§fSpell Type: §cOffensive§f.",
 				"§r§fSummons a ball of fire engulfed in void energy.",
 				"§r§fMana cost: 75 §r§9mana§r§f.");

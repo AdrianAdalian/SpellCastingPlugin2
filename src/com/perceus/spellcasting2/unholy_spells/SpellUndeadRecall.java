@@ -21,8 +21,7 @@ public class SpellUndeadRecall extends BaseSpellCapsule
 
 	public SpellUndeadRecall()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Undead Recall§r§f§ko§r", "SpellUndeadRecall", 250, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome with an incantation within that allows","§r§fthe caster to recall to the last point of death.","§r§fMana cost: 250 §r§9mana§r§f.");
-		// TODO Auto-generated constructor stub
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Undead Recall", "SpellUndeadRecall", 250, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA spelltome with an incantation within that allows","§r§fthe caster to recall to the last point of death.","§r§fMana cost: 250 §r§9mana§r§f.");
 	}
 
 	@Override

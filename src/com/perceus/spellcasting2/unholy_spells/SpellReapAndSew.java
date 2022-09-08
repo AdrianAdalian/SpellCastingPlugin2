@@ -35,7 +35,7 @@ public class SpellReapAndSew extends BaseSpellCapsule
 
 	public SpellReapAndSew()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Reap & Sew§r§f§ko§r", "SpellReapAndSew", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fAn §r§4§o§lUnholy§r§f text that contains two spells.","§r§fSpell Sew: curse the target with the Bad Omen debuff.","§r§fDuration: 30 seconds.","§r§fRange: 20 meters.","§r§fMana cost: 10 §r§9mana§r§f.","§r§fSpell Reap: while the target is cursed,","§r§fdeal §r§cdamage§r§f equal to target's maximum health.","§r§4Drain§r§f half of damage dealt.","§r§fRange: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.","§r§fUndead targets and The Ender Dragon are immune.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Reap & Sew", "SpellReapAndSew", 0, false, "§r§fElement: §r§4§o§lUnholy§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fAn §r§4§o§lUnholy§r§f text that contains two spells.","§r§fSpell Sew: curse the target with the Bad Omen debuff.","§r§fDuration: 30 seconds.","§r§fRange: 20 meters.","§r§fMana cost: 10 §r§9mana§r§f.","§r§fSpell Reap: while the target is cursed,","§r§fdeal §r§cdamage§r§f equal to target's maximum health.","§r§4Drain§r§f half of damage dealt.","§r§fRange: 20 meters.","§r§fMana cost: 1000 §r§9mana§r§f.","§r§fUndead targets and The Ender Dragon are immune.");
 	}
 
 	@Override

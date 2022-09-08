@@ -27,7 +27,7 @@ public class SpellDisarm extends BaseSpellCapsule
 
 	public SpellDisarm()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Disarm§r§f§ko§r", "SpellDisarm", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.", "§r§fAn incantation capable of disarming target player.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Disarm", "SpellDisarm", 100, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.", "§r§fAn incantation capable of disarming target player.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

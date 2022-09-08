@@ -27,7 +27,7 @@ public class SpellEtherTransference extends BaseSpellCapsule
 
 	public SpellEtherTransference()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Ether Transference§r§f§ko§r", "SpellEtherTransference", 0, true, true, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.",
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Ether Transference", "SpellEtherTransference", 0, true, true, "§r§fElement: §r§f§o§lHoly§r§f and §bE§ft§bh§fe§br§f.","§r§fSpell Type: §aSupport§f.",
 				"§r§fRadiate a player target with §r§f§o§lHoly§r§f energy,",
 				"§r§fConcentrating on their Aethereal wavelength,",
 				"§r§ftransfer the caster's mana reserves to target player.",
@@ -65,15 +65,15 @@ public class SpellEtherTransference extends BaseSpellCapsule
 			return false;
 		}
 		
-		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() == PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
+		if (PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getCurrentMana() <= PlayerDataMana.getPlayerData(event.getPlayer().getUniqueId()).getMinMana()) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(),"You don't have any more mana left to give.");
 			return false;
 		}
 		SpellParticles.drawLine(event.getPlayer().getLocation(), target.getLocation(), 1, Particle.END_ROD, null);
-		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.SMOKE_LARGE, null);
-		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_SHOOT, SoundCategory.MASTER, 1, 1);
-		((Player) target).playSound(event.getPlayer().getLocation(), Sound.ENTITY_WITHER_AMBIENT, SoundCategory.MASTER, 1, 1);
+		SpellParticles.drawDisc(event.getPlayer().getLocation(), 1, 1, 10, Particle.CLOUD, null);
+		event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
+		((Player) target).playSound(event.getPlayer().getLocation(), Sound.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.MASTER, 1, 1);
 		PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).setCurrentMana(PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() + 500);
 		if (PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getCurrentMana() > PlayerDataMana.getPlayerData(((Player) target).getUniqueId()).getMaxMana()) 
 		{

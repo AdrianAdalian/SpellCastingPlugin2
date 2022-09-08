@@ -113,8 +113,8 @@ public class SpellIceAge extends BaseSpellCapsule
 			}
 			return true;
 		}
-		
 		PrintUtils.sendMessage(event.getPlayer(),"FIZZLE!");
 		return false;
+		
 	}
 }

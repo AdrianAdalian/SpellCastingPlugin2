@@ -30,7 +30,7 @@ public class SpellAmeliorate extends BaseSpellCapsule
 
 	public SpellAmeliorate()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Ameliorate§r§f§ko§r", "SpellAmeliorate", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.", "§r§fRoute all illness and", "§r§fnegative stat changes of target player.","§r§fSubsequently §r§aHeal §r§fthem to full.","§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Ameliorate", "SpellAmeliorate", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.", "§r§fRoute all illness and", "§r§fnegative stat changes of target player.","§r§fSubsequently §r§aHeal §r§fthem to full.","§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override

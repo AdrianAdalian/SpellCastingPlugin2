@@ -25,7 +25,7 @@ public class SpellUndyingSoul extends BaseSpellCapsule
 
 	public SpellUndyingSoul()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Undying Soul§r§f§ko§r", "SpellUndyingSoul", 500, false, "§r§fElement: §r§4§o§lUnholy§r§f.",
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Undying Soul", "SpellUndyingSoul", 500, false, "§r§fElement: §r§4§o§lUnholy§r§f.",
 				"§r§fSpell Type: §bUtility§f.", 
 				"§r§fAn incantation capable of preventing the caster's death.",
 				"§r§fIf the caster should die within 1 minute of cast,",

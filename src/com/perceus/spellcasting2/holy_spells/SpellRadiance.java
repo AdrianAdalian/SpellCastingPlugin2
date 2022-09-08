@@ -21,7 +21,7 @@ public class SpellRadiance extends BaseSpellCapsule
 
 	public SpellRadiance()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Radiance§r§f§ko§r", "SpellRadiance", 100, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fWhen invoked, this tome emits a flash of holy light.","§r§fCauses those effected to glow.","§r§fDuration: 20 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Radiance", "SpellRadiance", 100, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §7Debuff§f §dAOE§f.","§r§fWhen invoked, this tome emits a flash of holy light.","§r§fCauses those effected to glow.","§r§fDuration: 20 seconds.","§r§fRange: 30 meters.","§r§fMana cost: 100 §r§9mana§r§f.");
 	}
 
 	@Override

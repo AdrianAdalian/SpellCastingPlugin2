@@ -20,7 +20,7 @@ public class SpellResetTome extends BaseSpellCapsule
 
 	public SpellResetTome()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§4§ko§r§4§lDeveloper Item: §r§fReset Tome§r§4§ko§r", "SpellResetTome", 0, true, "§r§fA tome containing unknown energy.", "§r§fA mysterious insription is written within that seemingly","§r§fallows the caster to reset all known knowledge of spells.","§r§4§lWARNING§r§f: using this tome is an action that cannot be undone.","§r§fUsing this item will reset all spellbook unlock progress.","§r§c§oDeveloper Item§r§f");
+		super(Material.ENCHANTED_BOOK, "§r§4§ko§r§4§lDeveloper Item: §r§fReset Tome§r§4§ko§r", "SpellResetTome", 0, true, "§r§fA tome containing unknown energy.","§r§fSpell Type: §bUtility§f.", "§r§fA mysterious insription is written within that seemingly","§r§fallows the caster to reset all known knowledge of spells.","§r§4§lWARNING§r§f: using this tome is an action that cannot be undone.","§r§fUsing this item will reset all spellbook unlock progress.","§r§c§oDeveloper Item§r§f");
 	}
 
 	@Override

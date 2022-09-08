@@ -25,7 +25,7 @@ public class SpellRestoration extends BaseSpellCapsule
 
 	public SpellRestoration()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fAura of Restoration§r§f§ko§r", "SpellRestoration", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §dAOE§f.","§r§fAn incation written by Archangels", "§r§fcalls home to the pages of this tome.","§r§fThe caster is able to fully restore health and mana,","§r§fand cure diseases and dispell debuffs","§r§fof all those within range.", "§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Aura of Restoration", "SpellRestoration", 500, false, "§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §dAOE§f.","§r§fAn incation written by Archangels", "§r§fcalls home to the pages of this tome.","§r§fThe caster is able to fully restore health and mana,","§r§fand cure diseases and dispell debuffs","§r§fof all those within range.", "§r§fRange: 15 meters.","§r§fMana cost: 500 §r§9mana§r§f.");
 	}
 
 	@Override

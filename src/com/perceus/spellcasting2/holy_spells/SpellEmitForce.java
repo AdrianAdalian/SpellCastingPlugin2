@@ -25,7 +25,7 @@ public class SpellEmitForce extends BaseSpellCapsule
 
 	public SpellEmitForce()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fEmit Force§r§7§ko§r", "SpellEmitForce", 20, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f §dAOE§f.", "§r§fOn Right-Click:","§r§fEmits a radial force, subjugating targets.","§r§fRange: 5 meters.","§r§fOn Left-Click:", "§r§fEmit a concentrated magical force, subjugating the target.", "§r§fRange: 10 meters.","§r§fMana cost: 20 §r§9mana§r§f.");
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fEmit Force§r§7§ko§r", "SpellEmitForce", 20, true, true,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f and §dAOE§f.", "§r§fOn Right-Click:","§r§fEmits a radial force, subjugating targets.","§r§fRange: 5 meters.","§r§fOn Left-Click:", "§r§fEmit a concentrated magical force, subjugating the target.", "§r§fRange: 10 meters.","§r§fMana cost: 20 §r§9mana§r§f.");
 	}
 
 	@Override

@@ -27,7 +27,7 @@ public class SpellPenance extends BaseSpellCapsule
 
 	public SpellPenance()
 	{
-		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fPenance§r§7§ko§r", "SpellPenance", 0, true, false,"§r§fElement: §r§f§o§lHoly§r§f.","§r§fSpell Type: §aSupport§f.",
+		super(Material.NETHER_STAR, "§r§7§ko§r§7§lSpell: §r§fPenance§r§7§ko§r", "SpellPenance", 0, true, false,"§r§fElement: §r§f§o§lHoly§r§f and §bE§ft§bh§fe§br§f.","§r§fSpell Type: §aSupport§f.",
 				"§r§fIf the target of this spell is a Player:", 
 				"§r§fExpend lifeforce at the benefit of the target's mana regen.", 
 				"§r§fDeal §r§cdamage§r§f to self equal to current max health.", 

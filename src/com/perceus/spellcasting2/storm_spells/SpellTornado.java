@@ -22,7 +22,7 @@ public class SpellTornado extends BaseSpellCapsule
 
 	public SpellTornado()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Tornado§r§f§ko§r", "SpellTornado", 1000, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThe caster summons an utterly debilitating torrent of wind.","§r§fTargets caught will be crippled and pushed away.","§r§fDeals 5 hearts of §cdamage§f.","§r§fDuration: 15 seconds.","§r§fRange: 50 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Tornado", "SpellTornado", 1000, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThe caster summons an utterly debilitating torrent of wind.","§r§fTargets caught will be crippled and pushed away.","§r§fDeals 5 hearts of §cdamage§f.","§r§fDuration: 15 seconds.","§r§fRange: 50 meters.","§r§fMana cost: 1000 §r§9mana§r§f.");
 	}
 
 	@Override

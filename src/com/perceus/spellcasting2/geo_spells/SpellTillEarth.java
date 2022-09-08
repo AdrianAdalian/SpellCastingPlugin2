@@ -18,7 +18,7 @@ public class SpellTillEarth extends BaseSpellCapsule
 
 	public SpellTillEarth()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: §r§fTill Earth§r§f§ko§r", "SpellTillEarth", 10, false, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA simple incantation that agrigates","§r§fthe target dirt or grass block.","§r§fPodzol is able to be tilled.","§r§fMana cost: 10 §r§9mana§r§f.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Till Earth", "SpellTillEarth", 10, false, "§r§fElement: §r§6Geo§r§f.","§r§fSpell Type: §bUtility§f.","§r§fA simple incantation that agrigates","§r§fthe target dirt or grass block.","§r§fPodzol is able to be tilled.","§r§fMana cost: 10 §r§9mana§r§f.");
 	}
 
 	@Override

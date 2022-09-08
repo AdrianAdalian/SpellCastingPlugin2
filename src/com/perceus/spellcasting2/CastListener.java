@@ -157,11 +157,13 @@ import com.perceus.spellcasting2.geo_spells.SpellSandstorm;
 import com.perceus.spellcasting2.geo_spells.SpellTerraform;
 import com.perceus.spellcasting2.geo_spells.SpellTillEarth;
 import com.perceus.spellcasting2.geo_spells.SpellToxicGas;
+import com.perceus.spellcasting2.geo_spells.SpellToxicSludge;
 import com.perceus.spellcasting2.geo_spells.SpellTransmute;
 import com.perceus.spellcasting2.holy_spells.SpellAccolades;
 import com.perceus.spellcasting2.holy_spells.SpellAmeliorate;
 import com.perceus.spellcasting2.holy_spells.SpellAngelicFlight;
 import com.perceus.spellcasting2.holy_spells.SpellBarrier;
+import com.perceus.spellcasting2.holy_spells.SpellBestowLife;
 import com.perceus.spellcasting2.holy_spells.SpellCure;
 import com.perceus.spellcasting2.holy_spells.SpellDisarm;
 import com.perceus.spellcasting2.holy_spells.SpellEmitForce;
@@ -186,6 +188,7 @@ import com.perceus.spellcasting2.holy_spells.SpellRegenerate;
 import com.perceus.spellcasting2.holy_spells.SpellRemedy;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
 import com.perceus.spellcasting2.holy_spells.SpellSatiate;
+import com.perceus.spellcasting2.holy_spells.SpellUrgentSupport;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
@@ -271,6 +274,7 @@ import com.perceus.spellcasting2.unholy_spells.SpellDarkHarvest;
 import com.perceus.spellcasting2.unholy_spells.SpellDebilitate;
 import com.perceus.spellcasting2.unholy_spells.SpellDemonSight;
 import com.perceus.spellcasting2.unholy_spells.SpellDemonicReflexes;
+import com.perceus.spellcasting2.unholy_spells.SpellDesintegrationAmpule;
 import com.perceus.spellcasting2.unholy_spells.SpellDoom;
 import com.perceus.spellcasting2.unholy_spells.SpellDrainingAura;
 import com.perceus.spellcasting2.unholy_spells.SpellEmitDamagingForce;
@@ -282,6 +286,7 @@ import com.perceus.spellcasting2.unholy_spells.SpellReapAndSew;
 import com.perceus.spellcasting2.unholy_spells.SpellReapSouls;
 import com.perceus.spellcasting2.unholy_spells.SpellRot;
 import com.perceus.spellcasting2.unholy_spells.SpellSapEther;
+import com.perceus.spellcasting2.unholy_spells.SpellSkullOfNight;
 import com.perceus.spellcasting2.unholy_spells.SpellUndeadEffigy;
 import com.perceus.spellcasting2.unholy_spells.SpellUndeadRecall;
 import com.perceus.spellcasting2.unholy_spells.SpellUndyingSoul;
@@ -383,6 +388,8 @@ public class CastListener implements Listener
 		put("SpellHealingAura", new SpellHealingAura());
 		put("SpellProtectOther", new SpellProtectOther());
 		put("SpellRemedy", new SpellRemedy());
+		put("SpellBestowLife", new SpellBestowLife());
+		put("SpellUrgentSupport", new SpellUrgentSupport());
 		
 		//void spells
 		put("SpellBanishGreaterEvil", new SpellBanishGreaterEvil());
@@ -429,6 +436,7 @@ public class CastListener implements Listener
 		put("SpellSandstorm", new SpellSandstorm());
 		put("SpellTransmute", new SpellTransmute());
 		put("SpellTillEarth", new SpellTillEarth());
+		put("SpellToxicSludge", new SpellToxicSludge());
 		
 		//water spells
 		put("SpellRipTide", new SpellRipTide()); 
@@ -470,7 +478,8 @@ public class CastListener implements Listener
 		put("SpellUndeadRecall", new SpellUndeadRecall());
 		put("SpellReapAndSew", new SpellReapAndSew());
 		put("SpellUndyingSoul", new SpellUndyingSoul());
-		
+		put("SpellSkullOfNight", new SpellSkullOfNight());
+		put("SpellDesintegrationAmpule", new SpellDesintegrationAmpule());
 		//storm spells
 		put("SpellSmite", new SpellSmite());
 		put("SpellBlink", new SpellBlink());
@@ -752,6 +761,7 @@ public class CastListener implements Listener
 		put("SpellResetTome", new SpellResetTome());
 		put("SpellUnlockTome", new SpellUnlockTome());	
 		put("CrackedEtherCrystal", new CrackedEtherCrystal());
+		put("DevSpellBanish", new DevSpellBanish());
 		
 		//astral spells
 		put("SpellSuspendedMatter", new SpellSuspendedMatter());

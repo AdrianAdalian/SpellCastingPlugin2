@@ -28,7 +28,7 @@ public class MagicWeapon_WandOfUnholy extends BaseSpellCapsule
 				"§r§fA simple stick infused with the element of §r§4§o§lUnholy§r§f.",
 				"§r§7§lSpell: §r§fDark Pulse",
 				"§r§fLeft-Click: Summon a bolt of darkness,",
-				"§r§fthat withers those hit.",
+				"§r§fthat inflicts §4Wither§f on those hit.",
 				"§r§fDeals 2 hearts of §r§cdamage§r§f over 8 seconds.",
 				"§r§fMana cost: 25 §r§9mana§r§f.",
 				"§r§6Ability§r§f: Shade",

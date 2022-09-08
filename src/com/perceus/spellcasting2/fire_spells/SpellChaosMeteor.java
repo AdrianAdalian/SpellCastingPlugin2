@@ -27,7 +27,7 @@ public class SpellChaosMeteor extends BaseSpellCapsule
 
 	public SpellChaosMeteor()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Chaos Meteor§r§f§ko§r", "SpellChaosMeteor", 200, true, 
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Chaos Meteor", "SpellChaosMeteor", 200, true, 
 				"§r§fElement: §r§cFire§r§f.",
 				"§r§fSpell Type: §cOffensive§f.", 
 				"§r§fSummons a ball of fire engulfed in void energy.",

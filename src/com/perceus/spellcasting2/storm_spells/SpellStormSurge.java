@@ -20,7 +20,7 @@ public class SpellStormSurge extends BaseSpellCapsule
 
 	public SpellStormSurge()
 	{
-		super(Material.ENCHANTED_BOOK, "§r§f§ko§r§fTome: Storm Surge§r§f§ko§r", "SpellStormSurge", 500, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThe caster summons a cursed thunderstorm","§r§fthat casts down lightning on all those within range.","§r§fThe storm's effects cause an energy drain on those hit","§r§fwhich heals the caster.","§r§fDeals 2.5 hearts of §r§cdamage §r§fper lightning bolt.","§r§4Drain §r§f1/2 hearts health for each target.","§r§fRange: 30 meters.","§r§fMana cost: 500 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
+		super(Material.ENCHANTED_BOOK, "§r§fTome: Storm Surge", "SpellStormSurge", 500, false, "§r§fElement: §r§dStorm§r§f.","§r§fSpell Type: §cOffensive§f §dAOE§f.","§r§fThe caster summons a cursed thunderstorm","§r§fthat casts down lightning on all those within range.","§r§fThe storm's effects cause an energy drain on those hit","§r§fwhich heals the caster.","§r§fDeals 2.5 hearts of §r§cdamage §r§fper lightning bolt.","§r§4Drain §r§f1/2 hearts health for each target.","§r§fRange: 30 meters.","§r§fMana cost: 500 §r§9mana§r§f.","§r§fThis spell will fizzle if it's not storming.");
 	}
 
 	@Override

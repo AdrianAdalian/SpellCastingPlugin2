@@ -19,7 +19,7 @@ public class CrackedEtherCrystal extends BaseSpellCapsule
 
 	public CrackedEtherCrystal()
 	{
-		super(Material.QUARTZ, "§r§7§ko§r§4Corrupt Magical Object§r§f: Cracked Ether Crystal§r§7§ko§r", "CrackedEtherCrystal", 0, true, "§r§fReset caster's maximum mana to 1000.","§r§4§o§lWARNING§r§f: This action cannot be undone.","§r§c§oDeveloper Item§r§f");
+		super(Material.QUARTZ, "§r§7§ko§r§4Corrupt Magical Object§r§f: Cracked Ether Crystal§r§7§ko§r", "CrackedEtherCrystal", 0, true, "§r§fReset caster's maximum mana to 1000.","§r§fSpell Type: §bUtility§f.","§r§4§o§lWARNING§r§f: This action cannot be undone.","§r§c§oDeveloper Item§r§f");
 		// TODO Auto-generated constructor stub
 	}
 

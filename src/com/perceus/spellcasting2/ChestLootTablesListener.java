@@ -25,8 +25,10 @@ import com.perceus.spellcasting2.geo_spells.SpellInscribeLuck;
 import com.perceus.spellcasting2.geo_spells.SpellNullify;
 import com.perceus.spellcasting2.geo_spells.SpellSandstorm;
 import com.perceus.spellcasting2.geo_spells.SpellTillEarth;
+import com.perceus.spellcasting2.geo_spells.SpellToxicSludge;
 import com.perceus.spellcasting2.geo_spells.SpellTransmute;
 import com.perceus.spellcasting2.holy_spells.SpellAmeliorate;
+import com.perceus.spellcasting2.holy_spells.SpellBestowLife;
 import com.perceus.spellcasting2.holy_spells.SpellDisarm;
 import com.perceus.spellcasting2.holy_spells.SpellEtherTransference;
 import com.perceus.spellcasting2.holy_spells.SpellFertility;
@@ -40,6 +42,7 @@ import com.perceus.spellcasting2.holy_spells.SpellProtectOther;
 import com.perceus.spellcasting2.holy_spells.SpellRadiance;
 import com.perceus.spellcasting2.holy_spells.SpellRemedy;
 import com.perceus.spellcasting2.holy_spells.SpellRestoration;
+import com.perceus.spellcasting2.holy_spells.SpellUrgentSupport;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarBolt;
 import com.perceus.spellcasting2.lunar_spells.SpellLunarEclipse;
 import com.perceus.spellcasting2.lunar_spells.SpellMoonBeam;
@@ -64,8 +67,10 @@ import com.perceus.spellcasting2.storm_spells.SpellElectrocute;
 import com.perceus.spellcasting2.storm_spells.SpellStormSurge;
 import com.perceus.spellcasting2.storm_spells.SpellTornado;
 import com.perceus.spellcasting2.storm_spells.SpellWildBolt;
+import com.perceus.spellcasting2.unholy_spells.SpellDesintegrationAmpule;
 import com.perceus.spellcasting2.unholy_spells.SpellDrainingAura;
 import com.perceus.spellcasting2.unholy_spells.SpellReapAndSew;
+import com.perceus.spellcasting2.unholy_spells.SpellSkullOfNight;
 import com.perceus.spellcasting2.unholy_spells.SpellUndeadRecall;
 import com.perceus.spellcasting2.unholy_spells.SpellUndyingSoul;
 import com.perceus.spellcasting2.void_spells.SpellEtherContinuity;
@@ -130,7 +135,8 @@ public class ChestLootTablesListener implements Listener
 				new KBSpellSatiate(),new KBSpellLawOfRegression(),new KBSpellExpellUndead(),new KBSpellAngelicFlight(),
 				new KBSpellRegenerate(),new KBSpellAccolades(),new KBSpellExtricate(),new KBSpellPenance(),
 				new KBSpellJudgement(), new SpellFertility(), new SpellProtectOther(), new SpellHealingAura(), 
-				new SpellItem_EtherCrystal(), new SpellUndyingSoul(), new SpellRemedy(), new SpellTsunami(), new SpellTornado(), new ObfuscatedSpellPage(), new BoonGrimoire()
+				new SpellItem_EtherCrystal(), new SpellUndyingSoul(), new SpellRemedy(), new SpellTsunami(), new SpellTornado(), new ObfuscatedSpellPage(), new BoonGrimoire(), 
+				new SpellBestowLife(), new SpellSkullOfNight(), new SpellToxicSludge(), new SpellDesintegrationAmpule(), new SpellUrgentSupport()
 				);
 		
 		List<BaseSpellCapsule> lootList2 = List.of(new SpellLunarBolt(), new SpellLunarEclipse(), new SpellInferno(), new SpellItem_BloodCrystalPlus(), new MagicWeapon_WandOfVoid(),
