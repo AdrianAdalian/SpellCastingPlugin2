@@ -173,6 +173,16 @@ public class PlayerManaRegeneration implements Listener
 			event.getPlayer().setFlying(false);
 		}
 		
+//		for (Attribute attr : Attribute.values())
+//		{
+//		  // I'm not sure how you want to go about getting a player, I leave this to your discretion 
+//		  if (event.getPlayer().getAttribute(attr) == null)
+//		  {
+//		    continue;
+//		  }
+//		  
+//		  event.getPlayer().getAttribute(attr).getModifiers().clear();
+//		}
 	}
 	@EventHandler
 	public void onDeath(PlayerDeathEvent event) 

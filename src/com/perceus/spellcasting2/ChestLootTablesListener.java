@@ -10,12 +10,16 @@ import org.bukkit.event.world.LootGenerateEvent;
 import org.bukkit.inventory.ItemStack;
 
 import com.perceus.spellcasting2.accounts.*;
+import com.perceus.spellcasting2.astral_spells.SpellAstralProjection;
+import com.perceus.spellcasting2.astral_spells.SpellEnrage;
 import com.perceus.spellcasting2.astral_spells.SpellEquilibrium;
 import com.perceus.spellcasting2.astral_spells.SpellEtherEquilibrium;
 import com.perceus.spellcasting2.astral_spells.SpellKarma;
 import com.perceus.spellcasting2.astral_spells.SpellNullifyGravity;
 import com.perceus.spellcasting2.astral_spells.SpellSuspendedMatter;
+import com.perceus.spellcasting2.astral_spells.SpellTimeDilation;
 import com.perceus.spellcasting2.astral_spells.SpellUrgentTeleport;
+import com.perceus.spellcasting2.astral_spells.SpellVectorManipulation;
 import com.perceus.spellcasting2.fire_spells.SpellChaosFireball;
 import com.perceus.spellcasting2.fire_spells.SpellChaosMeteor;
 import com.perceus.spellcasting2.fire_spells.SpellEruption;
@@ -141,7 +145,8 @@ public class ChestLootTablesListener implements Listener
 		
 		List<BaseSpellCapsule> lootList2 = List.of(new SpellLunarBolt(), new SpellLunarEclipse(), new SpellInferno(), new SpellItem_BloodCrystalPlus(), new MagicWeapon_WandOfVoid(),
 				new SpellSolarEclipse(), new SpellComet(), new SpellSolarFlare(), new SpellSolGate(), new SpellSuspendedMatter(), new SpellSolarBolt(), new SpellItem_EtherCrystal(), new SpellUrgentTeleport(),
-				new SpellNullifyGravity(), new SpellMoonBeam(), new SpellMoonBlast(), new SpellKarma(), new SpellEquilibrium(), new SpellEtherEquilibrium(), new BoonGrimoire());
+				new SpellNullifyGravity(), new SpellMoonBeam(), new SpellMoonBlast(), new SpellKarma(), new SpellEquilibrium(), new SpellEtherEquilibrium(), new BoonGrimoire(), new SpellEnrage(),
+				new SpellAstralProjection(), new SpellVectorManipulation(), new SpellTimeDilation());
 		
 		if (event.getWorld() == Bukkit.getWorld("world") && random.nextDouble() < 1.0)
 		{	

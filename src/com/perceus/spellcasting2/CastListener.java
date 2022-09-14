@@ -6,6 +6,7 @@ import java.util.Map;
 import org.bukkit.event.Listener;
 
 import com.perceus.spellcasting2.accounts.*;
+import com.perceus.spellcasting2.aethereal_spells.SpellAetherBreak;
 import com.perceus.spellcasting2.aethereal_spells.SpellAetherealOverride;
 import com.perceus.spellcasting2.aethereal_spells.SpellAetherealOverridePlus;
 import com.perceus.spellcasting2.aethereal_spells.SpellCleanse;
@@ -108,18 +109,25 @@ import com.perceus.spellcasting2.ancient_spells.SpellCreateWolf;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZoglin;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombie;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombifiedPiglin;
+import com.perceus.spellcasting2.astral_spells.SpellAstralProjection;
+import com.perceus.spellcasting2.astral_spells.SpellEnrage;
 import com.perceus.spellcasting2.astral_spells.SpellEquilibrium;
 import com.perceus.spellcasting2.astral_spells.SpellEtherEquilibrium;
 import com.perceus.spellcasting2.astral_spells.SpellKarma;
 import com.perceus.spellcasting2.astral_spells.SpellNullifyGravity;
 import com.perceus.spellcasting2.astral_spells.SpellSuspendedMatter;
+import com.perceus.spellcasting2.astral_spells.SpellTimeDilation;
 import com.perceus.spellcasting2.astral_spells.SpellUrgentTeleport;
+import com.perceus.spellcasting2.astral_spells.SpellVectorManipulation;
 import com.perceus.spellcasting2.darkmagic_spells.SpellBloodletting;
+import com.perceus.spellcasting2.darkmagic_spells.SpellCrimsonFury;
+import com.perceus.spellcasting2.darkmagic_spells.SpellCrimsonVigor;
 import com.perceus.spellcasting2.darkmagic_spells.SpellCurse;
 import com.perceus.spellcasting2.darkmagic_spells.SpellDeath;
 import com.perceus.spellcasting2.darkmagic_spells.SpellEtherBreak;
 import com.perceus.spellcasting2.darkmagic_spells.SpellHex;
 import com.perceus.spellcasting2.darkmagic_spells.SpellLawOfProgression;
+import com.perceus.spellcasting2.darkmagic_spells.SpellWrath;
 import com.perceus.spellcasting2.fire_spells.SpellChaosFireball;
 import com.perceus.spellcasting2.fire_spells.SpellChaosMeteor;
 import com.perceus.spellcasting2.fire_spells.SpellCombustion;
@@ -507,6 +515,9 @@ public class CastListener implements Listener
 		put("SpellHex", new SpellHex());
 		put("SpellDeath", new SpellDeath());
 		put("SpellLawOfProgression", new SpellLawOfProgression());
+		put("SpellCrimsonFury", new SpellCrimsonFury());
+		put("SpellCrimsonVigor", new SpellCrimsonVigor());
+		put("SpellWrath", new SpellWrath());
 		
 		//weapons
 		put("MagicWeaponWandOfFire", new MagicWeapon_WandOfFire());
@@ -591,6 +602,7 @@ public class CastListener implements Listener
 		put("SpellAetherealOverride", new SpellAetherealOverride());
 		put("SpellAetherealOverridePlus", new SpellAetherealOverridePlus());
 		put("SpellPurify", new SpellPurify());
+		put("SpellAetherBreak", new SpellAetherBreak());
 		
 		//ancient spells
 		put("SpellCreateCow", new SpellCreateCow());
@@ -770,6 +782,10 @@ public class CastListener implements Listener
 		put("SpellKarma", new SpellKarma());
 		put("SpellEquilibrium", new SpellEquilibrium());
 		put("SpellEtherEquilibrium", new SpellEtherEquilibrium());
+		put("SpellEnrage", new SpellEnrage());
+		put("SpellAstralProjection", new SpellAstralProjection());
+		put("SpellVectorManipulation", new SpellVectorManipulation());
+		put("SpellTimeDilation", new SpellTimeDilation());
 		
 		//lunar spells
 		put("SpellLunarBolt", new SpellLunarBolt());

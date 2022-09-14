@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 
 import com.perceus.spellcasting2.accounts.*;
+import com.perceus.spellcasting2.aethereal_spells.SpellAetherBreak;
 import com.perceus.spellcasting2.aethereal_spells.SpellAetherealOverride;
 import com.perceus.spellcasting2.aethereal_spells.SpellAetherealOverridePlus;
 import com.perceus.spellcasting2.aethereal_spells.SpellCleanse;
@@ -108,11 +109,13 @@ import com.perceus.spellcasting2.ancient_spells.SpellCreateZoglin;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombie;
 import com.perceus.spellcasting2.ancient_spells.SpellCreateZombifiedPiglin;
 import com.perceus.spellcasting2.darkmagic_spells.SpellBloodletting;
+import com.perceus.spellcasting2.darkmagic_spells.SpellCrimsonFury;
 import com.perceus.spellcasting2.darkmagic_spells.SpellCurse;
 import com.perceus.spellcasting2.darkmagic_spells.SpellDeath;
 import com.perceus.spellcasting2.darkmagic_spells.SpellEtherBreak;
 import com.perceus.spellcasting2.darkmagic_spells.SpellHex;
 import com.perceus.spellcasting2.darkmagic_spells.SpellLawOfProgression;
+import com.perceus.spellcasting2.darkmagic_spells.SpellWrath;
 import com.perceus.spellcasting2.fire_spells.SpellChaosFireball;
 import com.perceus.spellcasting2.fire_spells.SpellChaosMeteor;
 import com.perceus.spellcasting2.fire_spells.SpellEruption;
@@ -314,12 +317,12 @@ public class SpellItemDropListener implements Listener
 				new ObfuscatedSpellPage()});
 		put(EntityType.ENDER_DRAGON, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellChaosFireball(), new SpellChaosMeteor(), new KBSpellManaBurn(), new KBSpellBarrier(), new ObfuscatedSpellPage(), 
 				new KBSpellDracoMorph(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellVoidGate(), new KBSpellGate(), new SpellItem_EtherCrystal(), new SpellTornado()});
-		put(EntityType.WITHER, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), new ObfuscatedSpellPage(), 
+		put(EntityType.WITHER, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellWrath(), new SpellDeath(), new SpellBloodletting(), new SpellHex(), new SpellCurse(), new ObfuscatedSpellPage(), 
 				new SpellLawOfProgression(), new SpellEtherBreak(), new KBSpellArcaneBolt(), new SpellNullify(), new SpellDesintegrationAmpule(), 
 				new SpellDrainingAura(), new SpellUndeadRecall(), new KBSpellDarkHarvest(), new KBSpellReapSouls(),
 				new KBSpellDemonSight(), new KBSpellSapEther(), new KBSpellRaiseDead(), new KBSpellUndeadEffigy(), 
 				new KBSpellDemonicReflexes(), new KBSpellExpellLiving(), new KBSpellExpellUndead(), new KBSpellDoom(), 
-				new KBSpellRot(), new KBSpellBarrier(), new SpellReapAndSew(), new SpellItem_EtherCrystal(),new SpellUndyingSoul(), new SpellSkullOfNight()});
+				new KBSpellRot(), new KBSpellBarrier(), new SpellReapAndSew(), new SpellItem_EtherCrystal(),new SpellUndyingSoul(), new SpellSkullOfNight(), new SpellCrimsonFury()});
 		put(EntityType.ALLAY, new BaseSpellCapsule[] {new BoonGrimoire(), new SpellUrgentSupport(), new SpellBestowLife(), new SpellLivingRecall(), new SpellRecallAnchor(), new KBSpellJudgement(), new SpellAmeliorate(), 
 				new KBSpellVaporize(), new KBSpellArcaneBolt(), new SpellProlongedFlight(), new SpellGuardianAngel(), new KBSpellLawOfRegression(), 
 				new KBSpellPenance(), new SpellRestoration(), new SpellEtherTransference(), new ObfuscatedSpellPage(), 
@@ -403,6 +406,6 @@ public class SpellItemDropListener implements Listener
 				new SpellFortifySwiftSneak(), new SpellFortifyDepthStrider(), new SpellFortifyFrostWalker(), new SpellFortifySoulSpeed(), new SpellFortifySmite(), new SpellFortifyBaneOfArthropods(), new SpellFortifyLooting(),
 				new SpellFortifySweepingEdge(), new SpellFortifyKnockback(), new SpellFortifyFireAspect(), new SpellFortifyPower(), new SpellFortifyPunch(), new SpellFortifyInfinity(), new SpellFortifyFlame(), 
 				new SpellFortifyMultishot(), new SpellFortifyQuickCharge(), new SpellFortifyPiercing(), new SpellFortifyChanneling(), new SpellFortifyImpaling(), new SpellFortifyLoyalty(),
-				new SpellFortifyRipTide(), new SpellAetherealOverride(), new SpellAetherealOverridePlus(), new SpellPurify()});
+				new SpellFortifyRipTide(), new SpellAetherealOverride(), new SpellAetherealOverridePlus(), new SpellPurify(), new SpellAetherBreak()});
 	}};
 }

@@ -3,6 +3,7 @@ package com.perceus.spellcasting2.accounts;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -36,6 +37,10 @@ public class PlayerAccountManagement implements Listener
 		
 		if (!(event.getPlayer().hasPlayedBefore())) 
 		{
+			if (!event.getPlayer().isOp()) 
+			{
+				event.getPlayer().setGameMode(GameMode.SURVIVAL);
+			}
 			PrintUtils.sendMessage(event.getPlayer(), "Welcome to the server, " + event.getPlayer().getDisplayName() + "!");
 			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.1§f)");
 			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
@@ -49,6 +54,10 @@ public class PlayerAccountManagement implements Listener
 		
 		if (event.getPlayer().hasPlayedBefore()) 
 		{
+			if (!event.getPlayer().isOp()) 
+			{
+				event.getPlayer().setGameMode(GameMode.SURVIVAL);
+			}
 			PrintUtils.sendMessage(event.getPlayer(), "§fThis server is currently running §4S§cp§6e§el§2l§aC§ba§3s§1t§9i§dn§5g§fPlugin2 (§cv§41.5.1§f)");
 			PrintUtils.sendMessage(event.getPlayer(), "This server has custom recipes! Do /spellrecipes to view them.");
 		}

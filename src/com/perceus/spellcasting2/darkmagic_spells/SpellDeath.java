@@ -40,6 +40,12 @@ public class SpellDeath extends BaseSpellCapsule
 		
 		Entity target = getNearestEntityInSight(event.getPlayer(), 20);
 		
+		if (target == null) 
+		{
+			PrintUtils.sendMessage(event.getPlayer(), "Invalid Target.");
+			return false;
+		}
+		
 		if (!(target instanceof Player)) 
 		{
 			PrintUtils.sendMessage(event.getPlayer(), "Invalid Target.");

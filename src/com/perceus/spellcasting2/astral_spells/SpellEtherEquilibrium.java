@@ -25,8 +25,8 @@ public class SpellEtherEquilibrium extends BaseSpellCapsule
 
 	public SpellEtherEquilibrium()
 	{
-		super(Material.ENCHANTED_BOOK, ChatUtils.of("✩ Astral Tome: Ether Equilibrium ✩", "8B008B","FFFFFF",""), "SpellEtherEquilibrium", 150, false, "§r§fElement: §r§5A§ds§5t§dr§5α§dl§r§f.",
-				"§r§fSpell Type: §aSupport§f or §cOffensive§f.",
+		super(Material.ENCHANTED_BOOK, ChatUtils.of("✩ Astral Tome: Ether Equilibrium ✩", "8B008B","FFFFFF",""), "SpellEtherEquilibrium", 150, false, "§r§fElement: §r§5A§ds§5t§dr§5α§dl§r§f and §bE§ft§bh§fe§br§f.",
+				"§r§fSpell Type: §aSupport§f §bUtility§f.",
 				"§r§fA §5c§de§bl§3e§cs§4t§6i§eal §r§ftome.",
 				"§r§fThis tome swaps the mana value of target player.", 
 				"§r§fSet player target mana equal to",

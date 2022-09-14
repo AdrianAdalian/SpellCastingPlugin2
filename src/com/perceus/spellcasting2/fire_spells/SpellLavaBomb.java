@@ -46,14 +46,14 @@ public class SpellLavaBomb extends BaseSpellCapsule
 		arrow.setPickupStatus(PickupStatus.DISALLOWED);
 		arrow.setCritical(false);
 		new BukkitRunnable()
-		  {
-		    @Override
-		    public void run()
-		    {
-		    	arrow.getWorld().createExplosion(arrow.getLocation(), 10);
-		    	arrow.remove();
-		    }
-		  }.runTaskLater(Eden.getInstance(), 40);
+		{
+			@Override
+			public void run()
+			{
+				arrow.getWorld().createExplosion(arrow.getLocation(), 10);
+				arrow.remove();
+			}
+		}.runTaskLater(Eden.getInstance(), 40);
 		  
 		return true;
 	}
