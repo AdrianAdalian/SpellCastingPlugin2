@@ -147,6 +147,7 @@ import com.perceus.spellcasting2.fire_spells.SpellMeteor;
 import com.perceus.spellcasting2.fire_spells.SpellOverclockProtocol;
 import com.perceus.spellcasting2.fire_spells.SpellOverheat;
 import com.perceus.spellcasting2.fire_spells.SpellSmokeScreen;
+import com.perceus.spellcasting2.fusion_spells.SpellFusionFlare;
 import com.perceus.spellcasting2.geo_spells.SpellBoulder;
 import com.perceus.spellcasting2.geo_spells.SpellDracoMorph;
 import com.perceus.spellcasting2.geo_spells.SpellEarthquake;
@@ -825,6 +826,9 @@ public class CastListener implements Listener
 		put("AuraOfVoid", new AuraOfVoid());
 
 		put("BoonGrimoire", new BoonGrimoire());
+		
+		//fusion spells
+		put("SpellFusionFlare", new SpellFusionFlare());
 	}};
 	
 }

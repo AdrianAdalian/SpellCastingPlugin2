@@ -74,7 +74,8 @@ public class SpellToBookListener implements Listener
 			"BoonOfNightVision","BoonGrimoire","AuraOfFire","AuraOfHoly","AuraOfStorm","AuraOfWater","AuraOfGeo","AuraOfUnholy","AuraOfVoid","SpellBestowLife","DevSpellBanish","SpellSkullOfNight",
 			"SpellToxicSludge","SpellDesintegrationAmpule","SpellUrgentSupport","SpellCrimsonFury","SpellCrimsonVigor","SpellEnrage","SpellWrath","SpellAstralProjection","SpellVectorManipulation",
 			"SpellAetherBreak",
-			"SpellTimeDilation");
+			"SpellTimeDilation",
+			"SpellFusionFlare");
 	
 	
 	/**
